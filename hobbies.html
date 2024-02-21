@@ -24,17 +24,18 @@
 .hobby-description {
   flex-grow: 1; /* Takes up remaining space */
 }
-@media (max-width: 800px) {
-  .hobby {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-    align-items: center; /* Center align items for a neat look */
-  }
+/* Media query for smaller screens */
+    @media (max-width: 768px) {
+      .hobby {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center align items for a neat look */
+      }
 
-  .hobby img {
-    width: 100%; /* Make image width responsive */
-    height: auto; /* Adjust height automatically */
-  }
-}
+      .hobby img {
+        width: 100%; /* Make image width responsive */
+        height: auto; /* Adjust height automatically */
+      }
+    }
  </style>
 </head>
 <body>
