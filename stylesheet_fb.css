@@ -1,0 +1,154 @@
+
+body {
+  font-family: "Playfair Display",sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  font-weight: bold;
+  font-size: larger;
+  line-height: 1.5;  
+
+}
+
+.flex-container, .side, .main, .header, h1, h2, h3, h4,p {
+  letter-spacing: 0.5px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh; /* Changed to min-height to ensure the container expands with content */
+  background-color:#f9e0d9;
+  color: #000000; 
+
+}
+
+.side {
+flex: 0 0 15%; /* Changed from flex: 1; to reduce width */
+background-color: #000000;
+padding: 5px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items:stretch; /* Center items horizontally */
+margin: 0; /* Remove default margin */
+color: #f9e0d9;
+border: 15;
+/* margin-left: 400px; */
+transition: margin-left 0.3s; /* Add transition for smoother effect */
+
+}
+
+
+.main {
+  flex: 3;
+  background-color:#f9e0d9;
+  color:#000000;
+  padding: 25px;
+  box-sizing: border-box;
+  margin: 0; 
+  /* margin-right: 400px;  */
+  text-align: justify;
+  transition: margin-right 0.3s;
+}
+
+.header {
+  text-align: center;
+}
+
+.image {
+  max-width: 100%; /* Ensure image fits within container */
+  height: auto;
+  
+}
+
+.side ul {
+  padding: 0; /* Remove default padding */
+  list-style-type: none;
+  width: 100%; 
+  align-items: center; 
+}
+
+.side li {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: large;
+  text-align: center;
+}
+
+/* .side a {
+  color:#f9e0d9;
+  text-decoration: none;
+  width: 90%;
+} */
+
+.side a {
+  color: #f9e0d9;
+  text-decoration: none;
+  width: 100%; 
+  display: block; 
+  padding: 15px; 
+  box-sizing: border-box; 
+  background: linear-gradient(to right, transparent 50%, #f9e0d9 50%); 
+  background-size: 200% 100%; 
+  transition: background-position 0.3s; 
+}
+
+.side a:hover {
+  /* text-decoration: underline;
+   */
+  background-color:#f9e0d9;
+  background-position: -100% 0; 
+  color:#160f29;
+}
+
+.main p {
+  font-size: 1.25rem;
+}
+
+
+h1 {
+text-align:left;
+font-family:"Playfair Display"; 
+font-size: 60px;
+background-color:#f9e0d9;  
+color:#000000;  
+
+}
+
+h2, h3 , h4 {
+text-align:left;
+font-family:"Playfair Display"; 
+font-size: 40px;
+background-color:#f9e0d9;
+}
+
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1200px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .side {
+    flex: 0 0 15%; /* Adjust width for smaller screens */
+    margin-left: 0; /* Reset margin-left for smaller screens */
+    margin-right: 0; /* Reset margin-right for smaller screens */
+  }
+  .main {
+    flex: 1;
+    margin-left: 0; /* Reset margin-left for smaller screens */
+    margin-right: 0; /* Reset margin-right for smaller screens */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .side {
+    margin-left: 400px; /* Set initial margin-left for full screen */
+  }
+  .main {
+    margin-right: 400px; /* Set initial margin-right for full screen */
+  }
+}
+

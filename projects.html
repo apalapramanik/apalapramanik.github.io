@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet_fb.css">
+ 
+</head>
+<style>
+    /* Additional styles */
+    .project {
+      display: flex;
+      margin-bottom: 20px;
+      list-style-type: none; /* Remove bullets */
+    }
+
+    /* .project img {
+      width: 100px;
+      margin-right: 20px;
+    } */
+
+    .project-description {
+      flex: 1;
+    }
+  </style>
+<body>
+  <div class="flex-container">
+    <div class="side">
+
+      <ul>
+        <li><img class="image" src="me.JPG" alt="Thats me dancing!!"></li>
+        <li><a target="_blank" href="APALA_RESUME.pdf">Resume</a></li>               
+        <li><a target="_blank" href="research.html">Research</a></li>
+        <li><a target="_blank" href="projects.html">Projects</a></li>
+        <li><a target="_blank" href="courses.html">Courses</a></li> 
+        <li><a target="_blank" href="hobbies.html">Hobbies</a></li>
+        <li><a target="_blank" href="form.html">Queries</a></li>
+        <li><a target="_blank" href="mailto:apramanik2@huskers.unl.edu"><i class="fas fa-envelope"></i> Email</a></li>
+        <li><a target="_blank" href="https://github.com/apalapramanik"><i class="fab fa-github"></i> GitHub</a></li>        
+        <li><a target="_blank" href="https://scholar.google.com/citations?hl=en&user=iUuz41kAAAAJ&view_op=list_works&gmla=AILGF5UVY-chuAA12NOOq-Xp53s9t3TaLDb_ecIacMH8Xa4YxBRekQMrauP1WAHtYXLdxI3pihijLGmDcgpP9uNI"><i class="fas fa-graduation-cap"></i> Google Scholar</a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/apala-pramanik"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a target="_blank" href="https://www.facebook.com/apala.pramanik"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/apala__pramanik"><i class="fab fa-instagram"></i> Instagram</a></li>
+      </ul>
+    </div>
+    <div class="main">
+        <h1 class="research_head">My Projects</h1>
+        <ul>
+            <li class="project">
+                
+                <div class="project-description">
+                  <h2>Edge Assisted SLAM with Human-Construction
+                    Collaborative Robot</h2>
+                  <p>Accurate localization and mapping are key concerns
+                    while deploying a robot to assist humans at an indoor construc-
+                    tion site. Simultaneous localization and mapping are intense in
+                    terms of memory and computation. Edge computing helps offload
+                    some of the tasks of the mobile robot to an edge device. In this
+                    paper, we test the EdgeSLAM algorithm for generating a map of
+                    the second floor of Schorr Center at the University of Nebraska
+                    Lincoln to ensure that it can be used at a construction site
+                    building where the aim of the robot is to navigate to specific goals
+                    while avoiding humans and maintaining a safe distance of 1.25
+                    meters from the human workers at all points in time. Further, our
+                    approach uses a YOLOv3 network to detect a human worker and
+                    then performs clustering and Kalman filtering for point-cloud
+                    data from a depth camera to estimate the relative human motion
+                    under the robot’s local coordination. The estimated human states
+                    and their associating errors are used to monitor the potential
+                    collision between the human and robot at runtime using the
+                    rtamt tool</p>
+                  <!-- <a href="https://github.com/apalapramanik/Spanish-News-Classification">GitHub</a> -->
+                </div>
+              </li>
+           
+
+              <li class="project">
+                
+                <div class="project-description">
+                  <h2>Spanish News Classification</h2>
+                  <p>This project focuses on text classification using a BERT-based model on a Spanish news dataset.
+                     The dataset is preprocessed and split into training, validation, and test sets. 
+                     The model architecture includes input layers for tokenized text and attention masks, 
+                     followed by a BERT layer and a softmax output layer. The model is trained using TensorFlow with
+                      Adam optimizer and categorical crossentropy loss. Visualization techniques, such as training
+                       and validation accuracy plots, training and validation loss plots, and a confusion matrix, 
+                       are employed to analyze the model's performance.</p>
+                  <a href="https://github.com/apalapramanik/Spanish-News-Classification">GitHub</a>
+                </div>
+              </li>
+
+              <li class="project">
+                
+                <div class="project-description">
+                  <h2>Markov Model for Voynich Manuscript</h2>
+                  <p>Markov model of the Voynich Manuscript provides us with useful information for
+                     analysing the Voynich script. We used the transition matrices generated by our
+                      model to compare the six sections of the Manuscript, to compare the Manuscript
+                       to several natural languages, and to calculate the most likely character for
+                        several unknown characters in this transcription of the Voynich Manuscript.
+                         We found that the Voynich Manuscript appears to have similar character distributions
+                          throughout the different sections of the manuscript. Additionally, we found
+                           that the Manuscript has several unique features such as a high number of high
+                            probability character combinations and large number of character combinations
+                             that never occur within the Manuscript. Based on the results of our comparison
+                              to other languages we propose that one of more of the characters in those high
+                               probability character combinations are vowel sounds and that the Voynich gallows
+                                characters may indicate stress or some other element of paralinguistics. Lastly,
+                                 we demonstrated how the Markov model can be used to create a more accurate and
+                                  complete transcription of the manuscript through mathematical analysis of which
+                                   character is the most probable for hard-to-read characters given the surrounding characters. 
+                    .</p>
+                  <!-- <a href="https://github.com/apalapramanik/Spanish-News-Classification">GitHub</a> -->
+                </div>
+              </li>
+
+              <li class="project">
+                
+                <div class="project-description">
+                  <h2>Vision Transformer</h2>
+                  <p>This project centers on the re-
+                    implementation of the Vision Transformer (ViT) architecture, a pivotal development in computer vision. ViT utilizes
+                    self-attention mechanisms for image recognition, promising to
+                    surpass conventional convolutional neural networks (CNNs).
+                    Challenges to be addressed include scaling ViT for larger
+                    images and datasets while maintaining efficiency, devising
+                    efficient pretraining strategies in data-limited scenarios,
+                    optimizing fine-tuning techniques for specific tasks, and
+                    enhancing interpretability. ViT is crucial due to its potential to
+                    capture long-range dependencies in images, enabling broader
+                    generalization beyond grid-like patterns. Anticipated outcomes
+                    involve showcasing ViT's superiority in terms of accuracy,
+                    efficiency, and adaptability, thereby advancing image recognition
+                    technology in domains like healthcare and autonomous driving.
+                    This re-implementation of ViT holds the potential to revolutionize
+                    computer vision, delivering impactful solutions for a multitude
+                    of applications.</p>
+                  <!-- <a href="https://github.com/apalapramanik/Spanish-News-Classification">GitHub</a> -->
+                </div>
+              </li>
+              <li class="project">
+              
+                <div class="project-description">
+                  <h2>Hand-Gesture Recognition</h2>
+                  <p>The Hand Gesture Recognition project utilizes the Sign Language MNIST dataset, a modification of the classic MNIST, containing 27,455 training cases and
+                       7,172 test cases representing 24 classes of American Sign Language letters. The dataset was expanded using image processing techniques to create variations
+                        for better machine learning model training. This project aims to develop a robust visual recognition algorithm to assist the deaf and hard-of-hearing
+                       in better communicating through computer vision applications.</p>
+                  <a href="https://github.com/apalapramanik/Hand-Gesture-Recognition">GitHub</a>
+                </div>
+              </li>
+              <li class="project">
+                
+                <div class="project-description">
+                  <h2>Classifying CIFAR100</h2>
+                  <p>This project, conducted in collaboration with a partner, focuses on implementing
+                       architectures for image classification using the CIFAR-100 dataset. The architectures
+                        consist of convolutional layers with pooling and at least one fully connected layer,
+                         followed by softmax for the output layer. TensorFlow is utilized for model implementation,
+                          with a main loop for training defined in separate Python files. Data is accessed via TensorFlow
+                           Datasets, and hyperparameter selection is conducted independently of the test set.
+                            Results and analysis are presented in a written report following a provided template, 
+                            including experimental setup, results, and conclusions. The project aims to provide
+                             insights into effective architectures for this image classification application.</p>
+                  <a href="https://github.com/apalapramanik/Classifying-CIFAR100">GitHub</a>
+                </div>
+              </li>
+  
+              <li class="project">
+                  
+                  <div class="project-description">
+                    <h2>Classifying Fashion MNIST</h2>
+                    <p>This project explores the design and implementation of two architectures for image classification
+                       using the Fashion MNIST dataset. The architectures consist of fully connected layers with ReLU activation
+                        for hidden nodes and softmax for the output layer. TensorFlow is utilized for model implementation,
+                         with data accessed via TensorFlow Datasets. Hyperparameter selection is conducted independently of
+                          the test set, with validation data obtained through either a single training set and a single validation
+                           set or k-fold cross-validation. The models are optimized using Adam, with at least two sets of hyperparameters
+                            and one regularizer evaluated for each architecture. The results will provide insights into the performance
+                             of different architectures for this image classification task.</p>
+                    <a href="https://github.com/apalapramanik/Classifying-Fashion-MNIST">GitHub</a>
+                  </div>
+                </li>
+            <!-- Add more project items as needed -->
+          </ul>
+
+        
+    
+       <p class = "block">
+    
+        <!-- <blockquote class ="blue", style="font-family: Trirong">
+            Find the link to my research poster <a target="_blank" href="iros_2023_workshop.pdf">here</a>
+        </blockquote>
+     -->
+       </p>
+    </div>
+  </div>
+</body>
+</html>

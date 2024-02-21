@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+    /* General styling */
+    body {
+      font-family: "Trirong", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9e0d9; /* Light pink background */
+      color: #5d4965; /* Dark purple text color */
+    }
+
+    /* Flex container for side and main content */
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      background-color: #f9e0d9;
+      color: #5d4965;
+      margin: 0;
+    }
+
+    /* Side navigation styling */
+    .side {
+      flex: 0.25;
+      background-color: #5d4965; /* Dark purple background */
+      padding: 20px; /* Increased padding for better spacing */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+      color: #f9e0d9; /* Light pink text color */
+    }
+
+    /* Main content styling */
+    .main {
+      flex: 0.75; /* Reduced main content width */
+      background-color: #f9e0d9;
+      color: #5d4965;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    /* Image styling */
+    .image {
+      max-width: 100%; /* Ensure image fits within container */
+      height: auto;
+      border-radius: 50%; /* Rounded image */
+    }
+
+    /* Side navigation list styling */
+    .side ul {
+      padding: 0;
+      list-style-type: none;
+    }
+
+    /* Side navigation link styling */
+    .side li {
+      margin-bottom: 10px;
+    }
+
+    .side a {
+      color: #f9e0d9;
+      text-decoration: none;
+      width: 90%;
+    }
+
+    .side a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content paragraph styling */
+    .main p {
+      font-size: 1.25rem;
+      line-height: 1.6; /* Increased line height for better readability */
+    }
+
+    /* Header styling */
+    .header {
+      text-align: center;
+      color: #5d4965; /* Dark purple header color */
+    }
+
+    /* Media query for responsiveness */
+    @media screen and (max-width: 700px) {
+      .flex-container {
+        flex-direction: column; /* Stack side and main content on smaller screens */
+      }
+      .side {
+        flex: 1; /* Full width for side content on smaller screens */
+      }
+      .main {
+        flex: 1; /* Full width for main content on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="side">
+      <ul>
+        <li><img class="image" src="me.JPG" alt="Thats me dancing!!"></li>
+        <li><a target="_blank" href="https://github.com/apalapramanik">My Github Page</a></li>
+        <li><a target="_blank" class="btn" href="courses.html">Course Work</a></li>
+        <li><a target="_blank" href="APALA_RESUME.pdf">Resume</a></li>
+        <li><a target="_blank" href="research.html">Research</a></li>
+        <li><a target="_blank" href="contact.html">Contact</a></li>
+        <li><a target="_blank" href="form.html">Queries</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1 class="header">Apala Pramanik</h1>
+      <h3>Bio</h3>
+      <p>
+        I am currently a graduate research assistant at the University of Nebraska Lincoln.
+        My main research focus is perception-based safety monitoring and verification of autonomous robots at construction sites.
+        I obtained my bachelor's degree from Guru Gobind Singh Indraprastha University (GGSIPU), New Delhi.
+      </p>
+      <h3>Hobbies</h3>
+      <p>
+        Beyond academia, I nurture diverse interests that contribute to my personal
+        growth. Dance, particularly Bharatnatyam, has been an integral part of my life,
+        fostering discipline, creativity, and a deep appreciation for cultural expression.
+        Moreover, I pursue physical fitness, consistently pushing my limits. In my fitness
+        journey, I have achieved a personal record of 125 lbs for the deadlift. I am
+        committed to a healthy and active lifestyle.
+      </p>
+      <h3>News</h3>
+      <ol>
+        <li>Completed Graduate Teaching Fellowship Program at UNL</li>
+        <li>Presented poster at IROS 2023</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
