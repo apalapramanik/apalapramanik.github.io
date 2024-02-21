@@ -116,12 +116,20 @@ color:#000000;
 
 }
 
-h2, h3 , h4 {
+h2, h3  {
 text-align:left;
 font-family:"Playfair Display"; 
 font-size: 40px;
 background-color:#f9e0d9;
 }
+
+h4  {
+  text-align:left;
+  font-family:"Playfair Display"; 
+  font-size: 30px;
+  background-color:#f9e0d9;
+  }
+
 
 
 /* Media queries for responsiveness */
