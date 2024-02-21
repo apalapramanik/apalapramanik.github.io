@@ -145,10 +145,10 @@ background-color:#f9e0d9;
 
 @media screen and (min-width: 1200px) {
   .side {
-    margin-left: 400px; /* Set initial margin-left for full screen */
+    margin-left: 200px; /* Set initial margin-left for full screen */
   }
   .main {
-    margin-right: 400px; /* Set initial margin-right for full screen */
+    margin-right: 200px; /* Set initial margin-right for full screen */
   }
 }
 
