@@ -1,52 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"> -->
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <link rel="stylesheet" type="text/css" href="stylesheet_fb.css">
  
+  
+ 
 </head>
-<style>
-
-
-    input[type=text], select {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    
-    input[type=submit] {
-      width: 100%;
-      background-color: black;
-      color:#f9e0d9;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-    input[type=submit]:hover {
-      background-color: black;
-    }
-    
-    div {
-      border-radius: 5px;
-      background-color: #f9e0d9;
-      padding: 20px;
-    }
-    </style>
 <body>
   <div class="flex-container">
     <div class="side">
-
+      
       <ul>
-        <!-- <li><img class="image" src="dp3.png"style="height: 375px;"></li> -->
+        <!-- <li><img class="image" src="dp3.png" style="height: 375px;"></li> -->
         <li><img class="image" src="dp4.png" width="375px" height="275px"></li>
         <li><a target="_blank" href="APALA_RESUME.pdf">Resume</a></li>               
         <li><a target="_blank" href="publications.html">Publications</a></li>
@@ -61,36 +30,31 @@
         <li><a target="_blank" href="https://www.facebook.com/apala.pramanik"><i class="fab fa-facebook"></i> Facebook</a></li>
         <li><a target="_blank" href="https://www.instagram.com/apala__pramanik"><i class="fab fa-instagram"></i> Instagram</a></li>
         <li><a href="index.html">Home</a></li>
+  
       </ul>
     </div>
     <div class="main">
+     <h2>Vision-based Runtime Monitoring for Human-Construction Robot
+        Systems</h2>
+     <p>
+        Robots have been increasingly used in construction sites to reduce the human workers' workload on labor-intensive and dangerous tasks.
 
-        <h3> Please send your details for me to contact you!!</h3>
-
-        <div>
-        <form action="/action_page.php">
-            <label for="fname">Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-            <label for="Phone">Contact</label>
-            <input type="text" id="phone" name="phone" placeholder="Your contact ..">
-
-            <label for="Msg">Message</label>
-            <input type="text" id="Msg" name="Msg" placeholder="Your message ..">
-            
-            <label for="country">Country</label>
-            <select id="country" name="country">
-            <option value="India">Australia</option>
-            <option value="Canada">Canada</option>
-            <option value="USA">USA</option>
-            </select>
-
-            
+        Human-construction robots collaboration on a construction site creates a unique safety-critical Cyber-Physical System, which requires new techniques to monitor the safety of human workers at runtime.  
         
-            <input type="submit" value="Submit">
-        </form>
-        </div>
- 
+        Existing monitoring techniques analyze the system behaviors against its specifications using simulated or recorded system states defined based on a global coordination over a bounded time period in a centralized manner. 
+        
+        However, in the real world, such global view usually does not exist in practice, preventing the applicability of current monitoring techniques to real-world applications.
+        
+        In this paper, we propose a monitoring approach that uses only the robot perception to monitor the safety of human workers at runtime under the robot local view.
+        
+        Our approach uses a YOLO network to detect a human worker and then performs clustering and Kalman filtering for point-cloud data from a depth camera to estimate the relative human motion under the robot's local coordination. 
+        
+        The estimated human states are used to monitor the potential collision between the human and the robot at runtime.
+        
+        We evaluate our approach using simulation.
+        
+        The experiment results show that our approach is promising for real-time safety monitoring of real-world human-robot collaboration applications. 
+     </p>
     </div>
   </div>
 </body>
