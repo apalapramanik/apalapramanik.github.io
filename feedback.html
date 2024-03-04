@@ -13,7 +13,27 @@
   height: 375px;
   border-radius: 50%; /* This creates a circular shape */
   overflow: hidden; /* This ensures the image stays within the circular shape */
+
 }
+
+ /* Increase text size */
+ label, input[type="submit"] {
+      font-size: 2em;
+    }
+
+  /* Increase form field size */
+  input[type="text"], textarea {
+    width: 600px;
+    height: 50px;
+    font-size: 2em;
+  }
+
+  /* Increase form field size */
+  input[type="message"], textarea {
+    width: 800px;
+    height: 300px;
+    font-size: 2em;
+  }
 </style>
  
 </head>
@@ -41,21 +61,22 @@
       </ul>
     </div>
     <div class="main">
-      <h1 class="h1">Apala Pramanik</h1>
+      <!-- <h1 class="h1">Apala Pramanik</h1> -->
       <h3>Your feedback is important!!</h3>
 
       
-      <h3>Feedback</h3>
+      <!-- <h3>Feedback</h3> -->
       <form id="feedbackForm" onsubmit="return validateForm()">
 
         <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
+        <input type="text" id="name" ><br><br>
 
 
 
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="10" cols="100"></textarea><br><br>
-        <span id="wordCount">0 words</span><br><br>
+        <textarea id="message" name="message" rows="10" cols="70" oninput="countWords()"></textarea><br>
+
+        <span id="wordCount">0 words (200 left)</span><br><br>
         
         <label for="rating">Rating:</label><br>
         <input type="radio" id="rating1" name="rating" value="1">

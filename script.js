@@ -26,8 +26,8 @@ function validateForm() {
 
     if (message === '') {
     alert('Please enter a message.');
-    const wordCount = message.trim().split(/\s+/).length;
-    document.getElementById('wordCount').innerText = `${wordCount} ${wordCount === 1 ? 'word' : 'words'}`;
+    // const wordCount = message.trim().split(/\s+/).length;
+    // document.getElementById('wordCount').innerText = `${wordCount} ${wordCount === 1 ? 'word' : 'words'}`;
     return false;
     }
 
@@ -50,8 +50,9 @@ function validateForm() {
     return true;
 }
 
-// function countWords() {
-//     const message = document.getElementById('message').value;
-//     const wordCount = message.trim().split(/\s+/).length;
-//     document.getElementById('wordCount').innerText = `${wordCount} ${wordCount === 1 ? 'word' : 'words'}`;
-//   }
+function countWords() {
+    const message = document.getElementById('message').value;
+    const wordCount = message.trim().split(/\s+/).length;
+    // document.getElementById('wordCount').innerText = `${wordCount} ${wordCount === 1 ? 'word' : 'words'}`;
+    document.getElementById('wordCount').innerText = `${wordCount} words (${200 - wordCount} left)`;
+  }
