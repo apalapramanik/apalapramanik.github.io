@@ -42,34 +42,43 @@
     </div>
     <div class="main">
       <h1 class="h1">Apala Pramanik</h1>
-      <h3>Bio</h3>
-      <p>
-        I am currently a graduate research assistant at the University of Nebraska Lincoln.
-        My main research focus is perception-based safety monitoring and verification of autonomous robots at construction sites.
-        I obtained my bachelor's degree from Guru Gobind Singh Indraprastha University (GGSIPU), New Delhi.
-      </p>
-      <h3>Hobbies</h3>
-      <p>
-        Beyond academia, I nurture diverse interests that contribute to my personal
-        growth. Dance, particularly Bharatnatyam, has been an integral part of my life,
-        fostering discipline, creativity, and a deep appreciation for cultural expression. I like to dance in my free time to rejuvinate myself.
-        Moreover, I pursue physical fitness, consistently pushing my limits. In my fitness
-        journey, I have achieved a personal record of 125 lbs for the deadlift. I am
-        committed to a healthy and active lifestyle. 
-        
-      </p>
-      <h3>News</h3>
+      <h3>Your feedback is important!!</h3>
 
-      <ol>
-        <li>Upcoming: DAC 2024 Workshop Poster Presentation - PerM: Tool for Perception-based Runtime Monitoring for Human-Construction Robot Systems (San Francisco, June)</li>
-        <li>Upcoming: Graduate Teaching Fellowship Program at UNL (Lincoln, April 2024)</li>
-        <li>IROS 2023 Formal Methods Workshop Poster Presentation- Vision-based Runtime Monitoring for Human-Construction Robot Systems (Detroit, Oct 2023)</li>
-        <li>Presented research at Graduate Student Symposium (Lincoln, March 2023)</li>
-        <li>Successfully passed PhD qualifying examination (Lincoln, May 2023)</li>
+      
+      <h3>Feedback</h3>
+      <form id="feedbackForm" onsubmit="return validateForm()">
+
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="10" cols="100"></textarea><br><br>
+        <span id="wordCount">0 words</span><br><br>
         
-      </ol>
+        <label for="rating">Rating:</label><br>
+        <input type="radio" id="rating1" name="rating" value="1">
+        <label for="rating1">1</label>
+        <input type="radio" id="rating2" name="rating" value="2">
+        <label for="rating2">2</label>
+        <input type="radio" id="rating3" name="rating" value="3">
+        <label for="rating3">3</label>
+        <input type="radio" id="rating4" name="rating" value="4">
+        <label for="rating4">4</label>
+        <input type="radio" id="rating5" name="rating" value="5">
+        <label for="rating5">5</label><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        
+        <input type="submit" value="Submit">
+      </form>
+     
     </div>
   </div>
+
+  
   
 </body>
 </html>
