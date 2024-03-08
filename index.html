@@ -7,33 +7,13 @@
 
   <link rel="stylesheet" type="text/css" href="stylesheet_fb.css">
 
-  <script>
-    let isShowing = false;
-    let dropdownMenu = null;
-
-    function showDropdown() {
-      hideDropdown(); // Hide any previously shown menu
-      dropdownMenu = document.getElementById('researchDropdown');
-      dropdownMenu.style.display = 'block';
-      isShowing = true;
-    }
-
-    function hideDropdown() {
-      if (isShowing && dropdownMenu) {
-        dropdownMenu.style.display = 'none';
-        isShowing = false;
-      }
-    }
-  </script>
   <style>
-    .image {
-    height: 375px;
-    border-radius: 50%; /* This creates a circular shape */
-    overflow: hidden; /* This ensures the image stays within the circular shape */
-  }
+     .image {
+      height: 375px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
   </style>
-   
- 
 </head>
 <body>
   <div class="flex-container">
@@ -67,8 +47,7 @@
         <li><a target="_blank" href="https://www.facebook.com/apala.pramanik"><i class="fab fa-facebook"></i> Facebook</a></li>
         <li><a target="_blank" href="https://www.instagram.com/apala__pramanik"><i class="fab fa-instagram"></i> Instagram</a></li>
         <li><a target="_blank" href="feedback.html">Feedback</a></li>
-      
-  
+        <li><button id="darkModeToggle">Toggle Dark Mode</button></li>
       </ul>
     </div>
     <div class="main">
@@ -97,11 +76,40 @@
         <li>IROS 2023 Formal Methods Workshop Poster Presentation- Vision-based Runtime Monitoring for Human-Construction Robot Systems (Detroit, Oct 2023)</li>
         <li>Successfully passed PhD qualifying examination (Lincoln, May 2023)</li>
         <li>Presented research at Graduate Student Symposium (Lincoln, March 2023)</li>
-        
-        
       </ol>
     </div>
   </div>
   
+
+  <script>
+    let isShowing = false;
+    let dropdownMenu = null;
+    
+
+
+    function showDropdown() {
+      hideDropdown(); // Hide any previously shown menu
+      dropdownMenu = document.getElementById('researchDropdown');
+      dropdownMenu.style.display = 'block';
+      isShowing = true;
+    }
+
+    function hideDropdown() {
+      if (isShowing && dropdownMenu) {
+        dropdownMenu.style.display = 'none';
+        isShowing = false;
+      }
+    }
+
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+    });
+
+    
+  </script>
+
 </body>
 </html>

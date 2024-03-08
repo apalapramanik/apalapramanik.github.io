@@ -9,6 +9,16 @@ body {
   line-height: 1.5;  
 
 }
+/* body {
+  background-color: #f9e0d9;
+  color: #000000;
+} */
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #000000 !important;
+  color: #f9e0d9 !important;
+}
 
 .flex-container, .side, .main, .header, h1, h2, h3, h4,p {
   letter-spacing: 0.5px;
