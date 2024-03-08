@@ -100,12 +100,21 @@
       }
     }
 
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
+    let isDarkMode = false;
 
-    darkModeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-    });
+  function toggleDarkMode() {
+    isDarkMode = !isDarkMode;
+    const body = document.body;
+    if (isDarkMode) {
+      body.classList.add('dark-mode');
+    } else {
+      body.classList.remove('dark-mode');
+    }
+  }
+
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  darkModeToggle.addEventListener('click', toggleDarkMode);
+
 
     
   </script>

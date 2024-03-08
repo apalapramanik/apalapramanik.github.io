@@ -15,9 +15,29 @@ body {
 } */
 
 /* Dark mode styles */
+/* Dark mode styles */
 body.dark-mode {
-  background-color: #000000 !important;
-  color: #f9e0d9 !important;
+  background-color: #000000;
+  color: #f9e0d9;
+}
+
+.dark-mode .side {
+  background-color: #000000;
+  color: #f9e0d9;
+}
+
+.dark-mode .side a {
+  color: #f9e0d9;
+}
+
+.dark-mode .side a:hover {
+  background-color: #f9e0d9;
+  color: #160f29;
+}
+
+.dark-mode .main {
+  background-color: #f9e0d9;
+  color: #000000;
 }
 
 .flex-container, .side, .main, .header, h1, h2, h3, h4,p {
