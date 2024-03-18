@@ -26,8 +26,19 @@
       <ul>
         <!-- <li><img class="image" src="dp3.png" style="height: 375px;"></li> -->
         <li><img class="image" src="dp4.png" width="375px" height="275px"></li>
-        <li><a target="_blank" href="APALA_RESUME.pdf">Resume</a></li>               
-        <li><a target="_blank" href="publications.html">Research</a></li>
+        <li><a target="_blank" href="APALA_RESUME.pdf">Resume</a></li>     
+        <!-- Dropdown menu for Research -->
+        <li onmouseover="showDropdown()" onmouseout="hideDropdown()">
+          <a href="#" class="dropbtn">Research</a>
+          <div id="researchDropdown" class="dropdown-content" style="display: none;">
+            <a href="abstract_perm.html">PerM</a>
+            <a href="abstract_rtamt.html">Monitoring</a>
+            <a href="abstract_astitva.html">ASTITVA</a>
+            <a href="abstract_start.html">START</a>
+            <a href="abstract_seri.html">SERI</a>
+          </div>
+        </li>          
+        <li><a target="_blank" href="publications.html">Publications</a></li>
         <li><a target="_blank" href="projects.html">Projects</a></li>
         <!-- <li><a target="_blank" href="courses.html">Courses</a></li>  -->
         <li><a target="_blank" href="hobbies.html">Hobbies</a></li>
