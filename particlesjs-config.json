@@ -106,8 +106,5 @@
       }
     }
   },
-  "retina_detect": true,
-  "color": {
-    "value": "#000033"
-  }
+  "retina_detect": false
 }
