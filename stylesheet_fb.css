@@ -196,16 +196,7 @@ h4  {
   }
 }
 
-/* Add this style to your CSS file to style the animated background */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: #000000; /* Fallback color */
-}
+
 
 /* Add this style to make sure the particle animation is visible */
 #particles-js canvas {
