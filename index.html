@@ -77,7 +77,9 @@
       font-size: 1.5em;
     }
 
-    .scroll-down {
+    
+
+    .chevron-down {
       position: absolute;
       bottom: 20px;
       left: 50%;
@@ -112,6 +114,9 @@
         <a target="_blank" href="https://www.instagram.com/apala__pramanik"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
+    <div class="chevron-down" onclick="scrollToNext('#about')">
+        <i class="fas fa-chevron-down"></i>
+      </div>
   </div>
 
   <div id="about" class="section">
@@ -121,6 +126,9 @@
         My main research focus is perception-based safety monitoring and verification of autonomous robots at construction sites.
         I obtained my bachelor's degree from Guru Gobind Singh Indraprastha University (GGSIPU), New Delhi..</p>
     </div>
+    <div class="chevron-down" onclick="scrollToNext('#about')">
+        <i class="fas fa-chevron-down"></i>
+      </div>
   </div>
 
   <div id="hobbies" class="section">
@@ -133,6 +141,9 @@
         journey, I have achieved a personal record of 125 lbs for the deadlift. I am
         committed to a healthy and active lifestyle.</p>
     </div>
+    <div class="chevron-down" onclick="scrollToNext('#about')">
+        <i class="fas fa-chevron-down"></i>
+      </div>
   </div>
 
   <div id="news" class="section">
@@ -145,6 +156,9 @@
       <br>Presented research at Graduate Student Symposium (Lincoln, March 2023)</br>
       
     </div>
+    <div class="chevron-down" onclick="scrollToNext('#about')">
+        <i class="fas fa-chevron-down"></i>
+      </div>
   </div>
 
   <div class="scroll-down" onclick="scrollToNext()">
@@ -154,17 +168,8 @@
   <script>
     particlesJS.load('particles-js', 'particlesjs-config.json');
 
-    function scrollToNext() {
-      const sections = document.querySelectorAll('.section');
-      let nextSection = null;
-
-      sections.forEach((section, index) => {
-        if (window.scrollY < section.offsetTop) {
-          nextSection = section;
-          return;
-        }
-      });
-
+    function scrollToNext(nextSectionId) {
+      const nextSection = document.querySelector(nextSectionId);
       if (nextSection) {
         nextSection.scrollIntoView({ behavior: 'smooth' });
       }
