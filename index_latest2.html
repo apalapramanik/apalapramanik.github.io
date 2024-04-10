@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <title>Custom Particle Background</title> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #0f0f0f; /* Set background color to dark bluish-black */
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    canvas {
+      display: block;
+      vertical-align: bottom;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+      transition: opacity .8s ease, transform 1.4s ease;
+    }
+
+    #content {
+      position: absolute;
+      top: 43%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      font-family: "Playfair Display",sans-serif;
+      color: #ffffff;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #ffffff;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div id="content">
+    <h1>Apala Pramanik</h1>
+    <div class="social-icons">
+    
+      <a target="_blank" href="https://github.com/apalapramanik"><i class="fab fa-github"></i> </a></li>        
+      <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=iUuz41kAAAAJ&view_op=list_works&gmla=AILGF5UVY-chuAA12NOOq-Xp53s9t3TaLDb_ecIacMH8Xa4YxBRekQMrauP1WAHtYXLdxI3pihijLGmDcgpP9uNI"><i class="fas fa-graduation-cap"></i></a></li>
+      <a target="_blank" href="https://www.linkedin.com/in/apala-pramanik"><i class="fab fa-linkedin"></i> </a></li>
+      <a target="_blank" href="https://www.facebook.com/apala.pramanik"><i class="fab fa-facebook"></i> </a></li>
+      <a target="_blank" href="https://www.instagram.com/apala__pramanik"><i class="fab fa-instagram"></i> </a></li>
+    </div>
+  <script>
+    particlesJS.load('particles-js', 'particlesjs-config.json');
+  </script>
+</body>
+</html>
