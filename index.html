@@ -25,6 +25,7 @@
 
     #home {
       background-color: #0f0f0f;
+      position: relative; /* Ensure z-index works */
     }
 
     #about {
@@ -71,9 +72,8 @@
   </style>
 </head>
 <body>
-  <div id="particles-js">
-
   <div id="home" class="section">
+    <div id="particles-js"></div> <!-- Move particles div inside #home -->
     <div class="content">
       <h1>Apala Pramanik</h1>
       <div class="social-icons">
@@ -122,7 +122,6 @@
   <div class="scroll-down" onclick="scrollToNext()">
     <i class="fas fa-chevron-down"></i>
   </div>
-</div>
 
   <script>
     particlesJS.load('particles-js', 'particlesjs-config.json');
