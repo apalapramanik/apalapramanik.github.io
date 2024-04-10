@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Apala Pramanik1</title>
+  <title>Apala Pramanik</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -24,11 +24,6 @@
       scroll-snap-align: start;
     }
 
-    /* #home {
-      background-color: #0f0f0f;
-      position: relative; 
-    } */
-
     #about {
       background-color: #1a1a1a;
     }
@@ -44,16 +39,9 @@
     .content {
       text-align: center;
       padding: 50px;
-      /* position: absolute;
-      top: 43%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center; */
     }
 
     .content_home {
-      /* text-align: center;
-      padding: 50px; */
       position: absolute;
       top: 43%;
       left: 50%;
@@ -76,8 +64,6 @@
       color: white;
       font-size: 1.5em;
     }
-
-    
 
     .chevron-down {
       position: absolute;
@@ -102,8 +88,7 @@
 <body>
   <div id="particles-js"></div>
 
-    <div class="section">
-
+  <div class="section">
     <div class="content_home">
       <h1>Apala Pramanik</h1>
       <div class="social-icons">
@@ -115,8 +100,8 @@
       </div>
     </div>
     <div class="chevron-down" onclick="scrollToNext('#about')">
-        <i class="fas fa-chevron-down"></i>
-      </div>
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </div>
 
   <div id="about" class="section">
@@ -126,9 +111,9 @@
         My main research focus is perception-based safety monitoring and verification of autonomous robots at construction sites.
         I obtained my bachelor's degree from Guru Gobind Singh Indraprastha University (GGSIPU), New Delhi..</p>
     </div>
-    <div class="chevron-down" onclick="scrollToNext('#about')">
-        <i class="fas fa-chevron-down"></i>
-      </div>
+    <div class="chevron-down" onclick="scrollToNext('#hobbies')">
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </div>
 
   <div id="hobbies" class="section">
@@ -141,9 +126,9 @@
         journey, I have achieved a personal record of 125 lbs for the deadlift. I am
         committed to a healthy and active lifestyle.</p>
     </div>
-    <div class="chevron-down" onclick="scrollToNext('#hobbies')">
-        <i class="fas fa-chevron-down"></i>
-      </div>
+    <div class="chevron-down" onclick="scrollToNext('#news')">
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </div>
 
   <div id="news" class="section">
@@ -157,12 +142,8 @@
       
     </div>
     <div class="chevron-down" onclick="scrollToNext('#news')">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-  </div>
-
-  <div class="scroll-down" onclick="scrollToNext()">
-    <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </div>
 
   <script>
@@ -171,7 +152,10 @@
     function scrollToNext(nextSectionId) {
       const nextSection = document.querySelector(nextSectionId);
       if (nextSection) {
-        nextSection.scrollIntoView({ behavior: 'smooth' });
+        const rect = nextSection.getBoundingClientRect();
+        if (rect.bottom > window.innerHeight) {
+          nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
   </script>
