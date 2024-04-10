@@ -171,10 +171,7 @@
     function scrollToNext(nextSectionId) {
       const nextSection = document.querySelector(nextSectionId);
       if (nextSection) {
-        const rect = nextSection.getBoundingClientRect();
-        if (rect.bottom > window.innerHeight) {
-          nextSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        nextSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
   </script>
