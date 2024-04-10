@@ -155,7 +155,7 @@
       const nextSection = document.querySelector(nextSectionId);
       if (nextSection) {
         const rect = nextSection.getBoundingClientRect();
-        if (rect.bottom > window.innerHeight) {
+        if (rect.bottom > 0 && rect.top < window.innerHeight) {
           nextSection.scrollIntoView({ behavior: 'smooth' });
         }
       }
