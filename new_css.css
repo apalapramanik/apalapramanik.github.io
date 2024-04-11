@@ -101,6 +101,8 @@ text-transform:capitalize;
 
 /* Right-align text on the left side */
 .text-section {
+    height: 100vh;
+    overflow: auto;
     grid-column: 1 / 2;
     text-align: right;
     background-color: #495957;
@@ -108,6 +110,8 @@ text-transform:capitalize;
   
   /* Use grid for the right side and remove gaps */
   .image-section {
+    height: 100vh;
+    overflow: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr ;
