@@ -105,7 +105,7 @@ grid-column: 1 / 2; /* Span the first column */
 
 .image-section {
 display: grid;
-grid-template-rows: repeat(3, 1fr); /* Split into three rows */
+grid-template-columns: repeat(3, 1fr); /* Split into three rows */
 gap: 10px; /* Gap between images */
 }
 
