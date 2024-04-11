@@ -108,8 +108,8 @@ text-transform:capitalize;
   /* Use grid for the right side and remove gaps */
   .image-section {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
   }
   
   /* Adjust image size and remove gaps */
@@ -119,7 +119,7 @@ text-transform:capitalize;
     flex-direction: column;
     align-items: center;
     justify-content: center; */
-    height: 33%;
+    height: 100%;
 
   }
   
