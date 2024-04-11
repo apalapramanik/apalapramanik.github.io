@@ -84,19 +84,21 @@
     /* Navbar styles */
     .navbar {
       display: flex;
-      justify-content:end;
-      align-items:end;
+      justify-content: flex-end; /* Align items to the right */
+      align-items: center; /* Align items vertically */
       height: 30px;
       background-color: #0f0f0f;
       position: fixed;
       top: 0;
-      width: 30%;
+      right: 0; /* Align to the right side of the screen */
+      width: 30%; /* Limit width to 30% of the screen */
     }
 
     .navbar a {
       color: white;
       text-decoration: none;
-      padding: 15px;
+      padding: 5px; /* Reduce padding */
+      margin: 0 5px; /* Reduce spacing between each option */
       text-transform: uppercase;
     }
 
