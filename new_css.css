@@ -78,7 +78,7 @@ display: flex;
 justify-content: flex-end; /* Align items to the right */
 align-items: center; /* Align items vertically */
 height: 30px;
-background-color: #0f0f0f;
+/* background-color: #0f0f0f; */
 position: fixed;
 top: 0;
 right: 0; /* Align to the right side of the screen */
