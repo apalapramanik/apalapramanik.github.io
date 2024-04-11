@@ -1,113 +1,9 @@
-
-body {
-margin: 0;
-padding: 0;
-overflow-x: hidden;
-font-family: "Playfair Display", sans-serif;
-color: white;
-font-size: large;
-background-color: #0f0f0f;
-}
-
-.section {
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-scroll-snap-align: start;
-color: #F8F9FA;
-}
-
-
-.content {
-text-align: center;
-padding: 50px;
-top: 42%;
-left: 50%;
-color:#CED4DA;
-
-}
-
-.content_home {
-position: absolute;
-top: 42%;
-left: 50%;
-transform: translate(-50%, -50%);
-text-align: center;
-color:#CED4DA;
-}
-
-h1 {
-font-size: 3em;
-margin-bottom: 20px;
-}
-
-.social-icons {
-margin-top: 20px;
-}
-
-.social-icons a {
-display: inline-block;
-margin: 0 10px;
-color: #CED4DA;
-font-size: 1.5em;
-}
-
-.chevron-down {
-position: absolute;
-bottom: 20px;
-left: 50%;
-transform: translateX(-50%);
-color: #CED4DA;
-cursor: pointer;
-}
-
-#particles-js {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1;
-background-color: #0f0f0f; /* Set background color to dark bluish-black */
-}
-
-/* Navbar styles */
-.navbar {
-display: flex;
-justify-content: flex-end; /* Align items to the right */
-align-items: center; /* Align items vertically */
-height: 30px;
-/* background-color: #0f0f0f; */
-position: fixed;
-top: 0;
-right: 0; /* Align to the right side of the screen */
-width: 30%; /* Limit width to 30% of the screen */
-}
-
-.navbar a {
-color: #CED4DA;
-text-decoration: none;
-padding: 5px; /* Reduce padding */
-margin: 0 5px; /* Reduce spacing between each option */
-text-transform:capitalize;
-}
-
-.hobbies-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Split into two columns */
-    gap:0px; /* Remove gap between sections */
-    padding: 0;
-    margin: 0;
-  }
-
 /* Left text section */
 .text-section {
     grid-column: 1 / 2;
     text-align: right;
     background-color: #333;
-    padding: 2px;
-    margin: 0px;
+    padding: 20px;
     height: 100vh;
     overflow: auto;
     display: flex;
@@ -117,14 +13,14 @@ text-transform:capitalize;
   
   /* Right image section */
   .image-section {
+    grid-column: 2 / 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     background-color: #222;
-    padding: 0px;
-    margin: 0;
+    padding: 0;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
   }
   
   /* Hobby images */
@@ -132,7 +28,7 @@ text-transform:capitalize;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
   }
   
@@ -140,28 +36,106 @@ text-transform:capitalize;
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
-    /* border-radius: 5px; */
   }
   
-
-/*   
-  .hobby-image p {
-    margin-top: 5px;
-    color: #CED4DA;
-  } */ 
-
-
-
-  * {
+  /* General styles */
+  body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Playfair Display", sans-serif;
+    color: white;
+    font-size: large;
+    background-color: #0f0f0f;
   }
   
-  body, html {
-    margin: 0;
-    padding: 0;
+  .section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    color: #f8f9fa;
   }
- 
 
-
+  .content {
+    text-align: center;
+    padding: 50px;
+    top: 42%;
+    left: 50%;
+    color:#CED4DA;
+    
+    }
+    
+    .content_home {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:#CED4DA;
+    }
+    
+    h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ced4da;
+    font-size: 1.5em;
+  }
+  
+  .chevron-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ced4da;
+    cursor: pointer;
+  }
+  
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0f0f0f;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+  }
+  
+  .navbar a {
+    color: #ced4da;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 5px;
+    text-transform: capitalize;
+  }
+  
+  /* Hobbies container */
+  .hobbies-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0;
+    height: 100vh;
+  }
+  
