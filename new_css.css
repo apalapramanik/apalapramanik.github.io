@@ -108,8 +108,8 @@ text-transform:capitalize;
   /* Use grid for the right side and remove gaps */
   .image-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   
   /* Adjust image size and remove gaps */
