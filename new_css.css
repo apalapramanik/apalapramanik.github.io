@@ -96,7 +96,7 @@ text-transform:capitalize;
 .hobbies-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Split into two columns */
-    gap: 0; /* Remove gap between sections */
+    gap: 2; /* Remove gap between sections */
   }
 
 /* Right-align text on the left side */
