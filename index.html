@@ -6,104 +6,9 @@
   <title>Apala Pramanik1</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+  <link rel="stylesheet" type="text/css" href="new_css.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      font-family: "Playfair Display", sans-serif;
-      color: white;
-      font-size: large;
-      background-color: #0f0f0f;
-    }
-
-    .section {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      scroll-snap-align: start;
-      color: #F8F9FA;
-    }
-
-
-    .content {
-      text-align: center;
-      padding: 50px;
-      top: 42%;
-      left: 50%;
-      color:#CED4DA;
-      
-    }
-
-    .content_home {
-      position: absolute;
-      top: 42%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color:#CED4DA;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-
-    .social-icons {
-      margin-top: 20px;
-    }
-
-    .social-icons a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #CED4DA;
-      font-size: 1.5em;
-    }
-
-    .chevron-down {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #CED4DA;
-      cursor: pointer;
-    }
-
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-color: #0f0f0f; /* Set background color to dark bluish-black */
-    }
-
-    /* Navbar styles */
-    .navbar {
-      display: flex;
-      justify-content: flex-end; /* Align items to the right */
-      align-items: center; /* Align items vertically */
-      height: 30px;
-      background-color: #0f0f0f;
-      position: fixed;
-      top: 0;
-      right: 0; /* Align to the right side of the screen */
-      width: 30%; /* Limit width to 30% of the screen */
-    }
-
-    .navbar a {
-      color: #CED4DA;
-      text-decoration: none;
-      padding: 5px; /* Reduce padding */
-      margin: 0 5px; /* Reduce spacing between each option */
-      text-transform:capitalize;
-    }
-
-    
-  </style>
+  
 </head>
 <body>
 
@@ -150,7 +55,7 @@
     </div>
   </div>
 
-  <div id="hobbies" class="section">
+  <!-- <div id="hobbies" class="section">
     <div class="content">
       <h1>Hobbies</h1>
       <p>Beyond academia, I nurture diverse interests that contribute to my personal
@@ -159,6 +64,34 @@
         Moreover, I pursue physical fitness, consistently pushing my limits. In my fitness
         journey, I have achieved a personal record of 125 lbs for the deadlift. I am
         committed to a healthy and active lifestyle.</p>
+    </div>
+    <div class="chevron-down" onclick="scrollToNext('#news')">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div> -->
+
+  <div id="hobbies" class="section">
+    <div class="content">
+      <h1>Hobbies</h1>
+      <div class="hobbies-container">
+        <div class="text-section">
+          <p>Beyond academia, I nurture diverse interests that contribute to my personal growth. Dance, particularly Bharatnatyam, has been an integral part of my life, fostering discipline, creativity, and a deep appreciation for cultural expression. I like to dance in my free time to rejuvenate myself. Moreover, I pursue physical fitness, consistently pushing my limits. In my fitness journey, I have achieved a personal record of 125 lbs for the deadlift. I am committed to a healthy and active lifestyle.</p>
+        </div>
+        <div class="image-section">
+          <div class="hobby-image">
+            <img src="dance.jpg" alt="Dance">
+            <p>Dance</p>
+          </div>
+          <div class="hobby-image">
+            <img src="gym.jpg" alt="Fitness">
+            <p>Fitness</p>
+          </div>
+          <div class="hobby-image">
+            <img src="trip.jpeg" alt="Travel">
+            <p>Travel</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="chevron-down" onclick="scrollToNext('#news')">
       <i class="fas fa-chevron-down"></i>
