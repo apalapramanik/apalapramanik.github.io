@@ -101,35 +101,49 @@ text-transform:capitalize;
     margin: 0;
   }
 
-/* Right-align text on the left side */
+/* Left text section */
 .text-section {
-    height: 100vh;
-    overflow: auto;
     grid-column: 1 / 2;
     text-align: right;
-    background-color: #495957;
-  }
-  
-  /* Use grid for the right side and remove gaps */
-  .image-section {
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
     height: 100vh;
     overflow: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr ;
-    background-color: #343A40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
-  /* Adjust image size and remove gaps */
-  .hobby-image {
-    position: relative;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-    height: 100%;
-
+  /* Right image section */
+  .image-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background-color: #222;
+    padding: 20px;
+    margin: 0;
+    height: 100vh;
+    overflow: auto;
   }
+  
+  /* Hobby images */
+  .hobby-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .hobby-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
   
   /* .hobby-image img {
     position: absolute;
@@ -140,13 +154,13 @@ text-transform:capitalize;
     object-fit: cover;
     border-radius: 5px;
   }
-  
+/*   
   .hobby-image p {
     margin-top: 5px;
     color: #CED4DA;
-  } */
+  } */ */
 
-  /* Adjust the size of each image container */
+  Adjust the size of each image container
 .hobby-image {
     height: 100%; /* Each image container takes up the full height */
     display: flex;
