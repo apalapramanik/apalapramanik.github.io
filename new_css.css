@@ -96,7 +96,7 @@ text-transform:capitalize;
 .hobbies-container {
 display: grid;
 grid-template-columns: 1fr 1fr; /* Split into two columns */
-gap: 20px; /* Gap between sections */
+gap: 0px; /* Gap between sections */
 }
 
 .text-section {
@@ -106,7 +106,7 @@ grid-column: 1 / 2; /* Span the first column */
 .image-section {
 display: grid;
 grid-template-columns: repeat(3, 1fr); /* Split into three rows */
-gap: 10px; /* Gap between images */
+gap: 0px; /* Gap between images */
 }
 
 .hobby-image {
