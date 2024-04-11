@@ -103,6 +103,7 @@ text-transform:capitalize;
 .text-section {
     grid-column: 1 / 2;
     text-align: right;
+    background-color: #495957;
   }
   
   /* Use grid for the right side and remove gaps */
@@ -110,6 +111,7 @@ text-transform:capitalize;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr ;
+    background-color: #343A40;
   }
   
   /* Adjust image size and remove gaps */
