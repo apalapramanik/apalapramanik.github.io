@@ -36,7 +36,7 @@
 
   <div class="navbar">
     <a href="#content_home">Home</a>
-    <a href="#research">Research</a>       
+    <a href="#publications">Publications</a>       
     <a href="#projects">Projects</a>
     <a href="#hobbies">Hobbies</a> 
     <a href="#cv">CV</a>
@@ -74,50 +74,27 @@
     </div>
   </div>
 
-  <div id="projects" class="section">
-    <div class="project-cards">
-      <!-- Project Card 1 -->
-      <div class="project-card">
-        <h2>Project Title</h2>
-        <p>Project Description</p>
-      </div>
-      <div class="project-card">
-        <h2>Project Title</h2>
-        <p>Project Description</p>
-      </div>
-      <div class="project-card">
-        <h2>Project Title</h2>
-        <p>Project Description</p>
-      </div>
-      <div class="project-card">
-        <h2>Project Title</h2>
-        <p>Project Description</p>
-      </div>
-      <div class="project-card">
-        <h2>Project Title</h2>
-        <p>Project Description</p>
-      </div>
-      <div class="project-card">
-        <h2>Project Title</h2>
-        <p>Project Description</p>
-      </div>
-      <div class="project-card">
-        <h2>Project Title</h2>
-        <p>Project Description</p>
-      </div>
-      <!-- Add more project cards as needed -->
+ 
+
+  <div class="project-card" onclick="toggleFlip(this)">
+    <div class="front">
+      <!-- Front content of the card -->
+      <h3>Project Title</h3>
+      <p>Description or summary of the project</p>
     </div>
-    <div class="projects-heading">
-      <h1>Projects, I worked on...</h1>
+    <div class="back">
+      <!-- Back content of the card -->
+      <p>More detailed information about the project...</p>
+      <a href="#">Read more</a>
     </div>
   </div>
   
   
 
 
-  <div id="research" class="section">
+  <div id="publications" class="section">
     <div class="content">
-      <h1>Research</h1>
+      <h1>Publications</h1>
       <p>I am currently a graduate research assistant at the University of Nebraska Lincoln.
         My main research focus is perception-based safety monitoring and verification of autonomous robots at construction sites.
         I obtained my bachelor's degree from Guru Gobind Singh Indraprastha University (GGSIPU), New Delhi..</p>
@@ -155,6 +132,10 @@
         }
       }
     }
+
+    function toggleFlip(card) {
+      card.classList.toggle('flipped');
+  }
   </script>
 </body>
 </html>
