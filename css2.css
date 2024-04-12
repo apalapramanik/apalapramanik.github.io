@@ -1,3 +1,45 @@
+/* Projects section */
+
+/* Projects section */
+#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #343a40; /* Set background color for the projects section */
+  }
+  
+  /* Project cards container */
+  .project-cards {
+    width: 50%;
+    padding: 20px; /* Add padding to space the project cards */
+  }
+  
+  /* Individual project card */
+  .project-card {
+    background-color: black; /* Set background color for project cards */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin between project cards */
+  }
+  
+  /* Projects heading container */
+  .projects-heading {
+    width: 50%;
+    text-align:left;
+  }
+  
+  /* Projects heading style */
+  .projects-heading h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  
+
+
+
 /* Hobbies container */
 .hobbies-container {
     display: flex;
