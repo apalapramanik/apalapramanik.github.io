@@ -1,10 +1,5 @@
 
 #publications {
-    /* background-color: #0A0A15;
-    padding: 10px 0;
-    position: relative;
-    margin-top: 150px;
-    margin-bottom: 60px; */
     background: linear-gradient(135deg,#0A0A15 50% ,#ede5da);
     padding: 10px 0;
     position: relative;
@@ -42,7 +37,7 @@
     position: absolute;
     left:10%;
     top: 10px;
-    font-size: 100px;
+    font-size: 84px;
     color: #EDE5DA;
     padding: 80px 0;
     overflow: hidden; /* Hide overflow */
