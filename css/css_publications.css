@@ -1,0 +1,106 @@
+
+#publications {
+    background-color: #0A0A15;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+
+#publications-heading {
+    position: absolute;
+    left:20%;
+    top: 60px;
+    font-size: 84px;
+    color: #EDE5DA;
+    padding: 80px 0;
+    overflow: hidden; /* Hide overflow */
+    font-weight:1000;
+    text-align: center;
+}
+
+.vertical-typing > div {
+    display: block;
+    margin-bottom: 1px; /* Adjust spacing between letters */
+    height: 0;
+    overflow: hidden;
+    animation: typing 2s forwards;
+}
+
+.vertical-typing > div:last-child {
+    margin-bottom: 0; /* Remove margin for the last letter */
+}
+
+@keyframes typing {
+    0% {
+        height: 0;
+    }
+    20% {
+        height: 0;
+    }
+    100% {
+        height: 1.3em;
+    }
+}
+
+
+
+
+.timeline {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+.timeline .timeline-item {
+    width: calc(85% - 40px); 
+    margin-bottom: 50px;
+    padding: 50px;
+    background-color: 4E5B6C;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline .timeline-item:nth-child(odd) {
+    margin-right: 75%;
+    text-align: right;
+}
+
+.timeline .timeline-item:nth-child(even) {
+    margin-left: 75%;
+    text-align: left;
+}
+
+.timeline .timeline-title {
+    font-size: 24px;
+    color: #E6B54E;
+    margin-top: 0;
+}
+
+.timeline .timeline-details {
+    color: #E6B54E;
+    margin-bottom: 10px;
+}
+
+.timeline .timeline-link {
+    color: #4E5B6C;
+    text-decoration: none;
+}
+
+.timeline .timeline-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .timeline .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}

@@ -7,6 +7,8 @@ body {
     color: EDE5DA;
     font-size: large;
     background-color: #0A0A15;
+    /* cursor:crosshair; */
+    cursor: url('figures/cursor.png') 16 16, auto;
   }
   
   .section {
