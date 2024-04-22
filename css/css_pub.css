@@ -3,15 +3,17 @@
     background-color: #0A0A15;
     padding: 10px 0;
     position: relative;
-    margin-top: 150px;
+    margin-top: 60px;
     margin-bottom: 60px;
-    
 }
+
+
+
 #publications-heading {
     position: absolute;
-    left:10%;
-    top: 10px;
-    font-size: 100px;
+    left:20%;
+    top: 60px;
+    font-size: 84px;
     color: #EDE5DA;
     padding: 80px 0;
     overflow: hidden; /* Hide overflow */
@@ -21,14 +23,14 @@
 
 .vertical-typing > div {
     display: block;
-    margin-bottom: 1px; 
+    margin-bottom: 1px; /* Adjust spacing between letters */
     height: 0;
     overflow: hidden;
     animation: typing 2s forwards;
 }
 
 .vertical-typing > div:last-child {
-    margin-bottom: 0; 
+    margin-bottom: 0; /* Remove margin for the last letter */
 }
 
 @keyframes typing {
@@ -39,39 +41,47 @@
         height: 0;
     }
     100% {
-        height: 1.1em;
+        height: 1.3em;
     }
 }
 
+
+
+
 .timeline {
     max-width: 100%;
-    margin: 0 aut0;
-    padding: 30px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  
 }
 
 .timeline .timeline-item {
-    width: calc(85% - 50px);
-    margin-right: 5px; 
-    margin-bottom: 40px;
-    padding: 25px;
-    background-color: #2a3946;
+    width: calc(85% - 40px);
+    margin-bottom: 50px;
+    padding: 50px;
+    background-color: #4E5B6C;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Align date and content */
+    align-items: center; /* Center vertically */
 }
 
-.timeline .timeline-item:nth-child(odd) {
-    margin-right: 35%;
-    text-align: right;
-   
+.timeline .timeline-left {
+    flex: 0 0 auto;
 }
 
-.timeline .timeline-item:nth-child(even) {
-    margin-left: 35%;
-    text-align: left;
+.timeline .timeline-right {
+    flex: 1 1 auto;
+    padding-left: 20px; /* Add padding between date and content */
+}
+
+.timeline .timeline-date {
+    color: #E6B54E;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .timeline .timeline-title {
@@ -83,7 +93,6 @@
 .timeline .timeline-details {
     color: #E6B54E;
     margin-bottom: 10px;
-    
 }
 
 .timeline .timeline-link {
