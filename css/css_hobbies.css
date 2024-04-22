@@ -1,0 +1,59 @@
+/* Hobbies container */
+.hobbies-container {
+    display: flex;
+    height: 100vh; /* Set the height of the container to the full viewport height */
+  }
+  
+  /* Left text section */
+  .text-section {
+    flex: 1; /* Take up remaining space */
+    background-color: #333;
+    text-align: right;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end; /* Align text to the right */
+  }
+  
+  /* Right image section */
+  .image-section {
+    flex: 1; /* Take up remaining space */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    background-color: #222;
+    padding: 0;
+    margin:0;
+  }
+  
+  /* Hobby images */
+  .hobby-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover; /* Ensure the background image covers the entire div */
+    background-position: center; /* Center the background image */
+  }
+  
+  .hobby-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:fill;
+  }
+  /* Specify the background images for each hobby */
+.hobby-image:nth-child(1) {
+    background-image: url('dance4.JPG');
+  }
+  
+  .hobby-image:nth-child(2) {
+    background-image: url('gym2.jpeg');
+  }
+  
+  .hobby-image:nth-child(3) {
+    background-image: url('trip2.jpeg');
+  }
+ 
