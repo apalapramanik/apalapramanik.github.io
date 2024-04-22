@@ -82,7 +82,9 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 30%;
+    width: 100%;
+    z-index: 1000;
+    background-color: #0A0A15;
   }
   
   .navbar a {

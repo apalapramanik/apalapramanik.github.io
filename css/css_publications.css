@@ -1,12 +1,43 @@
 
 #publications {
-    background-color: #0A0A15;
+    /* background-color: #0A0A15;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 60px; */
+    background: linear-gradient(135deg,#0A0A15 50% ,#ede5da);
     padding: 10px 0;
     position: relative;
     margin-top: 150px;
     margin-bottom: 60px;
+    animation: gradientBG 10s infinite alternate;
+    /* background-size: 400% 400%; */
+    
     
 }
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.timeline .timeline-item:before {
+    content: attr(data-date);
+    position: absolute;
+    top: 0;
+    left: -70px;
+    background-color: #E6B54E;
+    color: #2a3946;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
 #publications-heading {
     position: absolute;
     left:10%;
