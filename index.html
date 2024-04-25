@@ -26,7 +26,7 @@
   
   
   <!-- <div id="particles-js"></div> -->
-  <canvas id="canvas-image-blending"></canvas>
+  <canvas id="canvas-basic"></canvas>
   <div id="initials">ap.</div>
 
 
@@ -362,6 +362,21 @@ var granimInstance = new Granim({
                 ['#f0ab51', '#eceba3']
             ],
             transitionSpeed: 7000
+        }
+    }
+});
+
+var granimInstance = new Granim({
+    element: '#canvas-basic',
+    direction: 'left-right',
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#ff9966', '#ff5e62'],
+                ['#00F260', '#0575E6'],
+                ['#e1eec3', '#f05053']
+            ]
         }
     }
 });
