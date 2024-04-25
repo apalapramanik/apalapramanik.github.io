@@ -12,6 +12,8 @@
   <link rel="stylesheet" type="text/css" href="css/css_contact.css">
   <link rel="stylesheet" type="text/css" href="css/css_publications.css">
   <link rel="stylesheet" type="text/css" href="css/css_hobbies.css">
+  <link rel="stylesheet" type="text/css" href="css/css_navbar.css">
+
 
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   
@@ -20,7 +22,8 @@
 
   
   <div id="initials">ap.</div>
-  <div id="particles-js"></div>
+  <!-- <div id="particles-js"></div> -->
+  <canvas id="canvas-basic"></canvas>
 
 
   <div id="content_home" class="section">
@@ -336,6 +339,21 @@
     const target = document.querySelector(item.getAttribute('data-target'));
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+});
+
+var granimInstance = new Granim({
+    element: '#canvas-basic',
+    direction: 'left-right',
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#ff9966', '#ff5e62'],
+                ['#00F260', '#0575E6'],
+                ['#e1eec3', '#f05053']
+            ]
+        }
+    }
 });
 
  
