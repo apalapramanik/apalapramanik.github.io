@@ -15,10 +15,13 @@
   <link rel="stylesheet" type="text/css" href="css/css_navbar.css">
   <link rel="stylesheet" type="text/css" href="css/background.css">
 
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+
 
 
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+  <script src="bower_components/aos/dist/aos.js"></script>
   
 </head>
 <body>
@@ -26,8 +29,9 @@
   
   
   <!-- <div id="particles-js"></div> -->
-  <div id="initials">ap.</div>
+  
   <canvas id="canvas-basic"></canvas>
+  <!-- <div id="initials">ap.</div> -->
 
 
 
@@ -311,6 +315,7 @@
   
 
   <script>
+    AOS.init();
     particlesJS.load('particles-js', 'particlesjs-config.json');
 
 
@@ -346,26 +351,26 @@
   });
 });
 
-// var granimInstance = new Granim({
-//     element: '#canvas-image-blending',
-//     direction: 'top-bottom',
-//     isPausedWhenNotInView: true,
-//     image : {
-//         source: '../assets/img/bg-forest.jpg',
-//         blendingMode: 'multiply'
-//     },
-//     states : {
-//         "default-state": {
-//             gradients: [
-//                 ['#29323c', '#485563'],
-//                 ['#FF6B6B', '#556270'],
-//                 ['#80d3fe', '#7ea0c4'],
-//                 ['#f0ab51', '#eceba3']
-//             ],
-//             transitionSpeed: 7000
-//         }
-//     }
-// });
+var granimInstance = new Granim({
+    element: '#canvas-image-blending',
+    direction: 'top-bottom',
+    isPausedWhenNotInView: true,
+    image : {
+        source: '../assets/img/bg-forest.jpg',
+        blendingMode: 'multiply'
+    },
+    states : {
+        "default-state": {
+            gradients: [
+                ['#29323c', '#485563'],
+                ['#FF6B6B', '#556270'],
+                ['#80d3fe', '#7ea0c4'],
+                ['#f0ab51', '#eceba3']
+            ],
+            transitionSpeed: 700
+        }
+    }
+});
 
 var granimInstance = new Granim({
     element: '#canvas-basic',
