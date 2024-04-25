@@ -1,0 +1,77 @@
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #0A0A15;
+}
+
+/* .navbar a {
+    color: #E6B54E;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 5px;
+    text-transform: capitalize;
+} */
+
+/* .navbar a {
+    color: #E6B54E;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 5px;
+    text-transform: capitalize;
+    transition: opacity 0.3s ease;
+}
+
+.navbar a:hover {
+    opacity: 0.5;
+} */
+
+/* .navbar a {
+    color: #E6B54E;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 5px;
+    text-transform: capitalize;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: translateX(10px);
+} */
+
+
+/* .navbar a {
+    color: #E6B54E;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 5px;
+    text-transform: capitalize;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+} */
+
+.navbar a {
+    color: #E6B54E;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 5px;
+    text-transform: capitalize;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.3);
+    background-color: #E6B54E;
+    color: #0A0A15;
+}
