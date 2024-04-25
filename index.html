@@ -36,7 +36,7 @@
 
 
   <div id="content_home" class="section">
-  <!-- <div class="section" > -->
+  
     <div class="content_home" style="display: flex; align-items: flex-start;">
         <img src="figures/dp4.png" width="400px" height="400px" style=" float: left; margin-right: 20px;">
         <div style="text-align: left;">
@@ -75,14 +75,7 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- <div id="scroll-indicator">
-    <div class="indicator" data-target="#content_home"></div>
-    <div class="indicator" data-target="#publications"></div>
-    <div class="indicator" data-target="#projects"></div>
-    <div class="indicator" data-target="#hobbies"></div>
-    <div class="indicator" data-target="#cv"></div>
-    <div class="indicator" data-target="#contact"></div>
-  </div> -->
+  
 
 
   <!-- <div class="section" id="projects">   -->
@@ -315,60 +308,60 @@
   
 
   <script>
-    AOS.init();
-    particlesJS.load('particles-js', 'particlesjs-config.json');
+      // AOS.init();
+      particlesJS.load('particles-js', 'particlesjs-config.json');
 
 
-    function scrollToNext(nextSectionId) {
-      const currentSection = document.querySelector(nextSectionId);
-      if (currentSection) {
-        const nextSection = currentSection.nextElementSibling;
-        if (nextSection) {
-          nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      function scrollToNext(nextSectionId) {
+        const currentSection = document.querySelector(nextSectionId);
+        if (currentSection) {
+          const nextSection = currentSection.nextElementSibling;
+          if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         }
       }
-    }
 
-    // Trigger the animation
-    document.addEventListener('DOMContentLoaded', function() {
-        var element = document.getElementById('publications-heading');
-        element.classList.add('typing');
-    });
+      // Trigger the animation
+      document.addEventListener('DOMContentLoaded', function() {
+          var element = document.getElementById('publications-heading');
+          element.classList.add('typing');
+      });
 
-    document.addEventListener('DOMContentLoaded', function() {
-    var element = document.getElementById('publications-heading');
-    element.classList.add('vertical-typing');
-});
-
-    function toggleFlip(card) {
-      card.classList.toggle('flipped');
-  }
-
-  document.querySelectorAll('.indicator').forEach(item => {
-  item.addEventListener('click', () => {
-    const target = document.querySelector(item.getAttribute('data-target'));
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.addEventListener('DOMContentLoaded', function() {
+      var element = document.getElementById('publications-heading');
+      element.classList.add('vertical-typing');
   });
-});
 
-
-
-var granimInstance = new Granim({
-    element: '#canvas-basic',
-    direction: 'left-right',
-    isPausedWhenNotInView: true,
-    states : {
-        "default-state": {
-            gradients: [
-                ['#ff9966', '#ff5e62'],
-                ['#00F260', '#0575E6'],
-                ['#e1eec3', '#f05053']
-            ],
-            transitionSpeed: 700
-        }
+      function toggleFlip(card) {
+        card.classList.toggle('flipped');
     }
-});
 
-  </script>
+    document.querySelectorAll('.indicator').forEach(item => {
+    item.addEventListener('click', () => {
+      const target = document.querySelector(item.getAttribute('data-target'));
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+
+
+  var granimInstance = new Granim({
+      element: '#canvas-basic',
+      direction: 'left-right',
+      isPausedWhenNotInView: true,
+      states : {
+          "default-state": {
+              gradients: [
+                  ['#ff9966', '#ff5e62'],
+                  ['#00F260', '#0575E6'],
+                  ['#e1eec3', '#f05053']
+              ],
+              transitionSpeed: 700
+          }
+      }
+  });
+
+</script>
 </body>
 </html>
