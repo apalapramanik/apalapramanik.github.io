@@ -30,7 +30,7 @@
   
   <!-- <div id="particles-js"></div> -->
   
-  <canvas id="canvas-basic"></canvas>
+  <canvas id="canvas-image-blending"></canvas>
   <div id="initials">ap.</div>
 
 
@@ -79,6 +79,7 @@
   
 
   <!-- <div class="section" id="projects">   -->
+    <!-- <canvas id="canvas-basic"></canvas> -->
     <h1 style="color:#EDE5DA; margin-bottom: 60px; text-align: center;">Projects.</h1>
     <div class="container_proj">
         <div class="card_proj">
@@ -211,7 +212,7 @@
 </div>
 <!-- </div> -->
 
-
+<canvas id="canvas-basic"></canvas>
 <section id="publications" class="timeline">
   <div class="container">
       <div id="publications-heading" class="vertical-typing">
@@ -346,21 +347,42 @@
 
 
 
+  // var granimInstance = new Granim({
+  //     element: '#canvas-basic',
+  //     direction: 'top-bottom',
+  //     isPausedWhenNotInView: true,
+  //     states : {
+  //         "default-state": {
+  //             gradients: [
+  //                 ['#ff9966', '#ff5e62'],
+  //                 ['#00F260', '#0575E6'],
+  //                 ['#e1eec3', '#f05053']
+  //             ],
+  //             transitionSpeed: 2000
+  //         }
+  //     }
+  // });
+
   var granimInstance = new Granim({
-      element: '#canvas-basic',
-      direction: 'top-bottom',
-      isPausedWhenNotInView: true,
-      states : {
-          "default-state": {
-              gradients: [
-                  ['#ff9966', '#ff5e62'],
-                  ['#00F260', '#0575E6'],
-                  ['#e1eec3', '#f05053']
-              ],
-              transitionSpeed: 2000
-          }
-      }
-  });
+    element: '#canvas-image-blending',
+    direction: 'top-bottom',
+    isPausedWhenNotInView: true,
+    image : {
+        source: '../assets/img/bg-forest.jpg',
+        blendingMode: 'multiply'
+    },
+    states : {
+        "default-state": {
+            gradients: [
+                ['#29323c', '#485563'],
+                ['#FF6B6B', '#556270'],
+                ['#80d3fe', '#7ea0c4'],
+                ['#f0ab51', '#eceba3']
+            ],
+            transitionSpeed: 7000
+        }
+    }
+});
 
 </script>
 
