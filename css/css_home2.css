@@ -5,9 +5,15 @@ body {
     overflow-x: hidden;
     font-family: "Playfair Display", sans-serif;
     color: #EDE5DA;
+    /* background: linear-gradient(to top, #a18cd1 50%, #fbc2eb 50%); */
     /* cursor:crosshair; */
     /* background-color: #0A0A15; */
     /* background: linear-gradient(135deg, #1E6A80 50%, #00FFBF); */
+
+    background-image: url('figures/bg-forest.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: keeps the background fixed while scrolling */
 }
 
 .section {
