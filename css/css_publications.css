@@ -1,14 +1,13 @@
 
 #publications {
-    /* background: linear-gradient(135deg,#1E6A80 50% ,#00FFBF); */
-    padding: 10px 0;
+    padding: 0 0;
+    padding-top: 70px;
     position: relative;
     margin-top: 150px;
     margin-bottom: 60px;
     animation: gradientBG 10s infinite alternate;
-    /* background-size: 400% 400%; */
-    
-    
+    background: transparent;
+   
 }
 
 @keyframes gradientBG {
@@ -34,20 +33,20 @@
 
 
 #publications-heading {
-    position: absolute;
-    left:10%;
-    top: 10px;
+    position:absolute;
+    left:10px;
+    top: 30px;
     font-size: 84px;
-    color: #EDE5DA;
-    padding: 80px 0;
+    color: black;
     overflow: hidden; /* Hide overflow */
     font-weight:1000;
-    text-align: center;
+    
 }
 
 .vertical-typing > div {
-    display: block;
+    /* display: block; */
     margin-bottom: 1px; 
+    margin-left: auto;
     height: 0;
     overflow: hidden;
     animation: typing 2s forwards;
@@ -72,7 +71,7 @@
 .timeline {
     max-width: 100%;
     margin: 0 aut0;
-    padding: 30px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -81,22 +80,23 @@
 
 .timeline .timeline-item {
     width: calc(85% - 50px);
+    /* margin-top: 50px; */
     margin-right: 5px; 
-    margin-bottom: 40px;
-    padding: 25px;
+    margin-bottom: 10px;
+    padding: 15px;
     background-color: #2a3946;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .timeline .timeline-item:nth-child(odd) {
-    margin-right: 35%;
+    margin-right: 55%;
     text-align: right;
    
 }
 
 .timeline .timeline-item:nth-child(even) {
-    margin-left: 35%;
+    margin-left: 55%;
     text-align: left;
 }
 

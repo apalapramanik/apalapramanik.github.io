@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/background.css">
+    <link rel="stylesheet" type="text/css" href="css/css_navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/css_home2.css">
+    <link rel="stylesheet" type="text/css" href="css/css_projects2.css">
+    <link rel="stylesheet" type="text/css" href="css/css_publications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+    <script src="script.js"></script>
+</head>
+<!-- DCF7FF light blue
+EEFBFF white
+#324145 dark gray
+485C63 gray -->
+
+<body>
+
+
+    <canvas id="canvas-basic"></canvas>
+    <div id="initials">ap.</div>
+
+    <div class="navbar">
+        <a href="#content_home">Home</a>
+        <a href="#publications">Publications</a>       
+        <a href="#projects">Projects</a>
+        <a href="#news">News</a> 
+        <a href="APALA_RESUME.pdf">CV</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div id="content_home" class="section">
+  
+        <div class="content_home" style="display: flex; align-items: flex-start;">
+            <img src="figures/dp4.png" width="400px" height="400px" style=" float: left; margin-right: 20px;">
+            <div style="text-align: left;">
+    
+                
+                <div style="display: flex; align-items: center;">
+                  <i style="font-size: large;">HELLO</i>
+                  <hr style="width: 100%; margin-left: 20px; margin-botton:0">
+                </div>
+                <h1 style="margin-top:0;">I'm Apala!</h1>
+                <h3 style="color:#DCF7FF; font-size: large; ">Student, Researcher, Dancer</h3>
+                <p style="font-size: 1.5em;">I am currently a graduate research assistant at the University of Nebraska Lincoln. My main research focus is perception-based safety monitoring and verification of autonomous robots at construction sites.</p>
+                <hr style="color:#EEFBFF; width: 100%; margin-top: 0; margin-bottom: 10px;">
+                <div class="social-icons">
+                    <a target="_blank" href="https://github.com/apalapramanik"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=iUuz41kAAAAJ&view_op=list_works&gmla=AILGF5UVY-chuAA12NOOq-Xp53s9t3TaLDb_ecIacMH8Xa4YxBRekQMrauP1WAHtYXLdxI3pihijLGmDcgpP9uNI"><i class="fas fa-graduation-cap"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/apala-pramanik"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/apala.pramanik"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/apala__pramanik"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="chevron-down" onclick="scrollToNext('#about')">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
+   
+    <div id="projects" class="section">
+       
+        
+        <div class="container_proj">
+            <h1  class="projects-heading">Projects.</h1>
+            <div class="card_proj">
+                <div class="card-inner_proj">
+                    <div class="card-front_proj">
+                        <img src="figures/slam.webp" alt="Project Image">
+                    </div>
+                    <div class="card-back_proj">
+                        <h3>Edge Assisted SLAM with Human-Construction
+                          Collaborative Robot</h3>
+                        
+                        <p>We test the EdgeSLAM algorithm for generating a map to ensure that it can be used at a construction site
+                          building where the aim of the robot is to navigate to specific goals
+                          while avoiding humans and maintaining a safe distance of 1.25
+                          meters from the human workers at all points in time. Further, our
+                          approach uses a YOLOv3 network to detect a human worker and
+                          then performs clustering and Kalman filtering for point-cloud
+                          data from a depth camera to estimate the relative human motion
+                          under the robot’s local coordination.</p>
+                        </div>
+                  
+                </div>
+            </div>
+            <!-- Repeat this card structure for each project -->
+            <div class="card_proj">
+                <div class="card-inner_proj">
+                    <div class="card-front_proj">
+                        <img src="figures/spanish.jpg" alt="Project Image">
+                    </div>
+                    <div class="card-back_proj">
+                        <h3>Spanish News Classification</h3>
+                        <p>This project focuses on text classification using a BERT-based model on a Spanish news dataset.
+                          The dataset is preprocessed and split into training, validation, and test sets. 
+                          The model architecture includes input layers for tokenized text and attention masks, 
+                          followed by a BERT layer and a softmax output layer. The model is trained using TensorFlow with
+                           Adam optimizer and categorical crossentropy loss. Visualization techniques, such as training
+                            and validation accuracy plots, training and validation loss plots, and a confusion matrix, 
+                            are employed to analyze the model's performance.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for each project -->
+            <div class="card_proj">
+                <div class="card-inner_proj">
+                    <div class="card-front_proj">
+                        <img src="figures/manu.webp" alt="Project Image">
+                    </div>
+                    <div class="card-back_proj">
+                        <h3>Markov Model for Voynich Manuscript</h3>
+                        <p> Markov model of the Voynich Manuscript provides us with useful information for
+                          analysing the Voynich script. We used the transition matrices generated by our
+                           model to compare the six sections of the Manuscript, to compare the Manuscript
+                            to several natural languages, and to calculate the most likely character for
+                             several unknown characters in this transcription of the Voynich Manuscript.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for each project -->
+            <div class="card_proj">
+              <div class="card-inner_proj">
+                  <div class="card-front_proj">
+                      <img src="figures/vit.png" alt="Project Image">
+                  </div>
+                  <div class="card-back_proj">
+                      <h3>Vision Transformer</h3>
+                      <p> This project centers on the re-
+                        implementation of the Vision Transformer (ViT) architecture, a pivotal development in computer vision. ViT utilizes
+                        self-attention mechanisms for image recognition, promising to
+                        surpass conventional convolutional neural networks (CNNs).
+                        Challenges to be addressed include scaling ViT for larger
+                        images and datasets while maintaining efficiency, devising
+                        efficient pretraining strategies in data-limited scenarios,
+                        optimizing fine-tuning techniques for specific tasks, and
+                        enhancing interpretability.</p>
+                  </div>
+              </div>
+          </div>
+    
+          <div class="card_proj">
+            <div class="card-inner_proj">
+                <div class="card-front_proj">
+                    <img src="figures/hand.jpg" alt="Project Image">
+                </div>
+                <div class="card-back_proj">
+                    <h3>Hand-Gesture Recognition</h3>
+                    <p> The Hand Gesture Recognition project utilizes the Sign Language MNIST dataset, a modification of the classic MNIST, containing 27,455 training cases and
+                      7,172 test cases representing 24 classes of American Sign Language letters. The dataset was expanded using image processing techniques to create variations
+                       for better machine learning model training. This project aims to develop a robust visual recognition algorithm to assist the deaf and hard-of-hearing
+                      in better communicating through computer vision applications</p>
+                </div>
+            </div>
+       
+        </div>
+    
+        <div class="card_proj">
+          <div class="card-inner_proj">
+              <div class="card-front_proj">
+                  <img src="figures/cifar.png" alt="Project Image">
+              </div>
+              <div class="card-back_proj">
+                  <h3>Classifying CIFAR100</h3>
+                  <p> This project, conducted in collaboration with a partner, focuses on implementing
+                    architectures for image classification using the CIFAR-100 dataset. The architectures
+                     consist of convolutional layers with pooling and at least one fully connected layer,
+                      followed by softmax for the output layer. TensorFlow is utilized for model implementation,
+                       with a main loop for training defined in separate Python files. Results and analysis are presented in a written report following a provided template, 
+                         including experimental setup, results, and conclusions.</p>
+              </div>
+          </div>
+        </div>
+     
+     
+    
+      <div class="card_proj">
+        <div class="card-inner_proj">
+            <div class="card-front_proj">
+                <img src="figures/fmnist.png" alt="Project Image">
+            </div>
+            <div class="card-back_proj">
+                <h3>Classifying Fashion MNIST</h3>
+                <p> This project explores the design and implementation of two architectures for image classification
+                  using the Fashion MNIST dataset. The architectures consist of fully connected layers with ReLU activation
+                   for hidden nodes and softmax for the output layer. Hyperparameter selection is conducted independently of
+                     the test set, with validation data obtained through either a single training set and a single validation
+                      set or k-fold cross-validation. The models are optimized using Adam, with at least two sets of hyperparameters
+                       and one regularizer evaluated for each architecture.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+
+    </div>
+
+
+    <div id="Research" class="section">
+        
+        <section id="publications" class="timeline">
+            
+            <div class="container">
+                <div id="publications-heading" class="vertical-typing">
+                  <div>P</div>
+                  <div>U</div>
+                  <div>B</div>
+                  <div>L</div>
+                  <div>I</div>
+                  <div>C</div>
+                  <div>A</div>
+                  <div>T</div>
+                  <div>I</div>
+                  <div>O</div>
+                  <div>N</div>
+                  <div>S</div>
+              </div>
+                <div class="timeline-item" >        
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">PerM: Tool for Perception-based Runtime Monitoring for Human-Construction Robot Systems</h3>             
+                        <i class="timeline-details">DAC 2024 Workshop</i>
+                        <p class="timeline-details">Authors: Apala Pramanik, Kyungki Kim,Dung Hoang Tran</p>
+                        
+                        
+                    </div>
+                </div>
+                <div class="timeline-item" >       
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">Vision-based Runtime Monitoring for Human-Construction Robot Systems</h3>           
+                        <i class="timeline-details">IROS 2023 Workshop : Formal methods techniques in robotics systems: Design and control</i>
+                        <p class="timeline-details">Authors: Apala Pramanik, Kyungki Kim,Dung Hoang Tran</p>
+                        <a target="_blank" style="color: #4E5B6C;"href="iros_2023_workshop.pdf"><i class="fas fa-graduation-cap"></i></a>
+                    
+                        
+                    </div>
+                </div>
+                <div class="timeline-item" >        
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">ASTITVA: assistive special tools and technologies for inclusion of visually challenged</h3>             
+                        <i class="timeline-details">2021 international conference on computing, communication, and intelligent systems (ICCCIS)</i>
+                        <p class="timeline-details">Authors: Apala Pramanik, Rahul Johari, Nitesh Kumar Gaurav, Sapna Chaudhary, Rohan Tripathi</p>
+                        <a target="_blank" style="color: #4E5B6C;"href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:d1gkVwhDpl0C"><i class="fas fa-graduation-cap"></i></a>
+                      
+                    </div>
+                </div>
+                <div class="timeline-item" >        
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">START: smart stick based on TLC algorithm in IoT network for visually challenged persons</h3>            
+                        <i class="timeline-details">2020 Fourth International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud)(I-SMAC)</i>
+                        <p class="timeline-details">Authors: Rahul Johari, Nitesh Kumar Gaurav, Sapna Chaudhary, Apala Pramanik</p>
+                        <a target="_blank" style="color: #4E5B6C;"href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:u5HHmVD_uO8C"><i class="fas fa-graduation-cap"></i></a>
+                        
+                    </div>
+                </div>
+                <div class="timeline-item" >        
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">SERI: SEcure Routing in IoT</h3>              
+                        <i class="timeline-details">International Conference on Internet of Things and Connected Technologies</i>
+                        <p class="timeline-details">Authors: Varnika Gaur, Rahul Johari, Parth Khandelwal, Apala Pramanik</p>
+                        <a target="_blank" style="color: #4E5B6C;"href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:2osOgNQ5qMEC"><i class="fas fa-graduation-cap"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+          </section>
+
+
+    </div>
+
+    
+
+    <div id="Hobbies" class="section">
+        <h1>Hobbies.</h1>
+
+
+    </div>
+
+    <div id="news" class="section">
+        <div class="content">
+          <h1 style="color:#E6B54E;">News!</h1>
+          <br>Upcoming: DAC 2024 Workshop Poster Presentation - PerM: Tool for Perception-based Runtime Monitoring for Human-Construction Robot Systems (San Francisco, June 2024)</br>
+          <br>Upcoming: Graduate Teaching Fellowship Program at UNL (Lincoln, April 2024)</br>
+          <br>IROS 2023 Formal Methods Workshop Poster Presentation- Vision-based Runtime Monitoring for Human-Construction Robot Systems (Detroit, Oct 2023)</br>
+          <br>Successfully passed PhD qualifying examination (Lincoln, May 2023)</br>
+          <br>Presented research at Graduate Student Symposium (Lincoln, March 2023)</br>
+          
+        </div>
+        <div class="chevron-down" onclick="scrollToNext('#news')">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    
+      <div id="contact" class="section">
+        <div class="content">
+          <h1 style="color:#0A0A15">Contact Me!</h1>
+          <i style="color: #4E5B6C;">Feel free to reach out to me using the following contact information:</i>
+          <ul>
+            <li><strong>Email:</strong> apramanik2@huskers.unl.edu</li>
+            <li><strong>Phone:</strong> +14023048871</li>
+            <li><strong>Address:</strong> Lincoln, Nebraska</li>
+          </ul>
+        </div>
+      </div>
+
+    <script>
+        var granimInstance = new Granim({
+    element: '#canvas-basic',
+    direction: 'top-bottom',
+    isPausedWhenNotInView: true,
+    image: {
+        source: 'figures/bg-forest.jpg',
+        blendingMode: 'multiply',
+        stretchMode: ['stretch', 'stretch']
+    },
+    
+    states: {
+        "default-state": {
+            gradients: [
+            ['#29323c', '#485563'],
+            ['#FF6B6B', '#556270']   ],
+            transitionSpeed: 5000
+        }
+    }
+});
+    </script>
+
+   
+    
+</body>
+
+</html>
+
+
+<!-- ['#29323c', '#485563'],
+['#FF6B6B', '#556270'],
+['#80d3fe', '#7ea0c4'],
+['#f0ab51', '#eceba3'] -->

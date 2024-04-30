@@ -24,15 +24,12 @@
   <!-- <script src="bower_components/aos/dist/aos.js"></script> -->
   
 </head>
-<body style="background-image: url('figures/bg-forest.jpg'); background-size: cover; background-position: center;">
-  <!-- <canvas id="canvas-image-blending"></canvas> -->
+<body>
+  
 
   
-  
-  <!-- <div id="particles-js"></div> -->
-  
-  
   <div id="initials">ap.</div>
+  <!-- <canvas id="canvas-image-blending"></canvas> -->
   
 
 
@@ -366,27 +363,27 @@
 // });
 
 
-var granimInstance = new Granim({
-    element: 'body', // Set to 'body' to target the entire page background
-    direction: 'top-bottom',
-    isPausedWhenNotInView: true,
-    image : {
-        source: 'figures/bg-forest.jpg',
-        blendingMode: 'multiply'
-    },
-    states : {
-        "default-state": {
-            gradients: [
-                ['#29323c', '#485563'],
-                ['#FF6B6B', '#556270'],
-                ['#80d3fe', '#7ea0c4'],
-                ['#f0ab51', '#eceba3']
-            ],
-            transitionSpeed: 7000
-        }
-    },
-    transparent: true // Make the canvas transparent
-});
+// var granimInstance = new Granim({
+//     element: 'canvas-image-blending', // Set to 'body' to target the entire page background
+//     direction: 'top-bottom',
+//     isPausedWhenNotInView: true,
+//     image : {
+//         source: 'figures/bg-forest.jpg',
+//         blendingMode: 'multiply'
+//     },
+//     states : {
+//         "default-state": {
+//             gradients: [
+//                 ['#29323c', '#485563'],
+//                 ['#FF6B6B', '#556270'],
+//                 ['#80d3fe', '#7ea0c4'],
+//                 ['#f0ab51', '#eceba3']
+//             ],
+//             transitionSpeed: 7000
+//         }
+//     }
+//     // transparent: true // Make the canvas transparent
+// });
 
 </script>
 
