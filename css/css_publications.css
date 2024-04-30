@@ -6,7 +6,7 @@
     margin-top: 150px;
     margin-bottom: 60px;
     animation: gradientBG 10s infinite alternate;
-    background: transparent;
+    /* background: transparent; */
    
 }
 
@@ -25,7 +25,6 @@
     position: absolute;
     top: 0;
     left: -70px;
-    background-color: #E6B54E;
     color: #2a3946;
     padding: 5px 10px;
     border-radius: 5px;

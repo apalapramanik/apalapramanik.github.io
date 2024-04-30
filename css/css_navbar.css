@@ -4,7 +4,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 50px;
+    height: 30px;
     position: fixed;
     top: 0;
     right: 0;
@@ -18,7 +18,7 @@
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
     margin: 0 5px;
     text-transform: capitalize;
     transition: transform 0.3s ease, background-color 0.3s ease;
