@@ -21,17 +21,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
-    <script src="script.js"></script>
+    <script src="particlesjs-config.json"></script>
 </head>
 <!-- DCF7FF light blue
 EEFBFF white
 #324145 dark gray
 485C63 gray -->
 
-<body>
+<body >
 
 
-    <canvas id="canvas-basic"></canvas>
+    <!-- <canvas id="canvas-basic"></canvas> -->
+    <div id="particles-js"></div>
     <div id="initials">ap.</div>
 
     <div class="navbar">
@@ -431,7 +432,9 @@ EEFBFF white
         }
     }, 400)
     }
-
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+    });
    
     
 
