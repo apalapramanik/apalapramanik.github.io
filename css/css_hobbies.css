@@ -1,28 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
 
-#hobbies .container_hobbies {
-  color:#999;
+.container_hobbies {
+  color:black;
   text-transform: uppercase;
-  font-size:3em;
+  font-size:9em;
   font-weight:bold;
   padding-top:200px;  
-  position:fixed;
+  position:relative;
   width:100%;
   bottom:45%;
   display:block;
   justify-content: center;
+  align-items: center; 
+  
+
 }
 
 #flip {
-  height:50px;
+  height:200px;
   overflow:hidden;
 }
 
 #flip > div > div {
   color:#fff;
-  padding:4px 12px;
-  height:45px;
+  padding:0px 0px;
+  height:200px;
   margin-bottom:45px;
   display:inline-block;
 }
@@ -42,21 +45,15 @@
 }
 
 @keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
-}
+    0% { margin-top: -505px; } /*Adjusted margin for first word */
+    10% { margin-top: -490px; } 
+    33% { margin-top: -490px; }
+    38% { margin-top: -275px; } /* Adjusted margin for second word */
+    66% { margin-top: -275px; }
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -505px; } /* Adjusted margin for last word */
+  }
 
-p {
-  position:fixed;
-  width:100%;
-  bottom:30px;
-  font-size:12px;
-  color:#999;
-  margin-top:200px;
-}
+  
+  
