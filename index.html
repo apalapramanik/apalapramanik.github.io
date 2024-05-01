@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- <meta charset="UTF-8"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    
 
     <link rel="stylesheet" type="text/css" href="css/css_background.css">
     <link rel="stylesheet" type="text/css" href="css/css_navbar.css">
@@ -20,19 +19,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
-    <script src="particlesjs-config.json"></script>
+   
 </head>
-<!-- DCF7FF light blue
-EEFBFF white
-#324145 dark gray
-485C63 gray -->
+
 
 <body >
 
 
-    <!-- <canvas id="canvas-basic"></canvas> -->
+ 
     <div id="particles-js"></div>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <div id="initials">ap.</div>
 
     <div class="navbar">
@@ -345,42 +342,14 @@ EEFBFF white
     </div>
     
 
-      <!-- <div class="loop-wrapper">
-        <div class="mountain"></div>
-        <div class="hill"></div>
-        <div class="tree"></div>
-        <div class="tree"></div>
-        <div class="tree"></div>
-        <div class="rock"></div>
-        <div class="truck"></div>
-        <div class="wheels"></div>
-      </div> 
-    </div> -->
+     
 
     
     
     
     
     <script>
-        var granimInstance = new Granim({
-        element: '#canvas-basic',
-        direction: 'top-bottom',
-        isPausedWhenNotInView: true,
-        image: {
-            source: 'figures/bg-forest.jpg',
-            blendingMode: 'multiply',
-            stretchMode: ['stretch', 'stretch']
-        },
         
-        states: {
-            "default-state": {
-                gradients: [
-                ['#29323c', '#485563'],
-                ['#FF6B6B', '#556270']   ],
-                transitionSpeed: 5000
-            }
-        }
-    });
     // 55555555555555555555555555555555555555 conatct me %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     consoleText(['Contact Me.....', 'Lets Connect...', 'Get in Touch...'], 'text',['#0A0A15','#0A0A15','#0A0A15']);
 
@@ -432,7 +401,7 @@ EEFBFF white
         }
     }, 400)
     }
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    particlesJS.load('particles-js', 'particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
     });
    
@@ -447,8 +416,3 @@ EEFBFF white
 
 </html>
 
-
-<!-- ['#29323c', '#485563'],
-['#FF6B6B', '#556270'],
-['#80d3fe', '#7ea0c4'],
-['#f0ab51', '#eceba3'] -->

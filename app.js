@@ -1,70 +1,127 @@
-const squares = document.querySelectorAll('.square')
-const mole = document.querySelector('.mole')
-const timeLeft = document.querySelector('#time-left')
-const score = document.querySelector('#score')
-const difficultyButton = document.querySelector('#difficulty-button')
+/* -----------------------------------------------
+/* How to use? : Check the GitHub README
+/* ----------------------------------------------- */
 
-let result = 0
-let hitPosition
-let currentTime = 60
-let timerId = null
-let difficulty = 'simple'
+/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
+/*
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
+});
+*/
 
-function randomSquare() {
-  squares.forEach(square => {
-    square.classList.remove('mole')
-  })
+/* Otherwise just put the config content (json): */
 
-  let randomSquare = squares[Math.floor(Math.random() * 9)]
-  randomSquare.classList.add('mole')
-
-  hitPosition = randomSquare.id
-}
-
-squares.forEach(square => {
-  square.addEventListener('mousedown', () => {
-    if (square.id == hitPosition) {
-      result++
-      score.textContent = result
-      hitPosition = null
-    }
-  })
-})
-
-function moveMole() {
-  if (difficulty === 'simple') {
-    timerId = setInterval(randomSquare, 1000)
-  } else if (difficulty === 'hard') {
-    timerId = setInterval(randomSquare, 500)
+particlesJS('particles-js',
+  
+  {
+    "particles": {
+      "number": {
+        "value": 6,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#2a2b31"
+      },
+      "shape": {
+        "type": "polygon",
+        "stroke": {
+          "width": 0,
+          "color": "#000"
+        },
+        "polygon": {
+          "nb_sides": 6
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 160,
+        "random": false,
+        "anim": {
+          "enable": true,
+          "speed": 10,
+          "size_min": 40,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": false,
+        "distance": 200,
+        "color": "#ffffff",
+        "opacity": 1,
+        "width": 2
+      },
+      "move": {
+        "enable": true,
+        "speed": 8,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": false,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
   }
-}
 
-moveMole()
-
-function countDown() {
- currentTime--
- timeLeft.textContent = currentTime
-
- if (currentTime == 0) {
-   clearInterval(countDownTimerId)
-   clearInterval(timerId)
-   alert('GAME OVER! Your final score is ' + result)
- }
-
-}
-
-let countDownTimerId = setInterval(countDown, 1000)
-
-difficultyButton.addEventListener('click', () => {
-  if (difficulty === 'simple') {
-    difficulty = 'hard'
-    difficultyButton.textContent = 'Hard'
-    clearInterval(timerId)
-    moveMole()
-  } else if (difficulty === 'hard') {
-    difficulty = 'simple'
-    difficultyButton.textContent = 'Simple'
-    clearInterval(timerId)
-    moveMole()
-  }
-})
+);
