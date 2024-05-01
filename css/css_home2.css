@@ -4,7 +4,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: "Playfair Display", sans-serif;
-    color: #EDE5DA;
+    color: white;
     /* background-color: transparent; */
     /* background-image: url('figures/bg-forest.jpg'); */
     background-size: cover;
@@ -46,7 +46,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #EEFBFF;
+    color: white;
 }
 
 h1 {
@@ -61,7 +61,7 @@ h1 {
 .social-icons a {
     display: inline-block;
     margin: 0 10px;
-    color: #4E5B6C;
+    color: #778da9 ;
     font-size: 1.5em;
 }
 
@@ -70,7 +70,7 @@ h1 {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: #DCF7FF;
+    color: #415a77;
     cursor: pointer;
 }
 
@@ -88,12 +88,13 @@ h1 {
 
 
 #initials {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     font-size: 64px;
     font-weight: bold;
-    color: #1A1F21;
+    color: #778da9;
+    z-index: 999;
 }
 
 @media only screen and (max-width: 1300px) {

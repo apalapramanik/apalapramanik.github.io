@@ -1,8 +1,10 @@
 .news-heading{  
     font-size: 5em;  
     font-family: serif;  
-    color:black;  
+    color:#f6aa1c;  
     text-align: center;  
+    /* background-color: #f6aa1c ; */
+    padding: 0;
     /* animation: animate 1.8s linear infinite;   */
     animation: wiggle 0.5s linear infinite;
     }  

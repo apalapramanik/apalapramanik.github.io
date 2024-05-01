@@ -25,7 +25,7 @@
     position: absolute;
     top: 0;
     left: -70px;
-    color: #2a3946;
+    color: #1b263b;
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -36,7 +36,7 @@
     left:10px;
     top: 30px;
     font-size: 84px;
-    color: black;
+    color: #e0e1dd;
     overflow: hidden; /* Hide overflow */
     font-weight:1000;
     
@@ -83,7 +83,7 @@
     margin-right: 5px; 
     margin-bottom: 10px;
     padding: 15px;
-    background-color: #2a3946;
+    background-color: #1b263b;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -101,12 +101,12 @@
 
 .timeline .timeline-title {
     font-size: 24px;
-    color: #E6B54E;
+    color: #eae0d5;
     margin-top: 0;
 }
 
 .timeline .timeline-details {
-    color: #E6B54E;
+    color: #e0e1dd;
     margin-bottom: 10px;
     
 }
