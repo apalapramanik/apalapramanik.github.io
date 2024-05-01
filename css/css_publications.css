@@ -48,7 +48,9 @@
     margin-left: auto;
     height: 0;
     overflow: hidden;
-    animation: typing 2s forwards;
+    /* animation: typing 2s forwards; */
+    animation: typing 3s forwards infinite;
+    animation-delay: 1s;
 }
 
 .vertical-typing > div:last-child {
