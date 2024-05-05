@@ -34,10 +34,7 @@
     color: white; 
   }
 
-  /* @import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap); */
-  /* body {
-    background: #111;
-  } */
+  
   .hidden {
     opacity:0;
   }
@@ -65,3 +62,4 @@
     top:-0.14em;
     left:10px;
   }
+
