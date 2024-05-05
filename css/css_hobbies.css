@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+#hobbies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 .container_hobbies {
   color:#e0e1dd;
   text-transform: uppercase;
   font-size:9em;
-  font-weight:bold;
-  padding-top:200px;  
+  font-weight:bold; 
   position:relative;
-  width:100%;
-  bottom:45%;
+  width:60%;
   display:block;
-  justify-content: center;
-  align-items: center; 
+  padding-right: 10px;
+  /*  justify-content: center; */
+  align-items: center;  
   
 
 }
@@ -61,7 +64,7 @@
 
 .image_flex {
   flex: 1;
-  width: 50%; 
+  width: 30%; 
   overflow: hidden;
   position: relative;
   display: flex;
@@ -73,6 +76,24 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 1500px) {
+  #hobbies {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .container_hobbies {
+    width: 50%;
+    padding-right: 30px;
+    text-align: left;
+  }
+
+  .image_flex {
+    width: 50%;
+    padding-top: 20px;
+  }
 }
   
   
