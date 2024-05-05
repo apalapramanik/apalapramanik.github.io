@@ -78,21 +78,33 @@
   object-fit: cover;
 }
 
-@media (min-width: 1500px) {
-  #hobbies {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 
+
+@media (max-width: 1500px) {
   .container_hobbies {
-    width: 50%;
-    padding-right: 30px;
-    text-align: left;
+    display: none;
   }
 
   .image_flex {
-    width: 50%;
+    width: 100%;
     padding-top: 20px;
+    margin-top: 50px;
+    position: relative; /
+  }
+
+  .image_flex::before {
+    content: "Hobbies";
+    position: absolute;
+    /* top: 10px; */
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4em;
+    color: black;
+    z-index: 1;
+    background: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
 }
   
