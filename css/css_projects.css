@@ -1,18 +1,43 @@
 /* Projects section */
 
+
+.projects-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: #e0e1dd;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+} 
+
+
+
 .container_proj {
-    min-height: 100vh;
+    max-height: auto;
     max-width: 80%;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px auto;
     display: grid;
+    padding-top: 40px;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-gap:20px; 
+   
+    justify-content: center;
+ 
   }
   .card_proj {
     position: relative;
     width: 500px;
     height: 350px;
     perspective: 1000px;
+    
+  
   }
   .card-inner_proj {
     position: absolute;
@@ -32,15 +57,13 @@
     backface-visibility: hidden;
     position: absolute;
     display: flex;
-    flex-direction: column; /* Display name on top, description below */    
+    flex-direction: column;   
     justify-content: flex-start; 
     align-items: center;
-    border-radius: 8px;
-    /* padding: 30px; Add padding to the front and back */
-    box-sizing: border-box; /* Include padding in the size calculation */
-  }
+    border-radius: 8px; 
+    box-sizing: border-box; 
+  } 
   .card-front_proj {
-    background-color: #4E5B6C;
     justify-content: center;
     align-items: center;
   }
@@ -52,19 +75,27 @@
     text-align: left;
     font-size: x-small;
     color: #EDE5DA;
-
+  
   }
   .card-desc-proj {
-  font-size:xx-small;
+  font-size:medium;
   }
   .card_proj img {
-
+  
     max-width: 100%;
     max-height: 100%;
     border-radius: 8px;
     object-fit: cover;
-    /* object-position: center; */
+   
   }
   h3_proj {
     margin: 0;
   }
+
+  @media screen and (max-width: 1500px) {
+    .container_proj {
+        grid-template-columns: 1fr;
+        grid-gap:5px;
+        min-height: auto
+    }
+}

@@ -5,20 +5,11 @@
     position: relative;
     margin-top: 150px;
     margin-bottom: 60px;
-    animation: gradientBG 10s infinite alternate;
-    /* background: transparent; */
-   
+    justify-content: center;
+  
 }
 
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
- 
-    100% {
-        background-position: 100% 50%;
-    }
-}
+
 
 .timeline .timeline-item:before {
     content: attr(data-date);
@@ -33,7 +24,7 @@
 
 #publications-heading {
     position:absolute;
-    left:10px;
+    left: 0px;
     top: 30px;
     font-size: 84px;
     color: #e0e1dd;
@@ -71,7 +62,7 @@
 
 .timeline {
     max-width: 100%;
-    margin: 0 aut0;
+    margin: 0 auto;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -122,10 +113,46 @@
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .timeline .timeline-item {
         width: 100%;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+} */
+
+@media (max-width: 1500px) {
+    .timeline .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+    }
+
+    .timeline .timeline-item:before {
+        left: autp;
+    }
+
+    .timeline .timeline-item:nth-child(odd),
+    .timeline .timeline-item:nth-child(even) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    #publications-heading {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 42px; /* Adjust font size for smaller screens */
+        text-align: center; /* Center align for smaller screens */
+    }
+
+    .vertical-typing > div {
+        display: inline-block;
+        margin-bottom: 0;
+        height: auto;
+        overflow: visible;
+        animation: none;
+        transform: rotate(0deg); /* Rotate back to horizontal */
     }
 }
