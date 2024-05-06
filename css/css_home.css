@@ -12,6 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    scroll-behavior: smooth;
     /* cursor: url('https://cdn-icons-png.flaticon.com/512/1998/1998679.png'), auto; */
     /* cursor: url('figures/rec.cur'), default; */
    
