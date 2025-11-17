@@ -121,7 +121,7 @@
     }
 } */
 
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
     .timeline .timeline-item {
         width: 100%;
         margin-left: 0 !important;
@@ -130,7 +130,7 @@
     }
 
     .timeline .timeline-item:before {
-        left: autp;
+        left: auto;
     }
 
     .timeline .timeline-item:nth-child(odd),
@@ -154,5 +154,36 @@
         overflow: visible;
         animation: none;
         transform: rotate(0deg); /* Rotate back to horizontal */
+    /* } */
+/* } */ 
+
+
+@media (max-width: 1800px) {
+    .timeline .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+    }
+
+    .timeline .timeline-item:before {
+        left: 0;
+    }
+
+    #publications-heading {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .vertical-typing > div {
+        display: inline-block;
+        margin-bottom: 0;
+        height: auto;
+        overflow: visible;
+        animation: none;
+        transform: rotate(0deg);
     }
 }
