@@ -113,49 +113,7 @@
     text-decoration: underline;
 }
 
-/* @media (max-width: 768px) {
-    .timeline .timeline-item {
-        width: 100%;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-} */
 
-/* @media (max-width: 1500px) {
-    .timeline .timeline-item {
-        width: 100%;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        text-align: left !important;
-    }
-
-    .timeline .timeline-item:before {
-        left: auto;
-    }
-
-    .timeline .timeline-item:nth-child(odd),
-    .timeline .timeline-item:nth-child(even) {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    #publications-heading {
-        position: relative;
-        top: 0;
-        left: 0;
-        font-size: 42px; 
-        text-align: center; 
-    }
-
-    .vertical-typing > div {
-        display: inline-block;
-        margin-bottom: 0;
-        height: auto;
-        overflow: visible;
-        animation: none;
-        transform: rotate(0deg); /* Rotate back to horizontal */
-    /* } */
-/* } */ 
 
 
 @media (max-width: 1800px) {
