@@ -1,13 +1,14 @@
 #contact {
- 
+
     color: #0A0A15;
-    padding: 50px; 
+    padding: 50px;
     display: flex;
     /* height: 33.33vh; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1; 
+    flex: 1;
+    position: relative;
   }
   
 
@@ -38,23 +39,14 @@
   .hidden {
     opacity:0;
   }
-  #contact console-container {
-   
+  #contact .console-container {
+
     font-family:"Playfair Display";
     font-size:4em;
     text-align:center;
-    /* height:1000px;
-    width:1000px; */
     display:block;
-    position:absolute;
-    align-items: center;
-    /* color:white; */
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    margin:auto;
-    /* background-color: #0A0A15; */
+    width: 100%;
+    margin-bottom: 20px;
   }
   .console-underscore {
      display:inline-block;

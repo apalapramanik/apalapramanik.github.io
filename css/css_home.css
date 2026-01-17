@@ -42,12 +42,17 @@ body {
 }
 
 .content_home {
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: white;
+    gap: 40px;
+}
+
+.content_home > div {
+    max-width: 400px;
+    text-align: left;
 }
 
 h1 {
