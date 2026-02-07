@@ -9,14 +9,12 @@
   color:#e0e1dd;
   text-transform: uppercase;
   font-size:9em;
-  font-weight:bold; 
+  font-weight:bold;
   position:relative;
   width:60%;
   display:block;
   padding-right: 10px;
-  /*  justify-content: center; */
-  align-items: center;  
-  
+  align-items: center;
 
 }
 
@@ -39,35 +37,35 @@
 
 #flip div div {
   background:#0353a4 ;
-  /* #084c61 */
 }
 #flip div:first-child div {
   background:#f5cb5c;
 }
 #flip div:last-child div {
   background:#941b0c;
-  
+
 }
 
 @keyframes show {
-    0% { margin-top: -505px; } /*Adjusted margin for first word */
-    10% { margin-top: -490px; } 
+    0% { margin-top: -505px; }
+    10% { margin-top: -490px; }
     33% { margin-top: -490px; }
-    38% { margin-top: -275px; } /* Adjusted margin for second word */
+    38% { margin-top: -275px; }
     66% { margin-top: -275px; }
     71% { margin-top: 0px; }
     99.99% { margin-top: 0px; }
-    100% { margin-top: -505px; } /* Adjusted margin for last word */
+    100% { margin-top: -505px; }
   }
 
- 
+
 
 .image_flex {
   flex: 1;
-  width: 30%; 
+  width: 30%;
   overflow: hidden;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -78,24 +76,89 @@
   object-fit: cover;
 }
 
+.hobby-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+  text-transform: none;
+  font-size: 16px;
+}
 
+.hobby-icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #e0e1dd;
+  background: #1b263b;
+  width: 90px;
+  padding: 12px 0;
+  border-radius: 10px;
+  border: 2px solid #778da9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hobby-icon-link i {
+  font-size: 1.4em;
+  width: 1.4em;
+  text-align: center;
+  margin-bottom: 6px;
+  color: #f6aa1c;
+}
+
+.hobby-icon-link:hover {
+  background: #f6aa1c;
+  border-color: #f6aa1c;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(246, 170, 28, 0.4);
+}
+
+.hobby-icon-link:hover i {
+  color: #0A0A15;
+}
+
+.hobby-icon-link:hover span {
+  color: #0A0A15;
+}
+
+.hobby-icon-link span {
+  font-size: 0.55em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+.hobby-icons-mobile {
+  display: none;
+}
 
 @media (max-width: 1500px) {
+  #hobbies {
+    flex-direction: column;
+  }
+
   .container_hobbies {
     display: none;
+  }
+
+  .hobby-icons.hobby-icons-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
 
   .image_flex {
     width: 100%;
     padding-top: 20px;
     margin-top: 50px;
-    position: relative; /
+    position: relative;
   }
 
   .image_flex::before {
     content: "Hobbies";
     position: absolute;
-    /* top: 10px; */
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -107,5 +170,3 @@
     border-radius: 5px;
   }
 }
-  
-  
