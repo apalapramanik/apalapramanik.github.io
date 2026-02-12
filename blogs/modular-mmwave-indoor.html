@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exploring a modular design approach for indoor environments that supports predictable mmWave wireless coverage through pre-characterized layout elements.">
+    <title>Designing Indoor Spaces for mmWave Coverage | Apala Pramanik</title>
+    <link rel="stylesheet" type="text/css" href="../css/css_home.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_blogpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+    <script type="text/javascript" src="../particles.js"></script>
+    <script type="text/javascript" src="../app.js"></script>
+    <div id="initials">ap.</div>
+
+    <div class="navbar">
+        <a href="../index.html#content_home">Home</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#blogs">Blogs</a>
+        <a href="../index.html#hobbies">Hobbies</a>
+        <a href="../index.html#news">News</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../APALA_RESUME.pdf">CV</a>
+    </div>
+
+    <div class="blogpost-wrapper">
+        <a href="../index.html#blogs" class="blogpost-back"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+
+        <div class="blogpost-tag">mmWave</div>
+        <h1 class="blogpost-title">Designing Indoor Spaces for mmWave Coverage</h1>
+        <p class="blogpost-meta">By Apala Pramanik</p>
+
+        <hr class="blogpost-divider">
+
+        <div class="blogpost-body">
+            <p>As wireless systems move toward millimeter-wave (mmWave) frequencies and beyond, indoor coverage becomes a fundamentally different problem. Traditional approaches to in-building wireless, such as distributed antenna systems (DAS), were designed for sub-6 GHz bands where signals propagate broadly, penetrate walls, and tolerate obstacles. At mmWave frequencies, however, signals are highly directional, easily blocked, and dependent on line-of-sight paths or strong specular reflections. This raises an important question: <strong>what if we designed indoor spaces with wireless propagation in mind from the start?</strong></p>
+
+            <h2>The Problem with Retrofitting</h2>
+
+            <p>Most indoor wireless deployments today are reactive. Buildings are constructed first, and then wireless infrastructure is added afterward through careful placement of antennas and radios. At sub-6 GHz, this approach works reasonably well because lower-frequency signals are forgiving: they reflect off walls, diffract around corners, and penetrate common materials. But at mmWave, the rules change. Beamforming replaces broad-area transmission with narrow, directional paths. While this dramatically improves link efficiency, it also removes the propagation redundancies that made earlier systems resilient. A single wall, a piece of furniture, or even a person walking through the beam path can break the link entirely.</p>
+
+            <p>Retrofitting existing buildings for mmWave coverage typically means deploying more access points, adding passive reflectors after the fact, or accepting dead zones. This is costly, energy-intensive, and often produces suboptimal results because the building's geometry and materials were never chosen with directional wireless in mind.</p>
+
+            <h2>A Modular Design Approach</h2>
+
+            <p>The core idea behind this project is to flip the script: instead of adapting wireless systems to existing buildings, design building interiors that inherently support mmWave propagation. The approach treats common architectural components, such as corridor segments, corners, junctions, and room transitions, as <strong>modular, tileable design units</strong>. Each module is pre-characterized for its wireless behavior at mmWave frequencies, so designers know in advance how signals will propagate through it.</p>
+
+            <p>These modules are paired with strategically selected materials and passive elements, such as reflectors and diffusers, positioned at key locations to support reflection or controlled scattering. A reflector mounted on a ceiling can redirect a beam around a corner. A diffuser at a room entrance can scatter redirected energy across a wider area, filling in coverage where direct line-of-sight is unavailable.</p>
+
+            <h2>Why Tiling Matters</h2>
+
+            <p>An interesting aspect of this work is the evaluation of different tiling strategies for modular layouts. Square tiles naturally constrain beam paths to orthogonal directions, which simplifies layout assembly but limits angular coverage. Hexagonal tiles, on the other hand, support a richer set of beam orientations, offering more flexibility for directing energy along diagonal or non-perpendicular paths. However, hexagonal grids introduce complications when applied to rectangular floor boundaries, such as those found in most real-world offices and buildings. Selecting the right tiling strategy involves balancing beam directionality, layout flexibility, and practical architectural constraints.</p>
+
+            <h2>From Layout to Coverage</h2>
+
+            <p>The project envisions a complete pipeline: starting from the selection of a tiling strategy, through the characterization of individual modules using ray-tracing simulations (tools like Wireless InSite), to the assembly of full floorplans that can be evaluated for coverage performance. The end goal is a lightweight planning toolkit that allows architects or building designers to compose indoor layouts using pre-characterized components and receive feedback on expected mmWave coverage, beam path continuity, and NLOS support, all without requiring deep RF expertise.</p>
+
+            <p>This is a shift in perspective. Rather than treating the built environment as an obstacle that wireless systems must overcome, the idea is to treat it as an <strong>asset that can be configured</strong>. Walls, corridors, and surface materials become design variables, not just physical constraints. By integrating wireless performance into the architectural planning process, it becomes possible to reduce the number of access points needed, lower infrastructure costs, and achieve more reliable coverage in dense indoor environments.</p>
+
+            <h2>Looking Forward</h2>
+
+            <p>While the immediate focus is on modular elements like ceiling-mounted reflectors and diffusers that can be explicitly modeled and placed, the longer-term vision is even more ambitious. Could architectural features, such as angled walls, ceiling contours, or geometric motifs, be intentionally shaped to guide wireless energy while also contributing to the visual identity of a space? This direction would blend form and function, making high-frequency propagation behavior an intentional part of interior architecture rather than a concealed afterthought. As we move toward 6G and sub-terahertz communication, where passive reflection becomes even more critical, this kind of design thinking will only grow in importance.</p>
+        </div>
+
+        <hr class="blogpost-divider">
+    </div>
+
+    <script>
+    particlesJS.load('particles-js', '../particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A survey of the literature on transmit power control for mmWave communications, tracing the evolution from optimization-based methods to reinforcement learning approaches.">
+    <title>Power Control for mmWave: From Optimization to RL | Apala Pramanik</title>
+    <link rel="stylesheet" type="text/css" href="../css/css_home.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_blogpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+    <script type="text/javascript" src="../particles.js"></script>
+    <script type="text/javascript" src="../app.js"></script>
+    <div id="initials">ap.</div>
+
+    <div class="navbar">
+        <a href="../index.html#content_home">Home</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#blogs">Blogs</a>
+        <a href="../index.html#hobbies">Hobbies</a>
+        <a href="../index.html#news">News</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../APALA_RESUME.pdf">CV</a>
+    </div>
+
+    <div class="blogpost-wrapper">
+        <a href="../index.html#blogs" class="blogpost-back"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+
+        <div class="blogpost-tag">Reinforcement Learning</div>
+        <h1 class="blogpost-title">Power Control for mmWave: From Optimization to Reinforcement Learning</h1>
+        <p class="blogpost-meta">By Apala Pramanik</p>
+
+        <hr class="blogpost-divider">
+
+        <div class="blogpost-body">
+            <p>Millimeter-wave (mmWave) communication promises multi-gigabit data rates and massive bandwidth, but these benefits come at a cost: significantly higher power consumption compared to sub-6 GHz systems. Wide bandwidths, dense deployments, and the need for high transmit power to compensate for severe path loss all contribute to growing energy demands. As 5G matures and 6G research accelerates, <strong>energy-efficient power control</strong> has become a central design challenge. This post surveys how the research community has approached transmit power control for mmWave systems, tracing a clear evolution from classical optimization to modern reinforcement learning methods.</p>
+
+            <h2>Classical Optimization: Where It All Started</h2>
+
+            <p>Early work on mmWave power control relied on <strong>deterministic optimization</strong>, treating power levels, beam patterns, and beamwidth as fixed decision variables. In uplink and downlink NOMA systems, for instance, analog beamforming was constrained by constant-modulus hardware, and joint power-beam optimization was formulated to maximize achievable sum rate. These problems were typically decomposed into smaller subproblems, such as beam-gain allocation or analog beamformer search, and solved using closed-form or semi-closed-form updates.</p>
+
+            <p>While elegant, these approaches depend on strong assumptions: dominant-path alignment, fixed user grouping, or simplified multipath models. They work well in controlled settings but struggle to scale in environments where channels vary quickly, such as vehicular scenarios or dense urban deployments.</p>
+
+            <h2>Energy Efficiency as a Design Metric</h2>
+
+            <p>As mmWave deployments evolved, energy efficiency moved to the foreground. Research on train-ground systems, for example, introduced long-range mmWave links with strong Doppler effects and strict quality-of-service constraints. Energy efficiency was defined as delivered data per unit energy, and techniques like fractional programming with Lagrangian updates were used to compute transmit-power profiles along the track. However, these solutions remained tied to deterministic propagation assumptions, fixed trajectories, and single-link analysis, limiting their applicability to dynamic, multi-user settings.</p>
+
+            <h2>Enter Reinforcement Learning</h2>
+
+            <p>Reinforcement learning (RL) emerged as a response to the limited adaptability of optimization-based designs. The appeal is straightforward: instead of relying on explicit channel models and mathematical decompositions, an RL agent can learn power control policies through direct interaction with the wireless environment.</p>
+
+            <p>Early RL work applied <strong>Q-learning</strong> to adjust downlink power levels in massive MIMO systems under jamming. The agent explored state-action pairs without explicit channel models, but depended on predefined state features, offline training samples, and discrete action sets, which restricted its ability to handle continuous control variables.</p>
+
+            <p>Subsequent studies adopted <strong>Deep Q-Network (DQN)</strong> frameworks to jointly determine beamforming directions, power levels, and interference-coordination actions in multi-cell environments. States encoded channel and interference information, and rewards tracked sum-rate improvements. However, centralized control introduced signaling overhead, and function approximation raised convergence and stability concerns.</p>
+
+            <h2>Joint Beamwidth and Power Control</h2>
+
+            <p>A natural extension was to treat beamwidth and power control jointly. Deep RL was used to map discrete beamwidth-power pairs to expected rate gains, with DQN architectures taking CSI-derived states and using instantaneous rate as the reward. The challenge here is that beamwidth and transmit power are inherently continuous parameters, and discretizing them affects both policy granularity and convergence speed.</p>
+
+            <p>Other RL-based beam-training models optimized energy efficiency or spectral efficiency by attaching reward penalties to training overhead. These formulations pushed the field forward but often assumed equal power distribution over paths and relied heavily on simulation-driven training.</p>
+
+            <h2>Game Theory and Coverage Analysis</h2>
+
+            <p>Parallel to the RL track, optimization and game-theoretic approaches continued to evolve. Generalized Nash games modeled power control and beamforming as interdependent choices, where best-response updates converge to equilibrium under specific feasibility conditions. Coverage analysis under beam-misalignment errors linked fractional power control to SNR degradation using statistical misalignment models. Secure mmWave-NOMA systems used clustering and successive convex approximation to allocate power under eavesdropping constraints, handling non-convexity through iterative DC transformations.</p>
+
+            <p>Multi-user coexistence between NR-U and WiGig was formulated as a mixed-integer nonlinear program, solved via penalty dual decomposition with CCCP for joint user grouping, beam coordination, and power allocation. While these methods are mathematically rigorous, their computational complexity often limits real-time applicability.</p>
+
+            <h2>Addressing Mobility and Temporal Dynamics</h2>
+
+            <p>More recent work has begun tackling mobility, multi-hop networks, and temporal variations. Location-aided beamwidth control using genetic algorithms maximized average rate under beamwidth and SNR constraints, though the method assumed a single line-of-sight path. Bootstrapped and Bayesian DQN techniques improved exploration by combining bootstrap sampling and Thompson sampling for joint beam and power decisions, but bootstrap diversity shrinks with accumulated data and Bayesian components increase running time.</p>
+
+            <p>Double-RIS-assisted multi-user uplink systems introduced collaborative beamforming and user power control solved through alternating optimization, inheriting the usual sensitivity to initialization and slow convergence that plagues alternating methods.</p>
+
+            <h2>The Latest: Cooperative and Secure Vehicular Links</h2>
+
+            <p>The most recent RL contributions target cooperative and secure vehicular mmWave links. <strong>Dueling Double Deep Recurrent Q-Networks</strong> integrate convolutional and LSTM layers to handle high-dimensional states and temporal correlation for joint beamforming, relay selection, and power allocation under secrecy constraints. These architectures represent a significant step in complexity, but the decision space remains discrete, limiting direct control of continuous transmit-power variables.</p>
+
+            <p>In multi-flow multi-hop networks, joint beam and power control has been solved using block coordinate descent with successive convex approximation for power and particle swarm optimization for 3D beam steering. While these hybrid methods converge to local solutions, their computational cost limits real-time deployment in dynamic channels.</p>
+
+            <h2>The Gaps That Remain</h2>
+
+            <p>Across this evolution, a clear pattern emerges: the field is moving from deterministic, decomposition-based optimization toward reinforcement learning and hybrid methods, motivated by the need to handle rapidly changing mmWave channels, multi-hop topologies, energy constraints, and mobility. Yet significant gaps remain:</p>
+
+            <ul>
+                <li><strong>Discretization dependence:</strong> Most RL methods still discretize inherently continuous parameters like transmit power, limiting policy resolution.</li>
+                <li><strong>Offline simulation reliance:</strong> Many approaches are trained in simulation and may not transfer well to real hardware.</li>
+                <li><strong>Centralized control assumptions:</strong> Scalability is limited when decisions require global state information.</li>
+                <li><strong>Convex relaxations in optimization:</strong> Classical methods continue to rely on structural assumptions that may not hold in practice.</li>
+            </ul>
+
+            <p>These gaps highlight the need for approaches that operate directly on hardware, adapt online, and manage coupled parameters such as gain settings and beam directions without heavy computational overhead. Bridging the divide between the theoretical elegance of optimization and the adaptability of RL remains one of the most active frontiers in mmWave system design.</p>
+        </div>
+
+        <hr class="blogpost-divider">
+    </div>
+
+    <script>
+    particlesJS.load('particles-js', '../particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+    </script>
+</body>
+</html>
