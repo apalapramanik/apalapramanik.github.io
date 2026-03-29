@@ -99,3 +99,25 @@
     text-align: center;
     border-radius: 5px;
   }
+
+  .news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .news-list li {
+    padding: 0.3em 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .news-list li:last-child {
+    border-bottom: none;
+  }
+
+  .news-highlight {
+    background-color: rgba(246, 170, 28, 0.15);
+    border-left: 4px solid #f6aa1c;
+    padding: 0.4em 0.8em !important;
+    border-radius: 4px;
+  }
