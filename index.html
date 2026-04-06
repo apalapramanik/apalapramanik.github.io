@@ -41,10 +41,11 @@
     <div class="navbar">
         <a href="#content_home">Home</a>             
         <a href="#publications">Publications</a>  
+        <a href="#blogs">Research</a>
         <a href="#projects">Projects</a>
-        <a href="#blogs">Blogs</a>
         <a href="#hobbies">Hobbies</a>
-        <a href="#news">News</a> 
+        <a href="#news">News</a>
+        <a href="#outreach">Outreach</a>
         <a href="#contact">Contact</a>
         <a href="APALA_RESUME.pdf">CV</a>
         
@@ -63,7 +64,7 @@
                 </div>
                 <h1 style="margin-top:0;">I'm Apala!</h1>
                 <h3 style="color:#DCF7FF; font-size: large; ">Student, Researcher, Dancer</h3>
-                <p style="font-size: 1.5em;">I am currently a graduate research assistant at the University of Nebraska Lincoln. My research focuses on enhancing mmWave communication through advanced beamforming, beam tracking, and prediction techniques, integrating machine learning and sensory data for improved wireless connectivity</p>
+                <p style="font-size: 1.2em;">I am currently a graduate research assistant at the <a href="https://cpn.unl.edu/" target="_blank" style="color:#f6aa1c;">CPN Lab</a> at the University of Nebraska Lincoln, advised by <a href="https://cse.unl.edu/~mcvuran/" target="_blank" style="color:#f6aa1c;">Dr. Mehmet Can Vuran</a>. My research focuses on enhancing mmWave communication through advanced beamforming, beam tracking, and prediction techniques, integrating machine learning and sensory data for improved wireless connectivity</p>
                 <hr style="color:#EEFBFF; width: 100%; margin-top: 0; margin-bottom: 10px;">
                 <div class="social-icons">
                     <a target="_blank" href="https://github.com/apalapramanik" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
@@ -161,201 +162,9 @@
 
     </div>
 
-    <div id="projects" class="section">
-       
-        
-        <div class="container_proj">
-            <h1  class="projects-heading">Projects.</h1>
-
-            <div class="card_proj">
-              <div class="card-inner_proj">
-                  <div class="card-front_proj">
-                      <img src="figures/raytracing.png" alt="3D Ray Tracing for mmWave Propagation">
-                  </div>
-                  <div class="card-back_proj">
-                      <h3>3D Ray Tracing for mmWave Propagation</h3>
-                      <div class = "card-desc-proj">A MATLAB-based ray tracing simulator for modeling millimeter-wave signal propagation
-                        in indoor environments. The framework traces rays from a transmitter through a configurable 3D office layout,
-                        computing received power while accounting for free-space path loss, multiple reflections (up to 3 bounces),
-                        and log-normal shadowing. Features include color-coded power visualization and animated GIF generation.</div>
-                  </div>
-              </div>
-            </div>
-
-            <div class="card_proj">
-              <div class="card-inner_proj">
-                  <div class="card-front_proj">
-                      <img src="figures/wirelessnet.png" alt="Multi-Modal Traffic Pattern Detection">
-                  </div>
-                  <div class="card-back_proj">
-                      <h3>Multi-Modal Traffic Pattern Detection</h3>
-                      <div class = "card-desc-proj">A deep-learning-based traffic pattern detection system using multi-modal data from
-                        radio signals and camera images. The system captures real-time RF signals via a USRP and synchronizes them
-                        with camera images to classify traffic patterns into Very Busy, Moderate, and Not Busy states using a
-                        Complex-Valued Neural Network (CVNN), achieving over 80% accuracy with sub-100ms latency.</div>
-                  </div>
-              </div>
-            </div>
-
-            <div class="card_proj">
-                <div class="card-inner_proj">
-                    <div class="card-front_proj">
-                        <img src="figures/slam.webp" alt="Edge Assisted SLAM Project">
-                    </div>
-                    <div class="card-back_proj">
-                        <h3>Edge Assisted SLAM with Human-Construction
-                          Collaborative Robot</h3>
-                        <div class = "card-desc-proj">
-                            We test the EdgeSLAM algorithm for generating a map to ensure that it can be used at a construction site
-                          building where the aim of the robot is to navigate to specific goals
-                          while avoiding humans and maintaining a safe distance of 1.25
-                          meters from the human workers at all points in time. Further, our
-                          approach uses a YOLOv3 network to detect a human worker and
-                          then performs clustering and Kalman filtering for point-cloud
-                          data from a depth camera to estimate the relative human motion
-                          under the robot’s local coordination
-                        </div>
-                       
-                        </div>
-                  
-                </div>
-            </div>
-            <!-- Repeat this card structure for each project -->
-            <div class="card_proj">
-                <div class="card-inner_proj">
-                    <div class="card-front_proj">
-                        <img src="figures/spanish.jpg" alt="Spanish News Classification Project">
-                    </div>
-                    <div class="card-back_proj">
-                        <h3>Spanish News Classification</h3>
-                        <div class = "card-desc-proj">This project focuses on text classification using a BERT-based model on a Spanish news dataset.
-                          The dataset is preprocessed and split into training, validation, and test sets. 
-                          The model architecture includes input layers for tokenized text and attention masks, 
-                          followed by a BERT layer and a softmax output layer. The model is trained using TensorFlow with
-                           Adam optimizer and categorical crossentropy loss. Visualization techniques, such as training
-                            and validation accuracy plots, training and validation loss plots, and a confusion matrix, 
-                            are employed to analyze the model's performance.</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Repeat this card structure for each project -->
-            <div class="card_proj">
-                <div class="card-inner_proj">
-                    <div class="card-front_proj">
-                        <img src="figures/manu.webp" alt="Voynich Manuscript Markov Model Project">
-                    </div>
-                    <div class="card-back_proj">
-                        <h3>Markov Model for Voynich Manuscript</h3>
-                        <div class = "card-desc-proj"> Markov model of the Voynich Manuscript provides us with useful information for
-                          analysing the Voynich script. We used the transition matrices generated by our
-                           model to compare the six sections of the Manuscript, to compare the Manuscript
-                            to several natural languages, and to calculate the most likely character for
-                             several unknown characters in this transcription of the Voynich Manuscript.</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Repeat this card structure for each project -->
-            <div class="card_proj">
-              <div class="card-inner_proj">
-                  <div class="card-front_proj">
-                      <img src="figures/vit.png" alt="Vision Transformer Project">
-                  </div>
-                  <div class="card-back_proj">
-                      <h3>Vision Transformer</h3>
-                      <div class = "card-desc-proj"> This project centers on the re-
-                        implementation of the Vision Transformer (ViT) architecture, a pivotal development in computer vision. ViT utilizes
-                        self-attention mechanisms for image recognition, promising to
-                        surpass conventional convolutional neural networks (CNNs).
-                        Challenges to be addressed include scaling ViT for larger
-                        images and datasets while maintaining efficiency, devising
-                        efficient pretraining strategies in data-limited scenarios,
-                        optimizing fine-tuning techniques for specific tasks, and
-                        enhancing interpretability.</div>
-                  </div>
-              </div>
-          </div>
-    
-          <div class="card_proj">
-            <div class="card-inner_proj">
-                <div class="card-front_proj">
-                    <img src="figures/hand.jpg" alt="Hand Gesture Recognition Project">
-                </div>
-                <div class="card-back_proj">
-                    <h3>Hand-Gesture Recognition</h3>
-                    <div class = "card-desc-proj"> The Hand Gesture Recognition project utilizes the Sign Language MNIST dataset, a modification of the classic MNIST, containing 27,455 training cases and
-                      7,172 test cases representing 24 classes of American Sign Language letters. The dataset was expanded using image processing techniques to create variations
-                       for better machine learning model training. This project aims to develop a robust visual recognition algorithm to assist the deaf and hard-of-hearing
-                      in better communicating through computer vision applications</div>
-                </div>
-            </div>
-       
-        </div>
-    
-        <div class="card_proj">
-          <div class="card-inner_proj">
-              <div class="card-front_proj">
-                  <img src="figures/cifar.png" alt="CIFAR-100 Classification Project">
-              </div>
-              <div class="card-back_proj">
-                  <h3>Classifying CIFAR100</h3>
-                  <div class = "card-desc-proj"> This project, conducted in collaboration with a partner, focuses on implementing
-                    architectures for image classification using the CIFAR-100 dataset. The architectures
-                     consist of convolutional layers with pooling and at least one fully connected layer,
-                      followed by softmax for the output layer. TensorFlow is utilized for model implementation,
-                       with a main loop for training defined in separate Python files. Results and analysis are presented in a written report following a provided template, 
-                         including experimental setup, results, and conclusions.</div>
-              </div>
-          </div>
-        </div>
-     
-     
-    
-      <div class="card_proj">
-        <div class="card-inner_proj">
-            <div class="card-front_proj">
-                <img src="figures/fmnist.png" alt="Fashion MNIST Classification Project">
-            </div>
-            <div class="card-back_proj">
-                <h3>Classifying Fashion MNIST</h3>
-                <div class = "card-desc-proj"> This project explores the design and implementation of two architectures for image classification
-                  using the Fashion MNIST dataset. The architectures consist of fully connected layers with ReLU activation
-                   for hidden nodes and softmax for the output layer. Hyperparameter selection is conducted independently of
-                     the test set, with validation data obtained through either a single training set and a single validation
-                      set or k-fold cross-validation. The models are optimized using Adam, with at least two sets of hyperparameters
-                       and one regularizer evaluated for each architecture.</div>
-            </div>
-        </div>
-      </div>
-
-      <div class="card_proj">
-        <div class="card-inner_proj">
-            <div class="card-front_proj">
-                <img src="figures/rnn.png" alt="Sequence Modeling with GRU, LSTM, and Transformer">
-            </div>
-            <div class="card-back_proj">
-                <h3>Sequence Modeling: GRU, LSTM & Transformer</h3>
-                <div class = "card-desc-proj">This project compares recurrent and attention-based architectures for sequence modeling tasks.
-                  We implemented and evaluated GRU (Gated Recurrent Unit), LSTM (Long Short-Term Memory), and Transformer models
-                  on time-series prediction and natural language processing tasks. The study analyzes the trade-offs between
-                  computational efficiency, long-range dependency handling, and model performance across different sequence lengths
-                  and complexity levels.</div>
-            </div>
-        </div>
-      </div>
-
-    </div>
-
-   
-
-
-    </div>
-
-
-    
-
     <div id="blogs" class="section">
         <div class="blogs-container">
-            <h1 class="blogs-heading">Blogs.</h1>
+            <h1 class="blogs-heading">Research.</h1>
             <div class="blogs-grid">
 
                 
@@ -409,6 +218,195 @@
         </div>
     </div>
 
+    <div id="projects" class="section">
+
+
+        <div class="container_proj">
+            <h1  class="projects-heading">Projects.</h1>
+
+            <div class="card_proj">
+              <div class="card-inner_proj">
+                  <div class="card-front_proj">
+                      <img src="figures/raytracing.png" alt="3D Ray Tracing for mmWave Propagation">
+                  </div>
+                  <div class="card-back_proj">
+                      <h3>3D Ray Tracing for mmWave Propagation</h3>
+                      <div class = "card-desc-proj">A MATLAB-based ray tracing simulator for modeling millimeter-wave signal propagation
+                        in indoor environments. The framework traces rays from a transmitter through a configurable 3D office layout,
+                        computing received power while accounting for free-space path loss, multiple reflections (up to 3 bounces),
+                        and log-normal shadowing. Features include color-coded power visualization and animated GIF generation.</div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="card_proj">
+              <div class="card-inner_proj">
+                  <div class="card-front_proj">
+                      <img src="figures/wirelessnet.png" alt="Multi-Modal Traffic Pattern Detection">
+                  </div>
+                  <div class="card-back_proj">
+                      <h3>Multi-Modal Traffic Pattern Detection</h3>
+                      <div class = "card-desc-proj">A deep-learning-based traffic pattern detection system using multi-modal data from
+                        radio signals and camera images. The system captures real-time RF signals via a USRP and synchronizes them
+                        with camera images to classify traffic patterns into Very Busy, Moderate, and Not Busy states using a
+                        Complex-Valued Neural Network (CVNN), achieving over 80% accuracy with sub-100ms latency.</div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="card_proj">
+                <div class="card-inner_proj">
+                    <div class="card-front_proj">
+                        <img src="figures/slam.webp" alt="Edge Assisted SLAM Project">
+                    </div>
+                    <div class="card-back_proj">
+                        <h3>Edge Assisted SLAM with Human-Construction
+                          Collaborative Robot</h3>
+                        <div class = "card-desc-proj">
+                            We test the EdgeSLAM algorithm for generating a map to ensure that it can be used at a construction site
+                          building where the aim of the robot is to navigate to specific goals
+                          while avoiding humans and maintaining a safe distance of 1.25
+                          meters from the human workers at all points in time. Further, our
+                          approach uses a YOLOv3 network to detect a human worker and
+                          then performs clustering and Kalman filtering for point-cloud
+                          data from a depth camera to estimate the relative human motion
+                          under the robot's local coordination
+                        </div>
+
+                        </div>
+
+                </div>
+            </div>
+            <!-- Repeat this card structure for each project -->
+            <div class="card_proj">
+                <div class="card-inner_proj">
+                    <div class="card-front_proj">
+                        <img src="figures/spanish.jpg" alt="Spanish News Classification Project">
+                    </div>
+                    <div class="card-back_proj">
+                        <h3>Spanish News Classification</h3>
+                        <div class = "card-desc-proj">This project focuses on text classification using a BERT-based model on a Spanish news dataset.
+                          The dataset is preprocessed and split into training, validation, and test sets.
+                          The model architecture includes input layers for tokenized text and attention masks,
+                          followed by a BERT layer and a softmax output layer. The model is trained using TensorFlow with
+                           Adam optimizer and categorical crossentropy loss. Visualization techniques, such as training
+                            and validation accuracy plots, training and validation loss plots, and a confusion matrix,
+                            are employed to analyze the model's performance.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for each project -->
+            <div class="card_proj">
+                <div class="card-inner_proj">
+                    <div class="card-front_proj">
+                        <img src="figures/manu.webp" alt="Voynich Manuscript Markov Model Project">
+                    </div>
+                    <div class="card-back_proj">
+                        <h3>Markov Model for Voynich Manuscript</h3>
+                        <div class = "card-desc-proj"> Markov model of the Voynich Manuscript provides us with useful information for
+                          analysing the Voynich script. We used the transition matrices generated by our
+                           model to compare the six sections of the Manuscript, to compare the Manuscript
+                            to several natural languages, and to calculate the most likely character for
+                             several unknown characters in this transcription of the Voynich Manuscript.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this card structure for each project -->
+            <div class="card_proj">
+              <div class="card-inner_proj">
+                  <div class="card-front_proj">
+                      <img src="figures/vit.png" alt="Vision Transformer Project">
+                  </div>
+                  <div class="card-back_proj">
+                      <h3>Vision Transformer</h3>
+                      <div class = "card-desc-proj"> This project centers on the re-
+                        implementation of the Vision Transformer (ViT) architecture, a pivotal development in computer vision. ViT utilizes
+                        self-attention mechanisms for image recognition, promising to
+                        surpass conventional convolutional neural networks (CNNs).
+                        Challenges to be addressed include scaling ViT for larger
+                        images and datasets while maintaining efficiency, devising
+                        efficient pretraining strategies in data-limited scenarios,
+                        optimizing fine-tuning techniques for specific tasks, and
+                        enhancing interpretability.</div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card_proj">
+            <div class="card-inner_proj">
+                <div class="card-front_proj">
+                    <img src="figures/hand.jpg" alt="Hand Gesture Recognition Project">
+                </div>
+                <div class="card-back_proj">
+                    <h3>Hand-Gesture Recognition</h3>
+                    <div class = "card-desc-proj"> The Hand Gesture Recognition project utilizes the Sign Language MNIST dataset, a modification of the classic MNIST, containing 27,455 training cases and
+                      7,172 test cases representing 24 classes of American Sign Language letters. The dataset was expanded using image processing techniques to create variations
+                       for better machine learning model training. This project aims to develop a robust visual recognition algorithm to assist the deaf and hard-of-hearing
+                      in better communicating through computer vision applications</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card_proj">
+          <div class="card-inner_proj">
+              <div class="card-front_proj">
+                  <img src="figures/cifar.png" alt="CIFAR-100 Classification Project">
+              </div>
+              <div class="card-back_proj">
+                  <h3>Classifying CIFAR100</h3>
+                  <div class = "card-desc-proj"> This project, conducted in collaboration with a partner, focuses on implementing
+                    architectures for image classification using the CIFAR-100 dataset. The architectures
+                     consist of convolutional layers with pooling and at least one fully connected layer,
+                      followed by softmax for the output layer. TensorFlow is utilized for model implementation,
+                       with a main loop for training defined in separate Python files. Results and analysis are presented in a written report following a provided template,
+                         including experimental setup, results, and conclusions.</div>
+              </div>
+          </div>
+        </div>
+
+
+
+      <div class="card_proj">
+        <div class="card-inner_proj">
+            <div class="card-front_proj">
+                <img src="figures/fmnist.png" alt="Fashion MNIST Classification Project">
+            </div>
+            <div class="card-back_proj">
+                <h3>Classifying Fashion MNIST</h3>
+                <div class = "card-desc-proj"> This project explores the design and implementation of two architectures for image classification
+                  using the Fashion MNIST dataset. The architectures consist of fully connected layers with ReLU activation
+                   for hidden nodes and softmax for the output layer. Hyperparameter selection is conducted independently of
+                     the test set, with validation data obtained through either a single training set and a single validation
+                      set or k-fold cross-validation. The models are optimized using Adam, with at least two sets of hyperparameters
+                       and one regularizer evaluated for each architecture.</div>
+            </div>
+        </div>
+      </div>
+
+      <div class="card_proj">
+        <div class="card-inner_proj">
+            <div class="card-front_proj">
+                <img src="figures/rnn.png" alt="Sequence Modeling with GRU, LSTM, and Transformer">
+            </div>
+            <div class="card-back_proj">
+                <h3>Sequence Modeling: GRU, LSTM & Transformer</h3>
+                <div class = "card-desc-proj">This project compares recurrent and attention-based architectures for sequence modeling tasks.
+                  We implemented and evaluated GRU (Gated Recurrent Unit), LSTM (Long Short-Term Memory), and Transformer models
+                  on time-series prediction and natural language processing tasks. The study analyzes the trade-offs between
+                  computational efficiency, long-range dependency handling, and model performance across different sequence lengths
+                  and complexity levels.</div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    </div>
+
     <div id="hobbies" class="section">
 
         <div class=container_hobbies>
@@ -460,7 +458,7 @@
     <div id="news" class="section">
         <div class="content">
           <h1 class="news-heading">News!</h1>
-          <ul class="news-list" style="font-size: 1.5em; color: white; line-height: 1.8;">
+          <ul class="news-list" style="font-size: 1.2em; color: white; line-height: 1.8;">
           <li class="news-highlight">Paper &#8220;Look Once, Beam Twice: Camera&#8209;Primed Real&#8209;Time Double&#8209;Directional mmWave Beam Management for Vehicular Connectivity&#8221; accepted at 2026 IEEE International Conference on Sensing, Communication, and Networking (SECON) (March 2026)</li>
           <li>Started PhD in Wireless Communications with focus on Millimeter Wave for V2I (May 2024)</li>
           <li>Graduated with Masters Degree in Computer Science from UNL (Lincoln, NE, May 2025)</li>
@@ -471,14 +469,26 @@
           <i class="fas fa-chevron-down"></i>
         </div>
       </div>
-    
+
+    <div id="outreach" class="section">
+        <div class="content">
+          <h1 class="news-heading" style="animation: none;">Outreach</h1>
+          <ul class="news-list" style="font-size: 1.2em; color: white; line-height: 1.8;">
+            <li><strong style="color: #f6aa1c;">Undergrad Research Fair</strong> &mdash; Presented research projects to undergraduate computer science major students</li>
+            <li><strong style="color: #f6aa1c;">K-12 Outreach Fair</strong> &mdash; Demonstrated research activities to K&ndash;12 students</li>
+            <li><strong style="color: #f6aa1c;">Mentorship</strong> &mdash; Mentored undergraduate researchers on experimental design, data analysis, and research communication</li>
+            <li><strong style="color: #f6aa1c;">Paper Review</strong> &mdash; Reviewed for IEEE Transactions on Wireless Communications (2025, 2026)</li>
+          </ul>
+        </div>
+    </div>
+
     <div id="contact" class="section">
         <!-- <div class='console-container' style="font-size: 4em; font-weight: 400;"><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div> -->
         
         <div class="content">
-        <div class='console-container' style="justify-content:center; font-size: 3em; font-weight: 400;"><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+        <div class='console-container' style="justify-content:center; font-size: 2.4em; font-weight: 400;"><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
       
-          <i style=" font-size: 1.5em;  color: #4E5B6C;">Feel free to reach out to me using the following contact information!</i>
+          <i style=" font-size: 1.2em;  color: #4E5B6C;">Feel free to reach out to me using the following contact information!</i>
           <br>
           <a style="font-size: 2em; color: #EEFBFF;" target="_blank" href="mailto:apramanik2@huskers.unl.edu" aria-label="Send Email"><i style="color: #EEFBFF;" class="fas fa-envelope"></i></a>
           <a style="font-size: 2em; color: #EEFBFF;" target="_blank" href="https://www.linkedin.com/in/apala-pramanik" aria-label="LinkedIn Profile"><i style="color: #EEFBFF;" class="fab fa-linkedin"></i></a>

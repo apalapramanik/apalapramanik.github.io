@@ -26,19 +26,21 @@ body {
     align-items: center;
     scroll-snap-align: start;
     color: black;
-    margin-left: 50px;
-    margin-right: 50px;
-    
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .content {
     text-align: left;
-    padding: 50px;
-    top: 42%;
-    left: 50%;
+    padding: 20px;
     color: black;
-    max-width: 800px;
-    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .content_home {
@@ -56,7 +58,7 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.4em;
     margin-bottom: 20px;
 }
 
@@ -97,7 +99,7 @@ h1 {
     position: fixed;
     top: 10px;
     left: 10px;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: bold;
     color: #778da9;
     z-index: 999;
@@ -118,12 +120,12 @@ h1 {
     }
 
     h1 {
-        font-size: 3em;
-    
+        font-size: 2.4em;
+
     }
 
     p {
-        font-size: 2em;
+        font-size: 1.4em;
         line-height: 1.5;
     }
 
