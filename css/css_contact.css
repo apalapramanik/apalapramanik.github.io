@@ -1,57 +1,66 @@
 #contact {
-
-    color: #0A0A15;
+    color: white;
     padding: 50px;
     display: flex;
-    /* height: 33.33vh; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
     position: relative;
-  }
-  
+}
 
-  #contact h1 {
-    font-size: 2.4em;
-  }
+.contact-content {
+    text-align: center;
+}
 
-  #contact p {
-    font-size: 1.4em;
-  }
+.contact-heading {
+    font-size: 3.5em;
+    color: #f6aa1c;
+    margin: 0 0 16px 0;
+}
 
-  #contact ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1.4em;
-  }
+.contact-tagline {
+    font-size: 1.1em;
+    color: #b8c7d1;
+    max-width: 640px;
+    margin: 0 auto 32px auto;
+    line-height: 1.6;
+}
 
-  #contact li {
-    margin-bottom: 10px;
-    color: white;
-  }
+.contact-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #f6aa1c;
+    color: #0A0A15;
+    font-size: 1.15em;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 20px rgba(246, 170, 28, 0.35);
+}
 
-  #contact li strong {
-    color: white; 
-  }
+.contact-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(246, 170, 28, 0.5);
+}
 
-  
-  .hidden {
-    opacity:0;
-  }
-  #contact .console-container {
+.contact-socials {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 32px;
+}
 
-    font-family:"Playfair Display";
-    font-size:3em;
-    text-align:center;
-    display:block;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .console-underscore {
-     display:inline-block;
-    position:relative;
-    top:-0.14em;
-    left:10px;
-  }
+.contact-socials a {
+    color: #b8c7d1;
+    font-size: 1.9em;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-socials a:hover {
+    color: #f6aa1c;
+    transform: translateY(-4px);
+}
 

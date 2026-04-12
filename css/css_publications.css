@@ -1,15 +1,11 @@
 
 #publications {
-    padding: 20px 20px;
-    padding-top: 70px;
+    padding: 40px 20px;
     position: relative;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto;
     justify-content: center;
     max-width: 1200px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     box-sizing: border-box;
 }
 
@@ -27,41 +23,11 @@
 
 
 #publications-heading {
-    position:absolute;
-    left: 0px;
-    top: 30px;
-    font-size: 64px;
-    color: #e0e1dd;
-    overflow: hidden; /* Hide overflow */
-    font-weight:1000;
-    
-}
-
-.vertical-typing > div {
-    /* display: block; */
-    margin-bottom: 1px; 
-    margin-left: auto;
-    height: 0;
-    overflow: hidden;
-    /* animation: typing 2s forwards; */
-    animation: typing 3s forwards infinite;
-    animation-delay: 1s;
-}
-
-.vertical-typing > div:last-child {
-    margin-bottom: 0; 
-}
-
-@keyframes typing {
-    0% {
-        height: 0;
-    }
-    20% {
-        height: 0;
-    }
-    100% {
-        height: 1.1em;
-    }
+    font-size: 3.5em;
+    color: #f6aa1c;
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-weight: 700;
 }
 
 .timeline {
@@ -94,6 +60,24 @@
     margin-bottom: 4px;
 }
 
+.award-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f6aa1c, #d68910);
+    color: #0A0A15;
+    font-size: 0.55em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 6px rgba(246, 170, 28, 0.4);
+}
+
+.award-badge i {
+    margin-right: 4px;
+}
+
 .timeline .timeline-details {
     color: #e0e1dd;
     margin-bottom: 4px;
@@ -111,25 +95,12 @@
 
 
 
-@media (max-width: 1800px) {
+@media (max-width: 1300px) {
+    #publications-heading {
+        font-size: 2.5em;
+    }
+
     .timeline .timeline-item:before {
         left: 0;
-    }
-
-    #publications-heading {
-        position: relative;
-        top: 0;
-        left: 0;
-        font-size: 42px;
-        text-align: center;
-    }
-
-    .vertical-typing > div {
-        display: inline-block;
-        margin-bottom: 0;
-        height: auto;
-        overflow: visible;
-        animation: none;
-        transform: rotate(0deg);
     }
 }
