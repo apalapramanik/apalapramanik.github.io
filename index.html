@@ -38,12 +38,16 @@
     <link rel="stylesheet" type="text/css" href="css/css_blogs.css">
     <link rel="stylesheet" type="text/css" href="css/css_skills.css">
     <link rel="stylesheet" type="text/css" href="css/css_experience.css">
+    <link rel="stylesheet" type="text/css" href="css/css_outreach.css">
+    <link rel="stylesheet" type="text/css" href="css/css_research_statement.css">
     <link rel="stylesheet" type="text/css" href="css/css_hobbies.css">
    
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
    
 
 
@@ -191,8 +195,27 @@
         </div>
     </div>
 
+    <div id="research-statement" class="section">
+        <div class="research-statement-container">
+            <h1 class="research-statement-heading">Research Statement.</h1>
+            <div class="research-statement-card">
+                <div class="research-quote-mark"><i class="fas fa-quote-left"></i></div>
+                <p class="research-statement-body">My research focuses on making <strong>mmWave wireless links survive the real world</strong> &mdash; where vehicles move, blockages happen, and hardware imposes hard constraints. I combine <strong>machine learning</strong>, <strong>camera and sensor cues</strong>, and <strong>ray-traced propagation models</strong> to enable fast, reliable double-directional beam management for V2I and V2X connectivity.</p>
+                <p class="research-statement-body">I'm especially interested in closing the loop between <strong>perception and the physical layer</strong>: using what a camera sees to prime where a beam points, and using reinforcement learning to adapt transmit power and gain in real time under SNR constraints. The goal is practical &mdash; algorithms that run on SDR testbeds today and scale to vehicular networks tomorrow.</p>
+                <div class="research-keywords">
+                    <span class="research-keyword">mmWave Beam Management</span>
+                    <span class="research-keyword">Vision-Aided Wireless</span>
+                    <span class="research-keyword">Reinforcement Learning</span>
+                    <span class="research-keyword">Ray Tracing</span>
+                    <span class="research-keyword">V2I / V2X</span>
+                    <span class="research-keyword">Software-Defined Radio</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="Research" class="section">
-        
+
         <section id="publications" class="timeline">
             
             <div class="container">
@@ -216,17 +239,7 @@
                     </div>
                 </div>
                 
-                <div class="timeline-item" >       
-                    <div class="timeline-right">
-                        <h3 class="timeline-title">Vision-based Runtime Monitoring for Human-Construction Robot Systems</h3>           
-                        <i class="timeline-details">IROS 2023 Workshop : Formal methods techniques in robotics systems: Design and control</i>
-                        <p class="timeline-details">Authors: <strong style="color:#f6aa1c;">Apala Pramanik</strong>, Kyungki Kim,Dung Hoang Tran</p>
-                        <a target="_blank" style="color: #4E5B6C;"href="iros_2023_workshop.pdf"><i class="fas fa-graduation-cap"></i></a>
-                    
-                        
-                    </div>
-                </div>
-                <div class="timeline-item" >        
+                <div class="timeline-item" >
                     <div class="timeline-right">
                         <h3 class="timeline-title">ASTITVA: assistive special tools and technologies for inclusion of visually challenged</h3>             
                         <i class="timeline-details">2021 international conference on computing, communication, and intelligent systems (ICCCIS)</i>
@@ -364,6 +377,7 @@
                     <ul class="skill-list">
                         <li>Ubuntu / Linux</li>
                         <li>Git</li>
+                        <li>Docker</li>
                         <li>LaTeX (Overleaf)</li>
                     </ul>
                 </div>
@@ -464,128 +478,45 @@
             </div>
 
             <div class="card_proj">
-                <div class="card-inner_proj">
-                    <div class="card-front_proj">
-                        <img src="figures/spanish.jpg" alt="Spanish News Classification Project">
-                    </div>
-                    <div class="card-back_proj">
-                        <h3>Spanish News Classification</h3>
-                        <div class = "card-desc-proj">This project focuses on text classification using a BERT-based model on a Spanish news dataset.
-                          The dataset is preprocessed and split into training, validation, and test sets.
-                          The model architecture includes input layers for tokenized text and attention masks,
-                          followed by a BERT layer and a softmax output layer. The model is trained using TensorFlow with
-                           Adam optimizer and categorical crossentropy loss. Visualization techniques, such as training
-                            and validation accuracy plots, training and validation loss plots, and a confusion matrix,
-                            are employed to analyze the model's performance.</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Repeat this card structure for each project -->
-            <div class="card_proj">
-                <div class="card-inner_proj">
-                    <div class="card-front_proj">
-                        <img src="figures/manu.webp" alt="Voynich Manuscript Markov Model Project">
-                    </div>
-                    <div class="card-back_proj">
-                        <h3>Markov Model for Voynich Manuscript</h3>
-                        <div class = "card-desc-proj"> Markov model of the Voynich Manuscript provides us with useful information for
-                          analysing the Voynich script. We used the transition matrices generated by our
-                           model to compare the six sections of the Manuscript, to compare the Manuscript
-                            to several natural languages, and to calculate the most likely character for
-                             several unknown characters in this transcription of the Voynich Manuscript.</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Repeat this card structure for each project -->
-            <div class="card_proj">
               <div class="card-inner_proj">
                   <div class="card-front_proj">
                       <img src="figures/vit.png" alt="Vision Transformer Project">
+                      <div class="card-year-tag">2023</div>
                   </div>
                   <div class="card-back_proj">
-                      <h3>Vision Transformer</h3>
-                      <div class = "card-desc-proj"> This project centers on the re-
-                        implementation of the Vision Transformer (ViT) architecture, a pivotal development in computer vision. ViT utilizes
-                        self-attention mechanisms for image recognition, promising to
-                        surpass conventional convolutional neural networks (CNNs).
-                        Challenges to be addressed include scaling ViT for larger
-                        images and datasets while maintaining efficiency, devising
-                        efficient pretraining strategies in data-limited scenarios,
-                        optimizing fine-tuning techniques for specific tasks, and
-                        enhancing interpretability.</div>
+                      <h3>Vision Transformer Re-implementation</h3>
+                      <div class="card-stats">
+                          <span class="stat-badge">Self-Attention</span>
+                          <span class="stat-badge">PyTorch</span>
+                      </div>
+                      <div class="card-desc-proj">Re-implemented the Vision Transformer (ViT) architecture from scratch, exploring self-attention
+                        mechanisms for image recognition. Studied scaling challenges, pretraining strategies in data-limited
+                        regimes, and fine-tuning techniques compared to conventional CNNs.</div>
                   </div>
               </div>
-          </div>
-
-          <div class="card_proj">
-            <div class="card-inner_proj">
-                <div class="card-front_proj">
-                    <img src="figures/hand.jpg" alt="Hand Gesture Recognition Project">
-                </div>
-                <div class="card-back_proj">
-                    <h3>Hand-Gesture Recognition</h3>
-                    <div class = "card-desc-proj"> The Hand Gesture Recognition project utilizes the Sign Language MNIST dataset, a modification of the classic MNIST, containing 27,455 training cases and
-                      7,172 test cases representing 24 classes of American Sign Language letters. The dataset was expanded using image processing techniques to create variations
-                       for better machine learning model training. This project aims to develop a robust visual recognition algorithm to assist the deaf and hard-of-hearing
-                      in better communicating through computer vision applications</div>
-                </div>
             </div>
 
-        </div>
-
-        <div class="card_proj">
-          <div class="card-inner_proj">
-              <div class="card-front_proj">
-                  <img src="figures/cifar.png" alt="CIFAR-100 Classification Project">
+            <div class="card_proj">
+              <div class="card-inner_proj">
+                  <div class="card-front_proj">
+                      <img src="figures/rnn.png" alt="Sequence Modeling with GRU, LSTM, and Transformer">
+                      <div class="card-year-tag">2023</div>
+                  </div>
+                  <div class="card-back_proj">
+                      <h3>Sequence Modeling: GRU, LSTM &amp; Transformer</h3>
+                      <div class="card-stats">
+                          <span class="stat-badge">GRU / LSTM</span>
+                          <span class="stat-badge">Transformer</span>
+                          <span class="stat-badge">TensorFlow</span>
+                      </div>
+                      <div class="card-desc-proj">Comparative study of recurrent and attention-based architectures for sequence modeling. Implemented
+                        and evaluated GRU, LSTM, and Transformer models on time-series prediction and NLP tasks, analyzing
+                        trade-offs between compute efficiency, long-range dependency handling, and accuracy.</div>
+                  </div>
               </div>
-              <div class="card-back_proj">
-                  <h3>Classifying CIFAR100</h3>
-                  <div class = "card-desc-proj"> This project, conducted in collaboration with a partner, focuses on implementing
-                    architectures for image classification using the CIFAR-100 dataset. The architectures
-                     consist of convolutional layers with pooling and at least one fully connected layer,
-                      followed by softmax for the output layer. TensorFlow is utilized for model implementation,
-                       with a main loop for training defined in separate Python files. Results and analysis are presented in a written report following a provided template,
-                         including experimental setup, results, and conclusions.</div>
-              </div>
-          </div>
+            </div>
+
         </div>
-
-
-
-      <div class="card_proj">
-        <div class="card-inner_proj">
-            <div class="card-front_proj">
-                <img src="figures/fmnist.png" alt="Fashion MNIST Classification Project">
-            </div>
-            <div class="card-back_proj">
-                <h3>Classifying Fashion MNIST</h3>
-                <div class = "card-desc-proj"> This project explores the design and implementation of two architectures for image classification
-                  using the Fashion MNIST dataset. The architectures consist of fully connected layers with ReLU activation
-                   for hidden nodes and softmax for the output layer. Hyperparameter selection is conducted independently of
-                     the test set, with validation data obtained through either a single training set and a single validation
-                      set or k-fold cross-validation. The models are optimized using Adam, with at least two sets of hyperparameters
-                       and one regularizer evaluated for each architecture.</div>
-            </div>
-        </div>
-      </div>
-
-      <div class="card_proj">
-        <div class="card-inner_proj">
-            <div class="card-front_proj">
-                <img src="figures/rnn.png" alt="Sequence Modeling with GRU, LSTM, and Transformer">
-            </div>
-            <div class="card-back_proj">
-                <h3>Sequence Modeling: GRU, LSTM & Transformer</h3>
-                <div class = "card-desc-proj">This project compares recurrent and attention-based architectures for sequence modeling tasks.
-                  We implemented and evaluated GRU (Gated Recurrent Unit), LSTM (Long Short-Term Memory), and Transformer models
-                  on time-series prediction and natural language processing tasks. The study analyzes the trade-offs between
-                  computational efficiency, long-range dependency handling, and model performance across different sequence lengths
-                  and complexity levels.</div>
-            </div>
-        </div>
-      </div>
-
-    </div>
 
 
 
@@ -640,7 +571,6 @@
           <li><span class="news-date">May 2025</span> Graduated with MS in Computer Science from University of Nebraska-Lincoln</li>
           <li><span class="news-date">Oct 2024</span> Presented &#8220;Perception-based Runtime Monitoring and Verification for Human-Robot Construction Systems&#8221; at <strong>ACM/IEEE MEMOCODE 2024</strong> &mdash; Best Paper Candidate (Raleigh, NC)</li>
           <li><span class="news-date">Aug 2024</span> Started PhD in Wireless Communications with focus on millimeter wave for V2I at UNL</li>
-          <li><span class="news-date">2023</span> Presented &#8220;Vision-based Runtime Monitoring for Human-Construction Robot Systems&#8221; at <strong>IROS 2023 Workshop</strong> on Formal Methods in Robotics</li>
           </ul>
         </div>
         <div class="chevron-down" onclick="scrollToNext('#news')">
@@ -649,13 +579,45 @@
       </div>
 
     <div id="outreach" class="section">
-        <div class="content">
-          <h1 class="news-heading">Outreach.</h1>
-          <ul class="news-list" style="font-size: 1.2em; color: white; line-height: 1.8;">
-            <li><strong style="color: #f6aa1c;">Undergrad Research Fair</strong> &mdash; Presented research projects to undergraduate computer science major students</li>
-            <li><strong style="color: #f6aa1c;">K-12 Outreach Fair</strong> &mdash; Demonstrated research activities to K&ndash;12 students</li>
-            <li><strong style="color: #f6aa1c;">Mentorship</strong> &mdash; Mentored undergraduate researchers on experimental design, data analysis, and research communication</li>
-          </ul>
+        <div class="outreach-container">
+          <h1 class="outreach-heading">Outreach.</h1>
+          <p class="outreach-subtitle">Sharing wireless research with students across every level &mdash; from curious kids to future PhDs.</p>
+          <div class="outreach-grid">
+
+            <div class="outreach-card">
+                <div class="outreach-icon"><i class="fas fa-user-graduate"></i></div>
+                <h3 class="outreach-title">Undergraduate Research Fair</h3>
+                <p class="outreach-desc">Presented live demonstrations of mmWave beamforming to undergraduate CS students, walking them through how directional beams are formed and comparing the performance of different beamforming strategies. The goal was to pull back the curtain on what graduate research actually looks like and motivate them to pursue research careers of their own.</p>
+                <div class="outreach-tags">
+                    <span class="outreach-tag">mmWave Demo</span>
+                    <span class="outreach-tag">Beamforming</span>
+                    <span class="outreach-tag">Research Motivation</span>
+                </div>
+            </div>
+
+            <div class="outreach-card">
+                <div class="outreach-icon"><i class="fas fa-gamepad"></i></div>
+                <h3 class="outreach-title">K&ndash;12 Outreach Fair</h3>
+                <p class="outreach-desc">Designed interactive games inspired by mmWave beamforming and beam alignment to explain wireless research to K&ndash;12 students in a fun, hands-on way. Kids got to physically &ldquo;steer beams,&rdquo; align transmitters and receivers, and see for themselves that research can be playful, creative, and genuinely cool.</p>
+                <div class="outreach-tags">
+                    <span class="outreach-tag">Interactive Games</span>
+                    <span class="outreach-tag">Beam Alignment</span>
+                    <span class="outreach-tag">STEM Outreach</span>
+                </div>
+            </div>
+
+            <div class="outreach-card">
+                <div class="outreach-icon"><i class="fas fa-hands-helping"></i></div>
+                <h3 class="outreach-title">Summer Undergraduate Mentorship</h3>
+                <p class="outreach-desc">Mentored undergraduate researchers over the summer, guiding them through hands-on contributions to our ongoing projects. Helped them ramp up on experimental design, data collection, SDR-based testbeds, and technical communication &mdash; so they could leave the summer with real research skills and a tangible project they built themselves.</p>
+                <div class="outreach-tags">
+                    <span class="outreach-tag">Summer Research</span>
+                    <span class="outreach-tag">Experimental Design</span>
+                    <span class="outreach-tag">SDR Testbeds</span>
+                </div>
+            </div>
+
+          </div>
         </div>
     </div>
 
@@ -663,6 +625,7 @@
         <div class="content contact-content">
           <h1 class="contact-heading">Let's Connect.</h1>
           <p class="contact-tagline">I'm always open to conversations about wireless communication, ML research, internships, and collaborations.</p>
+          <p class="contact-response-time"><i class="fas fa-clock"></i> I usually reply within 24 hours.</p>
           <a href="mailto:apramanik2@huskers.unl.edu?subject=Internship%20Opportunity%20%2F%20Collaboration" class="contact-primary">
               <i class="fas fa-envelope"></i> apramanik2@huskers.unl.edu
           </a>
@@ -685,7 +648,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-left">
-                &copy; 2026 Apala Pramanik &bull; Built with HTML, CSS &amp; JavaScript
+                &copy; 2026 &bull; Designed &amp; built by Apala Pramanik
             </div>
             <div class="footer-right">
                 <a href="https://github.com/apalapramanik" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>

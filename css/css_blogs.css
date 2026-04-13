@@ -1,19 +1,16 @@
-#blogs {
-    align-items: flex-start;
-}
 
 .blogs-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .blogs-heading {
     font-size: 3.5em;
     color: #f6aa1c;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 .blogs-grid {

@@ -1,11 +1,7 @@
 #contact {
-    color: white;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: relative;
+    justify-content: center;
+    text-align: center;
 }
 
 .contact-content {
@@ -22,8 +18,22 @@
     font-size: 1.1em;
     color: #b8c7d1;
     max-width: 640px;
-    margin: 0 auto 32px auto;
+    margin: 0 auto 12px auto;
     line-height: 1.6;
+}
+
+.contact-response-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85em;
+    color: #f6aa1c;
+    background-color: rgba(246, 170, 28, 0.1);
+    border: 1px solid rgba(246, 170, 28, 0.35);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin: 0 auto 28px auto;
+    font-weight: 600;
 }
 
 .contact-primary {

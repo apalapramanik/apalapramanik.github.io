@@ -1,0 +1,108 @@
+.outreach-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.outreach-heading {
+    font-size: 3.5em;
+    color: #f6aa1c;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.outreach-subtitle {
+    text-align: center;
+    color: #b8c7d1;
+    font-size: 0.95em;
+    font-style: italic;
+    margin: 0 auto 30px auto;
+    max-width: 720px;
+}
+
+.outreach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.outreach-card {
+    background-color: #1b263b;
+    border-radius: 10px;
+    padding: 28px 26px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid rgba(119, 141, 169, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.outreach-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+    border-color: rgba(246, 170, 28, 0.5);
+}
+
+.outreach-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(246, 170, 28, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.outreach-icon i {
+    font-size: 1.5em;
+    color: #f6aa1c;
+}
+
+.outreach-card:hover .outreach-icon {
+    background-color: #f6aa1c;
+    transform: scale(1.05);
+}
+
+.outreach-card:hover .outreach-icon i {
+    color: #0A0A15;
+}
+
+.outreach-title {
+    font-size: 1.3em;
+    color: #eae0d5;
+    margin: 0 0 12px 0;
+}
+
+.outreach-desc {
+    font-size: 0.95em;
+    color: #e0e1dd;
+    line-height: 1.65;
+    margin: 0 0 16px 0;
+    flex: 1;
+}
+
+.outreach-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.outreach-tag {
+    background-color: rgba(119, 141, 169, 0.2);
+    color: #b8c7d1;
+    border: 1px solid rgba(119, 141, 169, 0.5);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.72em;
+    font-weight: 600;
+}
+
+@media (max-width: 1300px) {
+    .outreach-heading {
+        font-size: 2.5em;
+    }
+}
