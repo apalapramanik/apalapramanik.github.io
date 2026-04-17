@@ -43,4 +43,19 @@ document.addEventListener("DOMContentLoaded", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
+
+    // Dark / Light theme toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) {
+        themeToggle.addEventListener("click", function () {
+            const current = document.documentElement.getAttribute("data-theme");
+            if (current === "light") {
+                document.documentElement.removeAttribute("data-theme");
+                try { localStorage.setItem("theme", "dark"); } catch (e) {}
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+                try { localStorage.setItem("theme", "light"); } catch (e) {}
+            }
+        });
+    }
 });

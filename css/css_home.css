@@ -15,9 +15,9 @@ body {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: white;
-    background-color: #0A0A15;
-    background-image: radial-gradient(ellipse at top, #131a2b 0%, #0A0A15 60%);
+    color: var(--text-primary);
+    background-color: var(--bg-base);
+    background-image: radial-gradient(ellipse at top, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 60%);
     background-attachment: fixed;
 }
 
@@ -25,13 +25,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Space Grotesk", "Inter", sans-serif;
     font-weight: 700;
     letter-spacing: -0.01em;
+    color: var(--text-heading);
 }
 
 .section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    color: white;
+    color: var(--text-primary);
     padding: 40px 20px 40px 20px;
     max-width: 1200px;
     margin-left: auto;
@@ -123,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-stat-label {
     font-size: 0.75em;
-    color: #b8c7d1;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-top: 4px;
@@ -153,9 +154,9 @@ h1 {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: rgba(30, 60, 100, 0.6);
+    background-color: var(--card-bg);
     border-left: 3px solid #3fa9f5;
-    color: #dcf7ff;
+    color: var(--text-body);
     padding: 8px 14px;
     border-radius: 4px;
     font-size: 0.82em;
@@ -217,7 +218,7 @@ h1 {
 .social-icons a {
     display: inline-block;
     margin: 0 10px;
-    color: #778da9 ;
+    color: var(--text-soft);
     font-size: 1.5em;
 }
 
@@ -236,7 +237,7 @@ h1 {
     left: 14px;
     font-size: 42px;
     font-weight: bold;
-    color: #778da9;
+    color: var(--text-soft);
     z-index: 999;
     text-decoration: none;
     transition: color 0.25s ease, transform 0.25s ease;
@@ -281,9 +282,9 @@ h1 {
 }
 
 .site-footer {
-    background-color: rgba(10, 10, 21, 0.85);
-    border-top: 1px solid rgba(119, 141, 169, 0.3);
-    color: #b8c7d1;
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--card-border);
+    color: var(--text-muted);
     padding: 20px 40px;
     font-size: 0.85em;
     backdrop-filter: blur(4px);
@@ -300,7 +301,7 @@ h1 {
 }
 
 .footer-left {
-    color: #b8c7d1;
+    color: var(--text-muted);
 }
 
 .footer-right {
@@ -309,7 +310,7 @@ h1 {
 }
 
 .footer-right a {
-    color: #778da9;
+    color: var(--text-soft);
     font-size: 1.3em;
     transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -320,7 +321,7 @@ h1 {
 }
 
 .footer-updated {
-    color: #778da9;
+    color: var(--text-soft);
     font-size: 0.9em;
     font-style: italic;
 }

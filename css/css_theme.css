@@ -1,0 +1,106 @@
+/* Theme variables — dark is default, light is toggled via [data-theme="light"] */
+
+:root {
+    --bg-base: #0A0A15;
+    --bg-gradient-top: #131a2b;
+    --bg-gradient-bottom: #0A0A15;
+    --text-primary: #ffffff;
+    --text-heading: #eae0d5;
+    --text-body: #e0e1dd;
+    --text-muted: #b8c7d1;
+    --text-soft: #778da9;
+    --card-bg: #1b263b;
+    --card-bg-elevated: #2a3946;
+    --card-border: rgba(119, 141, 169, 0.2);
+    --card-border-hover: rgba(246, 170, 28, 0.5);
+    --hr-color: rgba(255, 255, 255, 0.08);
+    --navbar-bg: transparent;
+    --navbar-text: #ffffff;
+    --footer-bg: rgba(10, 10, 21, 0.85);
+    --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.25);
+    --shadow-card-hover: 0 12px 28px rgba(0, 0, 0, 0.45);
+    --accent: #f6aa1c;
+    --accent-dim: #d68910;
+    --accent-soft-bg: rgba(246, 170, 28, 0.15);
+    --accent-soft-border: rgba(246, 170, 28, 0.4);
+    --accent-text-on: #0A0A15;
+    --tag-bg: rgba(119, 141, 169, 0.2);
+    --tag-border: rgba(119, 141, 169, 0.5);
+    --tag-text: #b8c7d1;
+}
+
+[data-theme="light"] {
+    --bg-base: #f5f7fb;
+    --bg-gradient-top: #ffffff;
+    --bg-gradient-bottom: #eef2f8;
+    --text-primary: #1a1f2e;
+    --text-heading: #1a1f2e;
+    --text-body: #2d3447;
+    --text-muted: #5b6478;
+    --text-soft: #8b95a5;
+    --card-bg: #ffffff;
+    --card-bg-elevated: #f8f9fb;
+    --card-border: rgba(30, 40, 60, 0.08);
+    --card-border-hover: rgba(246, 170, 28, 0.55);
+    --hr-color: rgba(30, 40, 60, 0.1);
+    --navbar-bg: transparent;
+    --navbar-text: #1a1f2e;
+    --footer-bg: rgba(255, 255, 255, 0.85);
+    --shadow-card: 0 4px 14px rgba(30, 40, 60, 0.08);
+    --shadow-card-hover: 0 14px 32px rgba(30, 40, 60, 0.15);
+    --accent: #c88411;
+    --accent-dim: #a66a08;
+    --accent-soft-bg: rgba(200, 132, 17, 0.12);
+    --accent-soft-border: rgba(200, 132, 17, 0.4);
+    --accent-text-on: #ffffff;
+    --tag-bg: rgba(30, 40, 60, 0.06);
+    --tag-border: rgba(30, 40, 60, 0.15);
+    --tag-text: #4a5568;
+}
+
+/* Smooth theme transitions on color-affected elements */
+body, .section, .blog-card, .hobby-card, .skill-category,
+.exp-item, .outreach-card, .research-statement-card,
+.timeline .timeline-item, .card-back_proj, .card-front_proj,
+.site-footer, .navbar a, .contact-primary, #back-to-top,
+.hero-badge, .hero-paper-banner, .hero-cta, .hero-cta-outline,
+.research-keyword, .exp-tag, .outreach-tag, .stat-badge,
+.news-date, .award-badge, .blog-tag, .skill-level,
+.hero-stat-num, .hero-stat-label, .contact-response-time,
+h1, h2, h3, h4, p, li, span, a {
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: transparent;
+    border: 1.5px solid var(--card-border);
+    color: var(--text-muted);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--accent-soft-bg);
+    color: var(--accent);
+    border-color: var(--accent-soft-border);
+    transform: scale(1.08);
+}
+
+.theme-toggle .icon-moon,
+.theme-toggle .icon-sun {
+    line-height: 1;
+}
+
+:root .theme-toggle .icon-sun { display: none; }
+:root .theme-toggle .icon-moon { display: inline; }
+[data-theme="light"] .theme-toggle .icon-sun { display: inline; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }

@@ -16,7 +16,7 @@
 
 .contact-tagline {
     font-size: 1.1em;
-    color: #b8c7d1;
+    color: var(--text-muted);
     max-width: 640px;
     margin: 0 auto 12px auto;
     line-height: 1.6;
@@ -64,7 +64,7 @@
 }
 
 .contact-socials a {
-    color: #b8c7d1;
+    color: var(--text-muted);
     font-size: 1.9em;
     transition: color 0.25s ease, transform 0.25s ease;
 }

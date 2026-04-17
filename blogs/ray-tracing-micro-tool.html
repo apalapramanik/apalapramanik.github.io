@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How I built a lightweight Python toolkit to go from raw mmWave beam-sweep CSV data to an interactive floor-plan report in a single command.">
+    <title>Building a Ray Tracing Micro Tool for mmWave Beam-Sweep Analysis | Apala Pramanik</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/css_theme.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_home.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_blogpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../index.html" id="initials">ap.</a>
+
+    <div class="navbar">
+        <a href="../index.html#content_home">Home</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#blogs">Blogs</a>
+        <a href="../index.html#hobbies">Hobbies</a>
+        <a href="../index.html#news">News</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../APALA_RESUME.pdf">CV</a>
+    </div>
+
+    <div class="blogpost-wrapper">
+        <a href="../index.html#blogs" class="blogpost-back"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+
+        <div class="blogpost-tag">Tools &amp; Open Source</div>
+        <h1 class="blogpost-title">Building a Ray Tracing Micro Tool for mmWave Beam-Sweep Analysis</h1>
+        <p class="blogpost-meta">By Apala Pramanik &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; <a href="https://github.com/apalapramanik/Ray-Tracing-Micro-Tool" target="_blank" rel="noopener noreferrer" style="color:#f6aa1c;text-decoration:none;font-weight:600;"><i class="fab fa-github"></i> GitHub</a></p>
+
+        <hr class="blogpost-divider">
+
+        <div class="blogpost-body">
+            <p>Collecting mmWave beam-sweep data is the easy part of propagation research. The hard part is what comes next: turning a dense CSV of 3,969 signal-to-noise ratio measurements into something you can actually interpret — a spatial picture of which beam directions work, where specular reflections appear, and how the room geometry shapes the link. I built the <a href="https://github.com/apalapramanik/Ray-Tracing-Micro-Tool" target="_blank" rel="noopener noreferrer">Ray Tracing Micro Tool</a> to solve exactly that problem, and this post explains the design decisions behind it.</p>
+
+            <h2>The Problem: From Raw Data to Spatial Insight</h2>
+
+            <p>Our phased-array mmWave radios support 63 discrete beam directions each, spanning –45° to +45° in approximately 1.5° steps. An exhaustive beam sweep records the received SNR for every one of the 63 × 63 = 3,969 TX/RX beam pair combinations. The result is a compact CSV file — four columns, no header, 3,969 rows — but there is nothing obvious to look at in raw form.</p>
+
+            <p>The standard approach in our lab was to load the data into a MATLAB script and manually tweak plot settings each time. Recreating figures for a new experiment meant adjusting hardcoded paths and column mappings. It worked, but it didn't scale. Every new dataset produced a new version of the same script. I wanted a single command that would ingest any experiment folder and produce both publication-quality static heatmaps and a fully interactive report.</p>
+
+            <h2>Architecture: A Lightweight CLI with Two Modes</h2>
+
+            <p>The tool is structured as a single entry-point script (<code>raytrace.py</code>) that delegates to two independent modules:</p>
+
+            <ul>
+                <li><strong>generate_report.py</strong> — builds a self-contained HTML report with an interactive floor-plan overlay, live beam selection, and specular ray-tracing visualization. The entire output is a single <code>.html</code> file; no web server needed, no external dependencies to install in the browser.</li>
+                <li><strong>plot_heatmap.py</strong> — generates four publication-quality 500 dpi PNG and SVG figures: raw Rx power, SNR heatmap (TX angle × RX angle), incident-angle power, and incident-angle SNR. It also exposes a <code>LiveHeatmapPlotter</code> class for real-time sweep monitoring as measurements come in.</li>
+            </ul>
+
+            <p>Keeping the two modes as separate modules meant each could be tested and evolved independently. The CLI layer in <code>raytrace.py</code> does late imports — it only imports <code>numpy</code>, <code>pandas</code>, <code>matplotlib</code>, and <code>seaborn</code> once a valid subcommand is selected. This means validation errors (missing directory, missing <code>snr_data.csv</code>) surface immediately, even if the Python environment is incomplete.</p>
+
+            <h2>The Interactive HTML Report</h2>
+
+            <p>The most useful output for understanding a measurement campaign is the interactive report. The report embeds all data — the SNR matrix, the floor plan, the antenna positions, the wall segments — directly in the HTML as JavaScript variables. This makes it fully self-contained: email it, archive it, or open it three years later and it works identically.</p>
+
+            <p>The core visualization has three linked panels:</p>
+
+            <ul>
+                <li><strong>SNR heatmap</strong> — a 63 × 63 grid where each cell is colored by the measured SNR. Clicking a cell selects that TX/RX beam pair.</li>
+                <li><strong>Floor plan overlay</strong> — shows the room geometry with the TX and RX antennas drawn to scale. When a beam pair is selected, the tool draws the TX beam cone, the RX beam cone, and the specular reflection path (computed in real time using the law of reflection against each wall segment).</li>
+                <li><strong>Beam info panel</strong> — displays the exact TX angle, RX angle, and SNR for the selected pair, plus which wall produced the strongest specular contribution.</li>
+            </ul>
+
+            <p>The "best beam" — the pair with the highest measured SNR — is highlighted automatically on load, so the most important result is immediately visible without any interaction.</p>
+
+            <h2>The Floor Plan Editor</h2>
+
+            <p>To overlay beam paths on the actual room, the tool needs to know where the walls are. I built <code>floorplan.html</code>, a standalone browser-based editor that lets you draw a room to scale by clicking to place wall endpoints. You can drop predefined shapes (squares, rectangles), drag endpoints to adjust, and undo the last action. When you're done, clicking <strong>Save JSON</strong> exports a <code>floorplan.json</code> file containing TX position, RX position, boresight angles, and all wall segments as pixel coordinates (2 px = 1 inch).</p>
+
+            <p>The included <code>floorplan.json</code> is pre-configured for the NH Building 2nd-floor lab at UNL — where our mmWave measurement platform lives — so anyone in our group can run the tool immediately without touching the floor plan configuration.</p>
+
+            <h2>Specular Ray Tracing</h2>
+
+            <p>The specular reflection visualization is the part I'm most pleased with. Given the TX position, boresight, and selected TX beam index, the tool computes the physical direction the TX beam points in 2D space. It then finds the image point of the TX through each wall using the standard mirror-reflection construction and checks whether the line from that image point to the RX position intersects the wall segment within its bounds. When it does, the reflection point and path are drawn on the floor plan, and the incident angle is computed and displayed.</p>
+
+            <p>This is purely 2D geometric optics — no full electromagnetic simulation — but it is fast enough to recompute on every beam selection in the browser, and it consistently matches the high-SNR ridge patterns visible in the heatmap for our lab environment.</p>
+
+            <h2>What I Would Do Differently</h2>
+
+            <p>The tool currently handles only single-bounce specular reflections. In cluttered indoor environments, second-bounce paths through two walls are common and can dominate the received power. Extending the ray tracer to handle two-bounce paths is the obvious next step.</p>
+
+            <p>I also kept the floor plan editor intentionally simple — click to place walls, no snapping to grid, pixel coordinates only. For more complex rooms or multi-floor environments, a proper parametric editor would be more robust. That said, for our lab's measurement campaigns the current editor has been sufficient.</p>
+
+            <h2>Using the Tool</h2>
+
+            <p>The full source is on GitHub. Getting started requires only four commands:</p>
+
+            <pre><code>git clone https://github.com/apalapramanik/Ray-Tracing-Micro-Tool.git
+cd Ray-Tracing-Micro-Tool
+pip install -r requirements.txt
+python raytrace.py report example_experiment/</code></pre>
+
+            <p>The last command reads <code>example_experiment/snr_data.csv</code>, generates the report, and opens it in your browser. An example dataset from a real 63 × 63 sweep in our lab is included, so you can see the output immediately without collecting any measurements of your own.</p>
+
+            <p>If you use the tool in your own mmWave research, I'd be glad to hear about it — the contact page is always open.</p>
+        </div>
+
+        <hr class="blogpost-divider">
+    </div>
+</body>
+</html>
