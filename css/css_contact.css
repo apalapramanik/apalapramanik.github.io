@@ -10,7 +10,7 @@
 
 .contact-heading {
     font-size: 3.5em;
-    color: #f6aa1c;
+    color: var(--accent);
     margin: 0 0 16px 0;
 }
 
@@ -27,7 +27,7 @@
     align-items: center;
     gap: 8px;
     font-size: 0.85em;
-    color: #f6aa1c;
+    color: var(--accent);
     background-color: rgba(246, 170, 28, 0.1);
     border: 1px solid rgba(246, 170, 28, 0.35);
     padding: 6px 14px;
@@ -40,7 +40,7 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    background-color: #f6aa1c;
+    background-color: var(--accent);
     color: #0A0A15;
     font-size: 1.15em;
     font-weight: 600;
@@ -70,7 +70,7 @@
 }
 
 .contact-socials a:hover {
-    color: #f6aa1c;
+    color: var(--accent);
     transform: translateY(-4px);
 }
 

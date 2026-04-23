@@ -48,10 +48,10 @@
     --footer-bg: rgba(255, 255, 255, 0.85);
     --shadow-card: 0 4px 14px rgba(30, 40, 60, 0.08);
     --shadow-card-hover: 0 14px 32px rgba(30, 40, 60, 0.15);
-    --accent: #c88411;
-    --accent-dim: #a66a08;
-    --accent-soft-bg: rgba(200, 132, 17, 0.12);
-    --accent-soft-border: rgba(200, 132, 17, 0.4);
+    --accent: #b45309;
+    --accent-dim: #92400e;
+    --accent-soft-bg: rgba(180, 83, 9, 0.1);
+    --accent-soft-border: rgba(180, 83, 9, 0.35);
     --accent-text-on: #ffffff;
     --tag-bg: rgba(30, 40, 60, 0.06);
     --tag-border: rgba(30, 40, 60, 0.15);

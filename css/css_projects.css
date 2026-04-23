@@ -2,7 +2,7 @@
 
 .projects-heading {
     font-size: 3.5em;
-    color: #f6aa1c;
+    color: var(--accent);
     text-align: center;
     margin: 0 0 20px 0;
 }
@@ -93,7 +93,7 @@
 
 .stat-badge {
     background-color: rgba(246, 170, 28, 0.15);
-    color: #f6aa1c;
+    color: var(--accent);
     border: 1px solid rgba(246, 170, 28, 0.4);
     padding: 2px 8px;
     border-radius: 10px;
@@ -115,7 +115,7 @@
     gap: 6px;
     padding: 5px 12px;
     background-color: rgba(246, 170, 28, 0.12);
-    color: #f6aa1c;
+    color: var(--accent);
     border: 1px solid rgba(246, 170, 28, 0.45);
     border-radius: 4px;
     font-size: 0.78em;
@@ -126,7 +126,7 @@
 }
 
 .card-link:hover {
-    background-color: #f6aa1c;
+    background-color: var(--accent);
     color: #0A0A15;
 }
 

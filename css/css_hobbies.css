@@ -9,7 +9,7 @@
 
 .hobbies-heading {
     font-size: 3.5em;
-    color: #f6aa1c;
+    color: var(--accent);
     text-align: center;
     margin-bottom: 10px;
 }
@@ -93,11 +93,11 @@
 
 .hobby-icon i {
     font-size: 1.3em;
-    color: #f6aa1c;
+    color: var(--accent);
 }
 
 .hobby-card:hover .hobby-icon {
-    background-color: #f6aa1c;
+    background-color: var(--accent);
     transform: scale(1.05);
 }
 
@@ -121,7 +121,7 @@
 
 .hobby-link {
     font-size: 0.85em;
-    color: #f6aa1c;
+    color: var(--accent);
     font-weight: 600;
     display: inline-flex;
     align-items: center;

@@ -9,7 +9,7 @@
 
 .skills-heading {
     font-size: 3.5em;
-    color: #f6aa1c;
+    color: var(--accent);
     text-align: center;
     margin: 0 0 10px 0;
 }
@@ -36,7 +36,7 @@
 }
 
 .skill-level.core {
-    background-color: #f6aa1c;
+    background-color: var(--accent);
     color: #0A0A15;
 }
 
@@ -71,7 +71,7 @@
 
 .skill-category-icon {
     font-size: 2em;
-    color: #f6aa1c;
+    color: var(--accent);
     margin-bottom: 10px;
 }
 

@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-stat-num {
     font-size: 1.8em;
     font-weight: 700;
-    color: #f6aa1c;
+    color: var(--accent);
     line-height: 1;
 }
 
@@ -140,8 +140,8 @@ h1 {
     align-items: center;
     gap: 8px;
     background: linear-gradient(135deg, rgba(246, 170, 28, 0.18), rgba(246, 170, 28, 0.08));
-    border: 1.5px solid #f6aa1c;
-    color: #f6aa1c;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
     padding: 8px 14px;
     border-radius: 20px;
     font-size: 0.85em;
@@ -171,7 +171,7 @@ h1 {
 }
 
 .hero-paper-banner strong {
-    color: #f6aa1c;
+    color: var(--accent);
 }
 
 .hero-actions {
@@ -185,7 +185,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #f6aa1c;
+    background-color: var(--accent);
     color: #0A0A15;
     padding: 10px 20px;
     border-radius: 6px;
@@ -202,12 +202,12 @@ h1 {
 
 .hero-cta-outline {
     background-color: transparent;
-    color: #f6aa1c;
-    border: 1.5px solid #f6aa1c;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
 }
 
 .hero-cta-outline:hover {
-    background-color: #f6aa1c;
+    background-color: var(--accent);
     color: #0A0A15;
 }
 
@@ -244,7 +244,7 @@ h1 {
 }
 
 #initials:hover {
-    color: #f6aa1c;
+    color: var(--accent);
     transform: scale(1.08);
 }
 
@@ -255,7 +255,7 @@ h1 {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    background-color: #f6aa1c;
+    background-color: var(--accent);
     color: #0A0A15;
     display: flex;
     align-items: center;
@@ -316,7 +316,7 @@ h1 {
 }
 
 .footer-right a:hover {
-    color: #f6aa1c;
+    color: var(--accent);
     transform: translateY(-2px);
 }
 

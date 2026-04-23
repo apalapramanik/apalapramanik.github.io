@@ -35,7 +35,7 @@
 }
 
 .navbar a.nav-active {
-    color: #f6aa1c;
+    color: var(--accent);
     position: relative;
 }
 
@@ -46,6 +46,6 @@
     right: 5px;
     bottom: 2px;
     height: 2px;
-    background-color: #f6aa1c;
+    background-color: var(--accent);
     border-radius: 2px;
 }

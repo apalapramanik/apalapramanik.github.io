@@ -12,7 +12,7 @@
 
 .experience-heading {
     font-size: 3.5em;
-    color: #f6aa1c;
+    color: var(--accent);
     text-align: center;
     margin-bottom: 40px;
 }
@@ -55,7 +55,7 @@
 
 .exp-date {
     display: inline-block;
-    color: #f6aa1c;
+    color: var(--accent);
     font-size: 0.85em;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -102,7 +102,7 @@
     content: "\25B8";
     position: absolute;
     left: 0;
-    color: #f6aa1c;
+    color: var(--accent);
     font-weight: bold;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .exp-desc a {
-    color: #f6aa1c;
+    color: var(--accent);
     text-decoration: none;
 }
 

@@ -28,7 +28,7 @@
 
 #publications-heading {
     font-size: 3.5em;
-    color: #f6aa1c;
+    color: var(--accent);
     text-align: center;
     margin: 0 0 30px 0;
     font-weight: 700;
