@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (themeToggle) {
         themeToggle.addEventListener("click", function () {
             const current = document.documentElement.getAttribute("data-theme");
-            if (current === "light") {
+            if (current === "dark") {
                 document.documentElement.removeAttribute("data-theme");
-                try { localStorage.setItem("theme", "dark"); } catch (e) {}
-            } else {
-                document.documentElement.setAttribute("data-theme", "light");
                 try { localStorage.setItem("theme", "light"); } catch (e) {}
+            } else {
+                document.documentElement.setAttribute("data-theme", "dark");
+                try { localStorage.setItem("theme", "dark"); } catch (e) {}
             }
         });
     }

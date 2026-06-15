@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A technical review of ORANSlice by Cheng et al. (ACM MobiCom 2024): an open-source 5G network slicing platform for O-RAN built on OpenAirInterface.">
+    <title>Paper Review: ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN | Apala Pramanik</title>
+    <script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {}
+  })();
+</script>
+    <link rel="stylesheet" type="text/css" href="../css/css_theme.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_home.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/css_blogpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap">
+</head>
+<body>
+    <div id="initials">ap.</div>
+
+    <div class="navbar">
+        <a href="../index.html#content_home">Home</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#blogs">Blogs</a>
+        <a href="../index.html#hobbies">Hobbies</a>
+        <a href="../index.html#news">News</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../APALA_RESUME.pdf">CV</a>
+    </div>
+
+    <div class="blogpost-wrapper">
+        <a href="../index.html#blogs" class="blogpost-back"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+
+        <div class="blogpost-tag">5G &amp; O-RAN</div>
+        <h1 class="blogpost-title">Paper Review: ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN</h1>
+        <p class="blogpost-meta">By Apala Pramanik &nbsp;·&nbsp; Cheng et al., ACM MobiCom 2024</p>
+
+        <hr class="blogpost-divider">
+
+        <div class="blogpost-body">
+
+            <h2>What This Paper Does</h2>
+            <p>Cheng et al. present <strong>ORANSlice</strong>, a software framework that adds network slicing capabilities to OAI (OpenAirInterface), an open-source 5G base station stack. The system has three components: a slice-aware two-tier MAC scheduler on the gNB, multi-PDU session support on the OAI softwarized UE, and an E2SM-CCC service model with a RAN slicing xApp running on the OSC Near-RT RIC. The paper validates the system on two hardware testbeds and one simulator.</p>
+
+            <h2>Background: The Problem Being Addressed</h2>
+            <p>A 5G network serves very different types of users on the same physical radio infrastructure. A hospital needs low latency. A streaming platform needs high throughput. <strong>Network slicing</strong> is the mechanism for partitioning radio resources among these different service types.</p>
+
+            <p>Radio resources are organized as a time-frequency grid. Each cell is a PRB (Physical Resource Block). Slicing means deciding how many PRBs go to each slice at each moment.</p>
+
+            <p>3GPP defines this through an <strong>RRM Policy</strong> with three parameters per slice:</p>
+            <ul>
+                <li><strong>DedicatedRatio</strong>: permanently reserves a percentage of PRBs for a slice.</li>
+                <li><strong>MinRatio</strong>: guarantees a minimum percentage when the slice has active users.</li>
+                <li><strong>MaxRatio</strong>: caps the maximum a slice can consume.</li>
+            </ul>
+
+            <p>Each slice carries an identity called <strong>S-NSSAI</strong> (SST + SD). SST is an 8-bit field identifying the service type; SD is a 24-bit optional field distinguishing slices of the same type.</p>
+
+            <p>O-RAN splits the base station into an RU (Radio Unit), DU (Distributed Unit), and CU (Central Unit), and adds a <strong>Near-RT RIC</strong> (RAN Intelligent Controller) that runs xApps to control the network through a standardized E2 interface. The service model defining slice control messages is called <strong>E2SM-CCC</strong>.</p>
+
+            <h2>What Existed Before and Why It Was Insufficient</h2>
+            <p>Several prior tools addressed parts of this problem.</p>
+
+            <p><strong>SCOPE</strong><sup><a href="#fn1">1</a></sup> built a slicing xApp on srsRAN 4G. It uses custom service models that are not O-RAN E2SM-CCC compliant and does not follow the 3GPP RAN slicing model.</p>
+
+            <p><strong>FlexSlice</strong><sup><a href="#fn2">2</a></sup> implemented a real-time slice-aware scheduler on OAI 5G but had no O-RAN E2 integration: no xApp, no standards-compliant control loop.</p>
+
+            <p><strong>RadioSaber</strong><sup><a href="#fn3">3</a></sup> developed a channel-aware slicing scheduler but operated entirely inside an RF simulator, with no real hardware involved.</p>
+
+            <p><strong>ProSlice</strong><sup><a href="#fn4">4</a></sup> built a customized E2SM and xApp for slicing but does not follow 3GPP slicing specifications, is not O-RAN E2SM-CCC compliant, and is not open-source.</p>
+
+            <p><strong>Zipper</strong><sup><a href="#fn5">5</a></sup> implemented slicing on closed-source commercial protocol stacks, making it inaccessible to the research community.</p>
+
+            <p>The shared gap: no single open-source tool provided 3GPP-compliant slicing, O-RAN-compliant control, and support for multiple simultaneous slices on a single UE, all in one working system on real hardware.</p>
+
+            <h2>The Three Components</h2>
+
+            <h3>Two-Tier MAC Scheduler</h3>
+            <p>The stock OAI MAC layer uses a proportional-fair scheduler that divides PRBs among users without any awareness of slices or QoS requirements. ORANSlice replaces this with a <strong>two-tier approach</strong>:</p>
+            <ul>
+                <li><strong>Tier 1</strong> divides the total PRB pool across slices according to the received RRM Policy (MinRatio and MaxRatio). Unused PRBs above a slice's MinRatio go into a shared pool.</li>
+                <li><strong>Tier 2</strong> runs proportional-fair scheduling among UEs within each slice's allocated PRB budget.</li>
+            </ul>
+            <p>One note: DedicatedRatio is not yet implemented (acknowledged in a footnote). Only MinRatio and MaxRatio enforcement is demonstrated.</p>
+
+            <h3>Multi-PDU on OAI nrUE</h3>
+            <p>A PDU session is a data connection between a UE and the core network, bound to a specific slice via its S-NSSAI and assigned an IP address. 3GPP allows up to 8 simultaneous PDU sessions per UE. OAI's softwarized UE previously supported only one active PDU session at a time. ORANSlice extends it to support multiple concurrent sessions, enabling a single device to carry traffic on two slices simultaneously. Commercial devices like the Sierra Wireless EM9191 already support this in firmware; this work brings OAI's software implementation to the same level.</p>
+
+            <h3>E2SM-CCC and RAN Slicing xApp</h3>
+            <p>The authors implement a simplified version of the O-RAN E2SM-CCC service model for the OSC Near-RT RIC. Only the RRMPolicyRatio configuration is supported. The RAN slicing xApp logic is straightforward: every 10 seconds it reads the last 5 seconds of KPM data from InfluxDB, identifies the slice with the lowest average downlink throughput, assigns it MaxRatio = 90%, and assigns the other slice MaxRatio = 10%. It sends this as an E2 Control message to the gNB.</p>
+
+            <p>The data flow is:</p>
+            <pre>gNB → [E2 Indication] → KPM xApp → InfluxDB
+                                        ↓
+gNB ← [E2 Control]  ← RAN Slicing xApp ←</pre>
+            <p>A separate KPM xApp handles metric collection and storage. The RAN Slicing xApp only handles decisions.</p>
+
+            <h2>Testbeds</h2>
+            <ul>
+                <li><strong>Arena</strong>: a shared SDR-based testbed at Northeastern University with 24 USRP X310/X410 units on an office ceiling, providing 106 PRBs across 40 MHz.</li>
+                <li><strong>X5G</strong>: a private multi-vendor 5G network using NVIDIA Aerial for GPU-accelerated L1, OAI for higher layers, and a Foxconn commercial RU, providing 273 PRBs across 100 MHz.</li>
+                <li><strong>OAI RFSim</strong>: simulates the RF channel in software with no radio hardware.</li>
+            </ul>
+
+            <h2>Experiments and Results</h2>
+            <p><strong>Experiment 1</strong> tests the closed-loop control. Two slices, one UE each; the xApp toggles MaxRatio every 10 seconds. The result is an alternating PRB allocation pattern across all three environments, confirming the policy is enforced correctly. The xApp logic intentionally creates a self-reversing loop; whichever slice gets more PRBs gains higher throughput and becomes the "winner," so next round the other slice receives the 90% allocation. This oscillating behavior is the expected proof of correct operation, not an optimized outcome.</p>
+
+            <p><strong>Experiment 2</strong> tests MinRatio guarantees with multi-PDU. UE 1 runs two simultaneous PDU sessions (one per slice); UE 2 competes on Slice 1. With MinRatio = 0 on Slice 2, UE 2's competition starves Slice 2 throughput. Setting MinRatio to 80 restores it; reducing it to 40 reduces throughput proportionally. Results are consistent across all three environments.</p>
+
+            <h2>Honest Assessment</h2>
+            <p>The contribution here is <strong>integration, not algorithmic novelty</strong>. The two-tier scheduler is a clean but straightforward engineering decision. The xApp control logic (90%/10% toggle) is intentionally simple and would not be appropriate in a production deployment. The E2SM-CCC implementation is a simplified subset of the full specification.</p>
+
+            <p>That said, the paper's claim is specifically about building an open, standards-compliant foundation that others can extend. On that metric, it delivers. Prior tools forced researchers to choose between standards compliance, O-RAN integration, or open-source availability. ORANSlice provides all three together, on real hardware, with published code.</p>
+
+            <p>The portability demonstration across Arena, X5G, and RFSim is the most practically useful result. Identical behavioral patterns on two different hardware stacks confirm that the implementation does not rely on vendor-specific quirks.</p>
+
+            <p>The remaining gaps are worth noting for anyone planning to build on this work:</p>
+            <ul>
+                <li>DedicatedRatio is unimplemented.</li>
+                <li>E2SM-CCC coverage is partial.</li>
+                <li>The xApp logic needs significant development before it could address real QoS requirements.</li>
+                <li>Current commercial 5G smartphones do not yet support multi-PDU sessions, limiting real-world applicability of the multi-slice UE work.</li>
+            </ul>
+
+            <hr class="blogpost-divider">
+
+            <h2>Paper Reference</h2>
+            <p>Cheng, Hai, Salvatore D'Oro, Rajeev Gangula, Sakthivel Velumani, Davide Villa, Leonardo Bonati, Michele Polese, Gabriel Arrobo, Christian Maciocco, and Tommaso Melodia. "ORANSlice: An Open-Source 5G Network Slicing Platform for O-RAN." In <em>Proceedings of the 30th Annual International Conference on Mobile Computing and Networking (ACM MobiCom '24)</em>, November 18–22, 2024, Washington D.C., USA. ACM, 2024. <a href="https://doi.org/10.1145/3636534.3701544" target="_blank" rel="noopener">https://doi.org/10.1145/3636534.3701544</a></p>
+
+            <hr class="blogpost-divider">
+
+            <h2>Footnotes</h2>
+            <ol>
+                <li id="fn1">Bonati, Leonardo, Salvatore D'Oro, Stefano Basagni, and Tommaso Melodia. "SCOPE: An Open and Softwarized Prototyping Platform for NextG Systems." In <em>Proceedings of the 19th Annual International Conference on Mobile Systems, Applications, and Services (MobiSys)</em>, 415–426. ACM, 2021.</li>
+                <li id="fn2">Chen, Chieh-Chun, Chia-Yu Chang, and Navid Nikaein. "FlexSlice: Flexible and Real-Time Programmable RAN Slicing Framework." In <em>IEEE Global Communications Conference (GLOBECOM)</em>, 3807–3812. IEEE, 2023.</li>
+                <li id="fn3">Chen, Yongzhou, Ruihao Yao, Haitham Hassanieh, and Radhika Mittal. "Channel-Aware 5G RAN Slicing with Customizable Schedulers." In <em>20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)</em>, 1767–1782. USENIX Association, 2023.</li>
+                <li id="fn4">Kak, Ahan, Van-Quan Pham, Huu-Trung Thieu, and Nakjung Choi. "ProSLICE: An Open RAN-Based Approach to Programmable RAN Slicing." In <em>IEEE Global Communications Conference (GLOBECOM)</em>, 197–202. IEEE, 2022.</li>
+                <li id="fn5">Balasingam, Arjun, Manikanta Kotaru, and Paramvir Bahl. "Application-Level Service Assurance with 5G RAN Slicing." In <em>USENIX Symposium on Networked Systems Design and Implementation (NSDI)</em>, 841–857. USENIX Association, 2024.</li>
+            </ol>
+        </div>
+
+        <hr class="blogpost-divider">
+    </div>
+</body>
+</html>

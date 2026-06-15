@@ -9,7 +9,7 @@
   (function () {
     try {
       var t = localStorage.getItem("theme");
-      if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
     } catch (e) {}
   })();
 </script>
@@ -50,7 +50,7 @@
 
             <p>In a V2I scenario, an RSU equipped with a mmWave antenna array communicates with vehicles traveling at speeds of 30-120 km/h (or more on highways). Due to the narrow beamwidths used in mmWave systems (often just a few degrees), even small changes in a vehicle's position can cause the beam to become misaligned, resulting in a sharp drop in received signal strength.</p>
 
-            <p>Consider a vehicle traveling at 100 km/h. It covers approximately 28 meters per second. If the RSU's beam has a 3-degree beamwidth and the vehicle is 50 meters away, the beam footprint on the road is roughly 2.6 meters wide. This means the vehicle can traverse the entire beam footprint in under 100 milliseconds. The system must update the beam direction at least this frequently to maintain alignment — a rate that strains conventional beam management procedures.</p>
+            <p>Consider a vehicle traveling at 100 km/h. It covers approximately 28 meters per second. If the RSU's beam has a 3-degree beamwidth and the vehicle is 50 meters away, the beam footprint on the road is roughly 2.6 meters wide. This means the vehicle can traverse the entire beam footprint in under 100 milliseconds. The system must update the beam direction at least this frequently to maintain alignment, a rate that strains conventional beam management procedures.</p>
 
             <p>Traditional beam tracking relies on periodic transmission of reference signals (such as SSB or CSI-RS in 5G NR) and measurement reports from the user. The base station then selects the best beam from a predefined codebook. This process has two fundamental limitations in high-mobility V2I scenarios:</p>
 
@@ -61,7 +61,7 @@
 
             <h2>How Machine Learning Helps</h2>
 
-            <p>Machine learning approaches reframe beam tracking from a reactive measurement problem to a <strong>predictive</strong> one. Instead of waiting for signal measurements to indicate misalignment, an ML model anticipates where the vehicle will be and which beam direction will be optimal — before the link degrades.</p>
+            <p>Machine learning approaches reframe beam tracking from a reactive measurement problem to a <strong>predictive</strong> one. Instead of waiting for signal measurements to indicate misalignment, an ML model anticipates where the vehicle will be and which beam direction will be optimal, before the link degrades.</p>
 
             <p>Several ML paradigms have been explored for this purpose:</p>
 
@@ -92,7 +92,7 @@
                 <li><strong>Radar:</strong> Automotive radar provides velocity and range information, useful for predicting how quickly beam directions need to change.</li>
             </ul>
 
-            <p>Sensor fusion — combining multiple modalities — further improves prediction accuracy and robustness, as different sensors compensate for each other's weaknesses (e.g., cameras struggle in poor lighting while LiDAR remains reliable).</p>
+            <p>Sensor fusion (combining multiple modalities) further improves prediction accuracy and robustness, as different sensors compensate for each other's weaknesses (e.g., cameras struggle in poor lighting while LiDAR remains reliable).</p>
 
             <h2>Challenges in Practical Deployment</h2>
 
@@ -107,7 +107,7 @@
 
             <h2>The Road Ahead</h2>
 
-            <p>The convergence of machine learning and mmWave communication represents a paradigm shift in how wireless systems are designed. Rather than relying solely on model-based signal processing, future V2I systems will likely employ hybrid approaches — using physics-based models to constrain the search space and ML to refine predictions within that space. As sensor-equipped intelligent infrastructure becomes more widespread and datasets grow richer, ML-driven beam management will be key to making mmWave V2I communication reliable enough for safety-critical applications.</p>
+            <p>The convergence of machine learning and mmWave communication represents a paradigm shift in how wireless systems are designed. Rather than relying solely on model-based signal processing, future V2I systems will likely employ hybrid approaches, using physics-based models to constrain the search space and ML to refine predictions within that space. As sensor-equipped intelligent infrastructure becomes more widespread and datasets grow richer, ML-driven beam management will be key to making mmWave V2I communication reliable enough for safety-critical applications.</p>
 
             <p>My ongoing research focuses on developing efficient ML frameworks that integrate multi-modal sensory data for real-time beam prediction in vehicular environments, aiming to bridge the gap between simulation results and practical deployment.</p>
         </div>

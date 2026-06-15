@@ -9,7 +9,7 @@
   (function () {
     try {
       var t = localStorage.getItem("theme");
-      if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
     } catch (e) {}
   })();
 </script>
@@ -50,7 +50,7 @@
 
             <p>Electromagnetic waves at millimeter wavelengths experience significantly higher free-space path loss compared to lower frequencies. According to the Friis transmission equation, path loss increases with the square of the carrier frequency. At 28 GHz, for instance, the path loss is roughly 20 dB higher than at 2.4 GHz for the same distance. Additionally, mmWave signals are highly susceptible to atmospheric absorption (particularly around 60 GHz due to oxygen molecules), rain attenuation, and blockage by obstacles such as buildings and even the human body.</p>
 
-            <p>To compensate for these losses, mmWave systems employ <strong>beamforming</strong> — the technique of focusing transmitted energy into narrow, directional beams rather than radiating omnidirectionally. By concentrating signal power toward the intended receiver, beamforming provides enough gain to overcome the harsh propagation characteristics of mmWave frequencies.</p>
+            <p>To compensate for these losses, mmWave systems employ <strong>beamforming</strong>, the technique of focusing transmitted energy into narrow, directional beams rather than radiating omnidirectionally. By concentrating signal power toward the intended receiver, beamforming provides enough gain to overcome the harsh propagation characteristics of mmWave frequencies.</p>
 
             <h2>Analog, Digital, and Hybrid Architectures</h2>
 
@@ -59,7 +59,7 @@
             <ul>
                 <li><strong>Analog Beamforming:</strong> Uses phase shifters connected to antenna elements to steer the beam in a desired direction. It is hardware-efficient and low-cost since it requires only a single RF chain, but it can only form one beam at a time, limiting spatial multiplexing.</li>
                 <li><strong>Digital Beamforming:</strong> Each antenna element has its own dedicated RF chain and analog-to-digital converter (ADC), enabling full control over amplitude and phase per element. This allows multiple simultaneous beams and supports advanced techniques like multi-user MIMO. However, the cost and power consumption scale linearly with the number of antennas, making it impractical for large mmWave arrays.</li>
-                <li><strong>Hybrid Beamforming:</strong> Combines analog and digital approaches by using a smaller number of RF chains connected to a larger antenna array through a network of phase shifters. This architecture strikes a practical balance — achieving near-optimal performance of fully digital systems while maintaining the feasibility of analog implementations. Most current 5G NR deployments rely on hybrid beamforming.</li>
+                <li><strong>Hybrid Beamforming:</strong> Combines analog and digital approaches by using a smaller number of RF chains connected to a larger antenna array through a network of phase shifters. This architecture strikes a practical balance, achieving near-optimal performance of fully digital systems while maintaining the feasibility of analog implementations. Most current 5G NR deployments rely on hybrid beamforming.</li>
             </ul>
 
             <h2>Beam Management: The Operational Challenge</h2>
@@ -76,7 +76,7 @@
 
             <p>The effectiveness of beamforming depends heavily on the antenna array configuration. mmWave's short wavelengths (1-10 mm) allow packing large numbers of antenna elements into compact form factors. A typical 5G base station may use a uniform planar array (UPA) with 64 to 256 elements, producing pencil-thin beams with gains exceeding 25 dBi.</p>
 
-            <p>Array geometry, element spacing, and the number of elements all influence the beam pattern — including the main lobe width, side lobe levels, and steering range. Half-wavelength spacing between elements is standard to avoid grating lobes while maximizing the array aperture.</p>
+            <p>Array geometry, element spacing, and the number of elements all influence the beam pattern, including the main lobe width, side lobe levels, and steering range. Half-wavelength spacing between elements is standard to avoid grating lobes while maximizing the array aperture.</p>
 
             <h2>Challenges and Open Problems</h2>
 
@@ -91,7 +91,7 @@
 
             <h2>Looking Ahead</h2>
 
-            <p>The future of mmWave beamforming lies in intelligent, data-driven approaches. Machine learning techniques — from deep neural networks to reinforcement learning — are being explored to accelerate beam search, predict optimal beam directions from contextual information (such as GPS, LiDAR, or camera data), and enable proactive beam management. These approaches promise to reduce overhead, improve robustness to mobility, and ultimately make mmWave communication practical for a wider range of applications, from autonomous vehicles to immersive extended reality.</p>
+            <p>The future of mmWave beamforming lies in intelligent, data-driven approaches. Machine learning techniques (from deep neural networks to reinforcement learning) are being explored to accelerate beam search, predict optimal beam directions from contextual information (such as GPS, LiDAR, or camera data), and enable proactive beam management. These approaches promise to reduce overhead, improve robustness to mobility, and ultimately make mmWave communication practical for a wider range of applications, from autonomous vehicles to immersive extended reality.</p>
 
             <p>In my next post, I will dive deeper into how machine learning is being applied to beam tracking and prediction, specifically in vehicle-to-infrastructure (V2I) communication scenarios.</p>
         </div>

@@ -1,6 +1,36 @@
-/* Theme variables — dark is default, light is toggled via [data-theme="light"] */
+/* Theme variables — light is default, dark is toggled via [data-theme="dark"] */
 
 :root {
+    /* Palette: Vibrant Coral #e26d5c | Wine Plum #723d46 | Deep Mocha #472d30 | Soft Peach #ffe1a8 */
+    --bg-base: #ffffff;
+    --bg-gradient-top: #ffffff;
+    --bg-gradient-bottom: #ffffff;
+    --text-primary: #472d30;
+    --text-heading: #472d30;
+    --text-body: #5a3a3e;
+    --text-muted: #7a5560;
+    --text-soft: #9a7578;
+    --card-bg: #fff8eb;
+    --card-bg-elevated: #fffdf7;
+    --card-border: rgba(114, 61, 70, 0.20);
+    --card-border-hover: rgba(226, 109, 92, 0.55);
+    --hr-color: rgba(114, 61, 70, 0.25);
+    --navbar-bg: transparent;
+    --navbar-text: #472d30;
+    --footer-bg: rgba(255, 248, 235, 0.92);
+    --shadow-card: 0 4px 14px rgba(71, 45, 48, 0.12);
+    --shadow-card-hover: 0 14px 32px rgba(71, 45, 48, 0.20);
+    --accent: #e26d5c;
+    --accent-dim: #c45548;
+    --accent-soft-bg: rgba(226, 109, 92, 0.12);
+    --accent-soft-border: rgba(226, 109, 92, 0.40);
+    --accent-text-on: #ffffff;
+    --tag-bg: rgba(255, 225, 168, 0.60);
+    --tag-border: rgba(114, 61, 70, 0.30);
+    --tag-text: #472d30;
+}
+
+[data-theme="dark"] {
     --bg-base: #0A0A15;
     --bg-gradient-top: #131a2b;
     --bg-gradient-bottom: #0A0A15;
@@ -27,35 +57,6 @@
     --tag-bg: rgba(119, 141, 169, 0.2);
     --tag-border: rgba(119, 141, 169, 0.5);
     --tag-text: #b8c7d1;
-}
-
-[data-theme="light"] {
-    --bg-base: #f5f7fb;
-    --bg-gradient-top: #ffffff;
-    --bg-gradient-bottom: #eef2f8;
-    --text-primary: #1a1f2e;
-    --text-heading: #1a1f2e;
-    --text-body: #2d3447;
-    --text-muted: #5b6478;
-    --text-soft: #8b95a5;
-    --card-bg: #ffffff;
-    --card-bg-elevated: #f8f9fb;
-    --card-border: rgba(30, 40, 60, 0.08);
-    --card-border-hover: rgba(246, 170, 28, 0.55);
-    --hr-color: rgba(30, 40, 60, 0.1);
-    --navbar-bg: transparent;
-    --navbar-text: #1a1f2e;
-    --footer-bg: rgba(255, 255, 255, 0.85);
-    --shadow-card: 0 4px 14px rgba(30, 40, 60, 0.08);
-    --shadow-card-hover: 0 14px 32px rgba(30, 40, 60, 0.15);
-    --accent: #b45309;
-    --accent-dim: #92400e;
-    --accent-soft-bg: rgba(180, 83, 9, 0.1);
-    --accent-soft-border: rgba(180, 83, 9, 0.35);
-    --accent-text-on: #ffffff;
-    --tag-bg: rgba(30, 40, 60, 0.06);
-    --tag-border: rgba(30, 40, 60, 0.15);
-    --tag-text: #4a5568;
 }
 
 /* Smooth theme transitions on color-affected elements */
@@ -100,7 +101,7 @@ h1, h2, h3, h4, p, li, span, a {
     line-height: 1;
 }
 
-:root .theme-toggle .icon-sun { display: none; }
-:root .theme-toggle .icon-moon { display: inline; }
-[data-theme="light"] .theme-toggle .icon-sun { display: inline; }
-[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+:root .theme-toggle .icon-sun { display: inline; }
+:root .theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: inline; }

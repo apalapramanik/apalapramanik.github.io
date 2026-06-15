@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Apala Pramanik - Bharatnatyam classical dance">
     <title>Bharatnatyam | Apala Pramanik</title>
+    <script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {}
+  })();
+</script>
+    <link rel="stylesheet" type="text/css" href="../css/css_theme.css">
     <link rel="stylesheet" type="text/css" href="../css/css_home.css">
     <link rel="stylesheet" type="text/css" href="../css/css_navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/css_blogpost.css">
@@ -23,6 +32,10 @@
         <a href="../index.html#news">News</a>
         <a href="../index.html#contact">Contact</a>
         <a href="../APALA_RESUME.pdf">CV</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme" onclick="(function(){var h=document.documentElement,c=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',c?'':'dark');try{localStorage.setItem('theme',c?'light':'dark');}catch(e){}})()">
+            <i class="fas fa-moon icon-moon"></i>
+            <i class="fas fa-sun icon-sun"></i>
+        </button>
     </div>
 
     <div class="blogpost-wrapper">
@@ -40,13 +53,13 @@
 
             <p>Bharatnatyam is built on the principles of the Natyashastra, an ancient treatise on performing arts. A typical performance follows a structured progression called the margam, which includes pieces like Alarippu (an invocatory piece), Jatiswaram (pure dance set to swaras), Varnam (the centerpiece combining nritta and abhinaya), Padams (expressive pieces), and Thillana (a rhythmic finale). Each piece demands a different balance of technique and expression.</p>
 
-            <p>What makes Bharatnatyam unique is its emphasis on geometry — the body creates sharp angles and lines through the aramandi (half-sitting position), stretched limbs, and precise hand gestures (mudras). There are 28 single-hand gestures and 23 combined-hand gestures, each carrying multiple meanings depending on the context. Mastering these gestures and learning to weave them into storytelling is a lifelong pursuit.</p>
+            <p>What makes Bharatnatyam unique is its emphasis on geometry: the body creates sharp angles and lines through the aramandi (half-sitting position), stretched limbs, and precise hand gestures (mudras). There are 28 single-hand gestures and 23 combined-hand gestures, each carrying multiple meanings depending on the context. Mastering these gestures and learning to weave them into storytelling is a lifelong pursuit.</p>
 
             <h2>What It Means to Me</h2>
 
-            <p>Practicing Bharatnatyam has taught me discipline, patience, and the beauty of expressing emotions through movement. The rigorous training — hours of adavus (basic steps), perfecting aramandi, and building stamina — mirrors the persistence needed in research. Both require showing up every day, working through frustration, and trusting that incremental progress adds up.</p>
+            <p>Practicing Bharatnatyam has taught me discipline, patience, and the beauty of expressing emotions through movement. The rigorous training, including hours of adavus (basic steps), perfecting aramandi, and building stamina, mirrors the persistence needed in research. Both require showing up every day, working through frustration, and trusting that incremental progress adds up.</p>
 
-            <p>Beyond the physical, dance gives me a way to connect with my cultural roots. Growing up, it was a link to traditions, mythology, and a community of artists. Now, far from home and deep in the world of wireless communication research, it remains a grounding force — a reminder that creativity and analysis are not opposites but complementary ways of engaging with the world.</p>
+            <p>Beyond the physical, dance gives me a way to connect with my cultural roots. Growing up, it was a link to traditions, mythology, and a community of artists. Now, far from home and deep in the world of wireless communication research, it remains a grounding force, a reminder that creativity and analysis are not opposites but complementary ways of engaging with the world.</p>
 
             <p>Whether performing on stage or practicing in solitude, Bharatnatyam brings a sense of balance that I carry into everything else I do.</p>
         </div>

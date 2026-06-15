@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Apala Pramanik - Travelling and exploring the world">
     <title>Travelling | Apala Pramanik</title>
+    <script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {}
+  })();
+</script>
+    <link rel="stylesheet" type="text/css" href="../css/css_theme.css">
     <link rel="stylesheet" type="text/css" href="../css/css_home.css">
     <link rel="stylesheet" type="text/css" href="../css/css_navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/css_blogpost.css">
@@ -23,6 +32,10 @@
         <a href="../index.html#news">News</a>
         <a href="../index.html#contact">Contact</a>
         <a href="../APALA_RESUME.pdf">CV</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme" onclick="(function(){var h=document.documentElement,c=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',c?'':'dark');try{localStorage.setItem('theme',c?'light':'dark');}catch(e){}})()">
+            <i class="fas fa-moon icon-moon"></i>
+            <i class="fas fa-sun icon-sun"></i>
+        </button>
     </div>
 
     <div class="blogpost-wrapper">
@@ -38,19 +51,19 @@
 
             <h2>What Draws Me to Travel</h2>
 
-            <p>I am drawn to places that offer a mix of natural beauty, history, and local culture. Whether it is the intricate carvings of a centuries-old temple, the quiet vastness of a mountain trail, or the energy of a bustling city market, I find that every place has a story to tell. Travelling pushes me out of my comfort zone — navigating unfamiliar places, trying new cuisines, and connecting with people from different backgrounds.</p>
+            <p>I am drawn to places that offer a mix of natural beauty, history, and local culture. Whether it is the intricate carvings of a centuries-old temple, the quiet vastness of a mountain trail, or the energy of a bustling city market, I find that every place has a story to tell. Travelling pushes me out of my comfort zone, navigating unfamiliar places, trying new cuisines, and connecting with people from different backgrounds.</p>
 
             <h2>Memorable Journeys</h2>
 
-            <p>Some of my most memorable experiences in the US have been road trips and outdoor adventures — exploring the red rock landscapes of Arizona, the stunning national parks of Utah, and witnessing the geysers and wildlife of Yellowstone in Wyoming. Presenting research at MEMOCODE 2024 in Raleigh, NC also gave me the chance to explore the city beyond the conference halls. Mixing academic travel with exploration has become one of my favorite aspects of being a researcher — every trip is an opportunity to both share knowledge and absorb new experiences.</p>
+            <p>Some of my most memorable experiences in the US have been road trips and outdoor adventures, exploring the red rock landscapes of Arizona, the stunning national parks of Utah, and witnessing the geysers and wildlife of Yellowstone in Wyoming. Presenting research at MEMOCODE 2024 in Raleigh, NC also gave me the chance to explore the city beyond the conference halls. Mixing academic travel with exploration has become one of my favorite aspects of being a researcher; every trip is an opportunity to both share knowledge and absorb new experiences.</p>
 
             <p>Back home in India, I have loved exploring the vibrant streets and cultural richness of Kolkata, the beaches and laid-back energy of Goa, the bustling pace of Mumbai, the serene mountains of Uttarakhand, and the majestic forts and deserts of Rajasthan. Each region has its own distinct flavor of food, language, and tradition, and travelling through India alone could be a lifelong pursuit.</p>
 
             <h2>Travel as Perspective</h2>
 
-            <p>More than anything, travelling reminds me that the world is vast and full of stories waiting to be discovered. It brings humility — realizing how many different ways people live, create, and solve problems. It also brings fresh perspective that I carry back into my work and everyday life. Some of my best ideas have come not from staring at a screen, but from a quiet moment on a train, a conversation with a stranger, or a walk through an unfamiliar neighborhood.</p>
+            <p>More than anything, travelling reminds me that the world is vast and full of stories waiting to be discovered. It brings humility, realizing how many different ways people live, create, and solve problems. It also brings fresh perspective that I carry back into my work and everyday life. Some of my best ideas have come not from staring at a screen, but from a quiet moment on a train, a conversation with a stranger, or a walk through an unfamiliar neighborhood.</p>
 
-            <p>I hope to continue exploring — both the places I have dreamed of visiting and the unexpected detours that make every journey unique.</p>
+            <p>I hope to continue exploring, both the places I have dreamed of visiting and the unexpected detours that make every journey unique.</p>
         </div>
 
         <hr class="blogpost-divider">

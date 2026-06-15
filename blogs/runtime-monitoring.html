@@ -9,7 +9,7 @@
   (function () {
     try {
       var t = localStorage.getItem("theme");
-      if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
     } catch (e) {}
   })();
 </script>
@@ -44,13 +44,13 @@
         <hr class="blogpost-divider">
 
         <div class="blogpost-body">
-            <p>Construction sites are among the most hazardous work environments. As robots are increasingly deployed alongside human workers to assist with tasks like material transport, bricklaying, and structural inspection, ensuring the safety of human-robot collaboration becomes paramount. Unlike controlled factory floors, construction sites are dynamic, unstructured, and unpredictable — making traditional safety measures insufficient. <strong>Runtime monitoring</strong>, the process of continuously observing a system during execution to verify that it satisfies specified safety properties, offers a principled approach to this challenge.</p>
+            <p>Construction sites are among the most hazardous work environments. As robots are increasingly deployed alongside human workers to assist with tasks like material transport, bricklaying, and structural inspection, ensuring the safety of human-robot collaboration becomes paramount. Unlike controlled factory floors, construction sites are dynamic, unstructured, and unpredictable, making traditional safety measures insufficient. <strong>Runtime monitoring</strong>, the process of continuously observing a system during execution to verify that it satisfies specified safety properties, offers a principled approach to this challenge.</p>
 
             <h2>Why Runtime Monitoring?</h2>
 
-            <p>Formal verification methods like model checking and theorem proving can guarantee system safety, but they operate on models of the system rather than the system itself. In the real world, the gap between model and reality — sensor noise, unexpected human behavior, environmental changes — means that pre-deployment verification alone cannot ensure safety during operation.</p>
+            <p>Formal verification methods like model checking and theorem proving can guarantee system safety, but they operate on models of the system rather than the system itself. In the real world, the gap between model and reality (sensor noise, unexpected human behavior, environmental changes) means that pre-deployment verification alone cannot ensure safety during operation.</p>
 
-            <p>Runtime monitoring bridges this gap. It operates on the actual system at execution time, checking whether observed behavior conforms to formal safety specifications. If a violation is detected (or predicted), the monitor can trigger corrective actions — slowing the robot, rerouting it, or stopping it entirely.</p>
+            <p>Runtime monitoring bridges this gap. It operates on the actual system at execution time, checking whether observed behavior conforms to formal safety specifications. If a violation is detected (or predicted), the monitor can trigger corrective actions: slowing the robot, rerouting it, or stopping it entirely.</p>
 
             <p>For human-robot construction systems, safety specifications typically involve spatial constraints. For example:</p>
 
@@ -60,7 +60,7 @@
                 <li><strong>Restricted zones:</strong> "The robot shall not enter the designated human work area during active operations."</li>
             </ul>
 
-            <p>These properties can be expressed in formal languages such as Signal Temporal Logic (STL), which allows specifying requirements over continuous signals with time bounds — making it well-suited for robotic systems operating in continuous physical spaces.</p>
+            <p>These properties can be expressed in formal languages such as Signal Temporal Logic (STL), which allows specifying requirements over continuous signals with time bounds, making it well-suited for robotic systems operating in continuous physical spaces.</p>
 
             <h2>Perception-Based Monitoring</h2>
 
@@ -85,7 +85,7 @@
                 <li><strong>Warning:</strong> The system is approaching a boundary condition. Based on predicted trajectories, a violation may occur within a specified time horizon. The monitor can trigger preemptive action (e.g., slowing down, adjusting the path).</li>
             </ul>
 
-            <p>The use of Signal Temporal Logic allows quantitative evaluation — not just "is the property satisfied?" but "by how much?" This notion of <strong>robustness</strong> provides a continuous measure of how far the system is from violating a specification, enabling more nuanced control responses.</p>
+            <p>The use of Signal Temporal Logic allows quantitative evaluation, not just "is the property satisfied?" but "by how much?" This notion of <strong>robustness</strong> provides a continuous measure of how far the system is from violating a specification, enabling more nuanced control responses.</p>
 
             <h2>The PerM Tool</h2>
 
@@ -105,7 +105,7 @@
             <p>Developing and deploying runtime monitoring for real-world human-robot systems has revealed several important challenges:</p>
 
             <ul>
-                <li><strong>Perception uncertainty:</strong> Neural network-based detectors can miss humans (false negatives) or hallucinate detections (false positives). A safety monitor must account for this uncertainty — potentially treating missed detections as dangerous rather than safe.</li>
+                <li><strong>Perception uncertainty:</strong> Neural network-based detectors can miss humans (false negatives) or hallucinate detections (false positives). A safety monitor must account for this uncertainty, potentially treating missed detections as dangerous rather than safe.</li>
                 <li><strong>Occlusion:</strong> On busy construction sites, humans may be partially or fully occluded by equipment or structures. The monitor must reason about occluded regions and maintain safety even when humans are not visible.</li>
                 <li><strong>Computational budget:</strong> Running object detection, depth processing, Kalman filtering, and formal specification checking in real time requires careful engineering. Each component must meet its latency budget to keep the overall pipeline responsive.</li>
                 <li><strong>Specification design:</strong> Writing correct and complete formal specifications is itself a challenge. Overly conservative specifications lead to a robot that is too cautious to be useful; overly permissive specifications compromise safety. Iterative refinement through simulation and testing is essential.</li>
@@ -115,7 +115,7 @@
 
             <p>Several exciting research directions extend this work. Incorporating multiple cameras or sensor modalities (LiDAR, UWB positioning) can improve perception coverage and reduce occlusion issues. Learning-based approaches could adapt safety margins based on the specific construction task and worker behavior patterns. And as construction robots become more autonomous, runtime monitoring will need to scale to multi-robot, multi-human scenarios with more complex spatial and temporal coordination requirements.</p>
 
-            <p>The ultimate goal is a framework where safety is not an afterthought but a continuously verified, formally grounded property of the system — enabling robots to be genuinely useful partners in hazardous environments while keeping human workers safe.</p>
+            <p>The ultimate goal is a framework where safety is not an afterthought but a continuously verified, formally grounded property of the system, enabling robots to be genuinely useful partners in hazardous environments while keeping human workers safe.</p>
         </div>
 
         <hr class="blogpost-divider">
