@@ -238,7 +238,7 @@ h1 {
     font-size: 42px;
     font-weight: bold;
     color: var(--text-soft);
-    z-index: 999;
+    z-index: 1001;
     text-decoration: none;
     transition: color 0.25s ease, transform 0.25s ease;
 }
