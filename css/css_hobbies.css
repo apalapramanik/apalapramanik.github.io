@@ -102,7 +102,7 @@
 }
 
 .hobby-card:hover .hobby-icon i {
-    color: #0A0A15;
+    color: var(--accent-text-on);
 }
 
 .hobby-title {

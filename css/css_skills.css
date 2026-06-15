@@ -37,7 +37,7 @@
 
 .skill-level.core {
     background-color: var(--accent);
-    color: #0A0A15;
+    color: var(--accent-text-on);
 }
 
 .skill-level.familiar {

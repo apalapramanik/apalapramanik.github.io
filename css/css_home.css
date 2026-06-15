@@ -139,7 +139,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, rgba(246, 170, 28, 0.18), rgba(246, 170, 28, 0.08));
+    background: var(--accent-soft-bg);
     border: 1.5px solid var(--accent);
     color: var(--accent);
     padding: 8px 14px;
@@ -147,7 +147,7 @@ h1 {
     font-size: 0.85em;
     font-weight: 600;
     margin-bottom: 10px;
-    box-shadow: 0 0 12px rgba(246, 170, 28, 0.25);
+    box-shadow: 0 0 12px var(--accent-soft-border);
 }
 
 .hero-paper-banner {
@@ -155,7 +155,7 @@ h1 {
     align-items: center;
     gap: 8px;
     background-color: var(--card-bg);
-    border-left: 3px solid #3fa9f5;
+    border-left: 3px solid var(--accent);
     color: var(--text-body);
     padding: 8px 14px;
     border-radius: 4px;
@@ -166,7 +166,7 @@ h1 {
 }
 
 .hero-paper-banner:hover {
-    background-color: rgba(30, 60, 100, 0.9);
+    background-color: var(--accent-soft-bg);
     transform: translateX(3px);
 }
 
@@ -186,7 +186,7 @@ h1 {
     align-items: center;
     gap: 8px;
     background-color: var(--accent);
-    color: #0A0A15;
+    color: var(--accent-text-on);
     padding: 10px 20px;
     border-radius: 6px;
     text-decoration: none;
@@ -197,7 +197,7 @@ h1 {
 
 .hero-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(246, 170, 28, 0.4);
+    box-shadow: 0 6px 16px var(--accent-soft-border);
 }
 
 .hero-cta-outline {
@@ -208,7 +208,7 @@ h1 {
 
 .hero-cta-outline:hover {
     background-color: var(--accent);
-    color: #0A0A15;
+    color: var(--accent-text-on);
 }
 
 .social-icons {
@@ -227,7 +227,7 @@ h1 {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: #415a77;
+    color: var(--text-muted);
     cursor: pointer;
 }
 
@@ -256,13 +256,13 @@ h1 {
     height: 46px;
     border-radius: 50%;
     background-color: var(--accent);
-    color: #0A0A15;
+    color: var(--accent-text-on);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.1em;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(246, 170, 28, 0.4);
+    box-shadow: 0 6px 20px var(--accent-soft-border);
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -277,7 +277,7 @@ h1 {
 }
 
 #back-to-top:hover {
-    background-color: #ffc94a;
+    background-color: var(--accent-dim);
     transform: translateY(-3px);
 }
 

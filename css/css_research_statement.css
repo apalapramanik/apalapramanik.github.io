@@ -27,7 +27,7 @@
     position: absolute;
     top: 22px;
     left: 24px;
-    color: rgba(246, 170, 28, 0.2);
+    color: var(--accent-soft-bg);
     font-size: 2.4em;
     line-height: 1;
 }

@@ -113,7 +113,7 @@
   }
 
   .news-highlight {
-    background-color: rgba(246, 170, 28, 0.15);
+    background-color: var(--accent-soft-bg);
     border-left: 4px solid var(--accent);
     padding: 0.4em 0.8em !important;
     border-radius: 4px;
