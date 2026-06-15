@@ -30,6 +30,7 @@
         // Apply saved theme before render to avoid flash
         (function () {
             try {
+                if (!localStorage.getItem("theme_v")) { localStorage.removeItem("theme"); localStorage.setItem("theme_v", "2"); }
                 var t = localStorage.getItem("theme");
                 if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
             } catch (e) {}

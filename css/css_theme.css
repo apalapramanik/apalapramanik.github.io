@@ -15,7 +15,7 @@
     --card-border: rgba(114, 61, 70, 0.20);
     --card-border-hover: rgba(226, 109, 92, 0.55);
     --hr-color: rgba(114, 61, 70, 0.25);
-    --navbar-bg: transparent;
+    --navbar-bg: #ffffff;
     --navbar-text: #472d30;
     --footer-bg: rgba(255, 248, 235, 0.92);
     --shadow-card: 0 4px 14px rgba(71, 45, 48, 0.12);
