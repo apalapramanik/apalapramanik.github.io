@@ -1,5 +1,54 @@
+// Smooth-scroll to the section following the given selector.
+// Used by the chevron affordance at the bottom of a section.
+function scrollToNext(currentSelector) {
+    const current = document.querySelector(currentSelector);
+    if (!current) return;
+    let next = current.nextElementSibling;
+    while (next && !next.classList.contains("section")) {
+        next = next.nextElementSibling;
+    }
+    if (next) {
+        next.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+}
+
 // Scrollspy + back-to-top interactions
 document.addEventListener("DOMContentLoaded", function () {
+    // Mobile navigation toggle
+    const navbar = document.querySelector(".navbar");
+    const navToggle = document.getElementById("nav-toggle");
+    if (navbar && navToggle) {
+        navToggle.addEventListener("click", function () {
+            const open = navbar.classList.toggle("nav-open");
+            navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+            navToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+        });
+
+        // Close the panel after tapping a link
+        navbar.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navbar.classList.remove("nav-open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.setAttribute("aria-label", "Open navigation menu");
+            });
+        });
+
+        // Close on Escape, and on click outside the bar
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && navbar.classList.contains("nav-open")) {
+                navbar.classList.remove("nav-open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.focus();
+            }
+        });
+        document.addEventListener("click", function (e) {
+            if (navbar.classList.contains("nav-open") && !navbar.contains(e.target)) {
+                navbar.classList.remove("nav-open");
+                navToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+
     // Navbar scrollspy: highlight active section
     const navLinks = document.querySelectorAll(".navbar a[href^='#']");
     const sectionIds = Array.from(navLinks)

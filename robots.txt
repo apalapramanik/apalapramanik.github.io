@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apalapramanik.github.io/sitemap.xml

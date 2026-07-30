@@ -13,7 +13,10 @@
     <meta property="og:url" content="https://apalapramanik.github.io/">
     <meta property="og:title" content="Apala Pramanik, PhD Researcher">
     <meta property="og:description" content="PhD Researcher at UNL working on mmWave communication, beamforming, and ML for V2I/V2X. Open to internship opportunities.">
-    <meta property="og:image" content="https://apalapramanik.github.io/figures/apala.JPG">
+    <meta property="og:image" content="https://apalapramanik.github.io/figures/og-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Apala Pramanik, PhD Researcher at University of Nebraska-Lincoln">
     <meta property="og:site_name" content="Apala Pramanik Portfolio">
 
@@ -22,9 +25,69 @@
     <meta name="twitter:url" content="https://apalapramanik.github.io/">
     <meta name="twitter:title" content="Apala Pramanik, PhD Researcher">
     <meta name="twitter:description" content="PhD Researcher at UNL working on mmWave communication, beamforming, and ML for V2I/V2X. Open to internship opportunities.">
-    <meta name="twitter:image" content="https://apalapramanik.github.io/figures/apala.JPG">
+    <meta name="twitter:image" content="https://apalapramanik.github.io/figures/og-card.jpg">
+    <meta name="twitter:image:alt" content="Apala Pramanik, PhD Researcher at University of Nebraska-Lincoln">
 
     <link rel="canonical" href="https://apalapramanik.github.io/">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="figures/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="figures/favicon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#f2e9dc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0A0A15" media="(prefers-color-scheme: dark)">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Apala Pramanik",
+      "url": "https://apalapramanik.github.io/",
+      "image": "https://apalapramanik.github.io/figures/og-card.jpg",
+      "jobTitle": "PhD Researcher",
+      "description": "PhD researcher in mmWave communication, beamforming, and machine learning for V2I/V2X systems at the CPN Lab, University of Nebraska-Lincoln.",
+      "email": "mailto:apramanik2@huskers.unl.edu",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Nebraska-Lincoln",
+        "url": "https://www.unl.edu/"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Nebraska-Lincoln",
+          "url": "https://www.unl.edu/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Guru Gobind Singh Indraprastha University",
+          "url": "http://www.ipu.ac.in/"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lincoln",
+        "addressRegion": "NE",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "Millimeter Wave Communication",
+        "Beamforming",
+        "Beam Management",
+        "Machine Learning",
+        "Reinforcement Learning",
+        "V2I / V2X Communication",
+        "Software Defined Radio",
+        "Ray Tracing",
+        "O-RAN"
+      ],
+      "sameAs": [
+        "https://github.com/apalapramanik",
+        "https://www.linkedin.com/in/apala-pramanik",
+        "https://scholar.google.com/citations?hl=en&user=iUuz41kAAAAJ"
+      ]
+    }
+    </script>
 
     <script>
         // Apply saved theme before render to avoid flash
@@ -44,7 +107,6 @@
     <link rel="stylesheet" type="text/css" href="css/css_projects.css">
     <link rel="stylesheet" type="text/css" href="css/css_publications.css">
     <link rel="stylesheet" type="text/css" href="css/css_news.css">
-    <link rel="stylesheet" type="text/css" href="css/css_animation.css">
     <link rel="stylesheet" type="text/css" href="css/css_contact.css">
     <link rel="stylesheet" type="text/css" href="css/css_text.css">
     <link rel="stylesheet" type="text/css" href="css/css_blogs.css">
@@ -75,50 +137,54 @@
     <a id="initials" href="#content_home" aria-label="Back to top">ap.</a>
     <a id="back-to-top" href="#content_home" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
-    <div class="navbar">
-        <a href="#content_home">Home</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#blogs">Blogs</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#news">News</a>
-        <a href="#outreach">Outreach</a>
-        <a href="#contact">Contact</a>
-        <a href="APALA_RESUME.pdf">CV</a>
+    <nav class="navbar">
+        <div class="nav-links" id="nav-links">
+            <a href="#content_home">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#publications">Publications</a>
+            <a href="#research-statement">Research</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#news">News</a>
+            <a href="#outreach">Outreach</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+            <a href="APALA_RESUME.pdf" target="_blank" rel="noopener" class="nav-cv">CV</a>
+        </div>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
             <i class="fas fa-moon icon-moon"></i>
             <i class="fas fa-sun icon-sun"></i>
         </button>
-    </div>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fas fa-bars icon-open"></i>
+            <i class="fas fa-times icon-close"></i>
+        </button>
+    </nav>
    
     <div id="content_home" class="section">
   
         <div class="content_home">
             <div class="hero-image-wrap">
-                <img src="figures/apala.JPG" width="400" height="400" alt="Apala Pramanik, PhD Researcher in mmWave and Machine Learning at University of Nebraska-Lincoln" class="hero-image">
+                <img src="figures/opt/apala.webp" width="340" height="340" fetchpriority="high" decoding="async" alt="Apala Pramanik, PhD Researcher in mmWave and Machine Learning at University of Nebraska-Lincoln" class="hero-image">
             </div>
             <div>
 
                 <div style="display: flex; align-items: center; margin-bottom: 4px;">
                     <i style="font-size: large; letter-spacing: 2px; color: var(--text-muted);">HELLO, I'M</i>
-                    <hr style="flex: 1; margin-left: 20px; margin-bottom: 0; border: none; border-top: 1px solid rgba(255,255,255,0.15);">
+                    <hr style="flex: 1; margin-left: 20px; margin-bottom: 0; border: none; border-top: 1px solid var(--hr-color);">
                 </div>
                 <h1 style="margin-top:0;">Apala Pramanik</h1>
                 <h3 style="color: var(--text-heading); font-size: large; margin-bottom: 6px;">PhD Researcher &bull; mmWave &bull;  ML &bull; V2I / V2X &bull; O-RAN</h3>
                 <p style="font-size: 0.95em; color: var(--text-muted); margin: 0 0 10px 0;"><i class="fas fa-map-marker-alt" style="color:var(--accent);"></i> Lincoln, NE, USA</p>
                 <div class="hero-badge">
-                    <i class="fas fa-briefcase"></i> Open to Internship Opportunities: ML for Wireless / V2I / V2X
+                    <i class="fas fa-briefcase"></i> Open to Spring / Summer 2027 Internships: ML for Wireless / V2I / V2X
                 </div>
+                <p class="hero-auth">
+                    <i class="fas fa-id-badge"></i> F-1 student visa &mdash; eligible for CPT/OPT internship employment; no sponsorship required for internships.
+                </p>
                 <p style="font-size: 0.95em; line-height: 1.6; color: var(--text-body); text-align: justify;">I am a PhD student at the <a href="https://cpn.unl.edu/" target="_blank" style="color:var(--accent);">CPN Lab</a>, University of Nebraska-Lincoln, advised by <a href="https://cse.unl.edu/~mcvuran/" target="_blank" style="color:var(--accent);">Dr. Mehmet Can Vuran</a>. My research focuses on enhancing <strong>mmWave</strong> communication through advanced beamforming, beam tracking, and prediction techniques, integrating <strong>machine learning</strong> and sensory data for improved wireless connectivity. I am also beginning to explore <strong>O-RAN</strong> (the open, disaggregated RAN architecture) as a platform for bringing intelligent, standards-compliant control closer to the radio.</p>
-                <div class="hero-stats">
-                    <div class="hero-stat"><div class="hero-stat-num">6</div><div class="hero-stat-label">Publications</div></div>
-                    <div class="hero-stat"><div class="hero-stat-num">4</div><div class="hero-stat-label">First-Author</div></div>
-                    <div class="hero-stat"><div class="hero-stat-num">1</div><div class="hero-stat-label">Best Paper Candidate</div></div>
-                    <div class="hero-stat"><div class="hero-stat-num">3+</div><div class="hero-stat-label">Years Research</div></div>
-                </div>
-                <hr style="color:#EEFBFF; width: 100%; margin-top: 0; margin-bottom: 10px;">
+                <hr style="width: 100%; margin-top: 0; margin-bottom: 10px; border: none; border-top: 1px solid var(--hr-color);">
                 <div class="hero-actions">
                     <a href="APALA_RESUME.pdf" target="_blank" rel="noopener" type="application/pdf" class="hero-cta"><i class="fas fa-file-alt"></i> View CV</a>
                     <a href="APALA_RESUME.pdf" download class="hero-cta hero-cta-outline"><i class="fas fa-download"></i> Download</a>
@@ -128,15 +194,13 @@
                     <a target="_blank" href="https://github.com/apalapramanik" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
                     <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=iUuz41kAAAAJ&view_op=list_works&gmla=AILGF5UVY-chuAA12NOOq-Xp53s9t3TaLDb_ecIacMH8Xa4YxBRekQMrauP1WAHtYXLdxI3pihijLGmDcgpP9uNI" aria-label="Google Scholar Profile"><i class="fas fa-graduation-cap"></i></a>
                     <a target="_blank" href="https://www.linkedin.com/in/apala-pramanik" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                    <a target="_blank" href="https://www.facebook.com/apala.pramanik" aria-label="Facebook Profile"><i class="fab fa-facebook"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/apala__pramanik" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
       
     </div>
 
-    <div id="experience" class="section">
+<div id="experience" class="section">
         <div class="experience-container">
             <h1 class="experience-heading">Experience &amp; Education.</h1>
             <div class="experience-timeline">
@@ -207,7 +271,318 @@
         </div>
     </div>
 
-    <div id="research-statement" class="section">
+<div id="projects" class="section">
+        <div class="container_proj">
+            <h1 class="projects-heading">Projects.</h1>
+            <div class="projects-grid">
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/raytrace_tool.webp" alt="Ray Tracing Micro Tool for mmWave Beam-Sweep Analysis">
+                        <div class="proj-year-tag">2026</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Ray Tracing Micro Tool</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">Python CLI</span>
+                            <span class="stat-badge">Interactive HTML</span>
+                            <span class="stat-badge">mmWave</span>
+                        </div>
+                        <p class="proj-card-desc">Python toolkit that turns raw 63×63 mmWave beam-sweep CSV data into an interactive floor-plan report and publication-quality heatmaps in a single command. Includes a browser-based floor plan editor and real-time specular ray-tracing overlay.</p>
+                        <a href="https://github.com/UNL-CPN-Lab/Ray-Tracing-Micro-Tool" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/rnn.webp" alt="Sequence Modeling">
+                        <div class="proj-year-tag">2026</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Sequence Modeling: GRU, LSTM &amp; Transformer</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">GRU / LSTM</span>
+                            <span class="stat-badge">Transformer</span>
+                            <span class="stat-badge">TensorFlow</span>
+                        </div>
+                        <p class="proj-card-desc">Comparative study of recurrent and attention-based architectures. Implemented and evaluated GRU, LSTM, and Transformer models on time-series and NLP tasks, analyzing compute efficiency and long-range dependency handling.</p>
+                        <div class="proj-card-links">
+                            <a href="https://github.com/apalapramanik/GRU" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> GRU</a>
+                            <a href="https://github.com/apalapramanik/RNN" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> RNN</a>
+                            <a href="https://github.com/apalapramanik/LSTM" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> LSTM</a>
+                            <a href="https://github.com/apalapramanik/Transformers" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Transformers</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/raytracing.webp" alt="3D Ray Tracing for mmWave Propagation">
+                        <div class="proj-year-tag">2024</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">3D Ray Tracing for mmWave Propagation</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">24 GHz</span>
+                            <span class="stat-badge">3-bounce reflections</span>
+                            <span class="stat-badge">MATLAB</span>
+                        </div>
+                        <p class="proj-card-desc">MATLAB-based ray tracing simulator for indoor mmWave propagation. Traces rays through a configurable 3D layout, computing received power with free-space path loss, multiple reflections, and log-normal shadowing.</p>
+                        <a href="https://github.com/apalapramanik/mmWave-Ray-Tracing" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/wirelessnet.webp" alt="Multi-Modal Traffic Pattern Detection">
+                        <div class="proj-year-tag">2024</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Multi-Modal Traffic Pattern Detection</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">&gt;80% accuracy</span>
+                            <span class="stat-badge">&lt;100 ms latency</span>
+                            <span class="stat-badge">USRP + CVNN</span>
+                        </div>
+                        <p class="proj-card-desc">Real-time traffic classification fusing synchronized USRP RF signals and camera images (±10 ms). A Complex-Valued Neural Network classifies traffic states with a watchdog for continuous operation.</p>
+                        <a href="https://github.com/apalapramanik/WirelessNet" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/slam.webp" alt="Edge-Assisted SLAM">
+                        <div class="proj-year-tag">2023</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Edge-Assisted SLAM for Human-Robot Construction</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">1.25 m safety radius</span>
+                            <span class="stat-badge">YOLOv3 + Kalman</span>
+                            <span class="stat-badge">ROS</span>
+                        </div>
+                        <p class="proj-card-desc">EdgeSLAM deployment at a construction site; robot navigates to goals while maintaining a 1.25 m safe distance from workers using YOLOv3 detection and Kalman filtering on depth-camera point clouds.</p>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:IjCSPb-OGe4C" target="_blank" rel="noopener" class="card-link"><i class="fas fa-file-alt"></i> MEMOCODE 2024 paper</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/vit.webp" alt="Vision Transformer Re-implementation">
+                        <div class="proj-year-tag">2023</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Vision Transformer Re-implementation</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">Self-Attention</span>
+                            <span class="stat-badge">PyTorch</span>
+                        </div>
+                        <p class="proj-card-desc">Re-implemented the ViT architecture from scratch, exploring self-attention for image recognition. Analyzed scaling challenges, pretraining strategies in data-limited regimes, and fine-tuning vs. CNNs.</p>
+                        <a href="https://github.com/apalapramanik/Vision-Transformer" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-icon-header">
+                        <i class="fas fa-brain"></i>
+                        <div class="proj-year-tag">2023–24</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">AI &amp; Machine Learning Projects</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">BERT</span>
+                            <span class="stat-badge">CNN</span>
+                            <span class="stat-badge">TensorFlow</span>
+                            <span class="stat-badge">HuggingFace</span>
+                        </div>
+                        <p class="proj-card-desc">A collection of ML projects: Spanish news classification with fine-tuned BERT (BETO, 7-class NLP), sign-language gesture recognition (CNN, 98% test acc), and CIFAR-100 image classification (custom CNN, 63.75% test acc).</p>
+                        <div class="proj-card-links">
+                            <a href="https://github.com/apalapramanik/Spanish-News-Classification" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Spanish News Classification</a>
+                            <a href="https://github.com/apalapramanik/Hand-Gesture-Recognition" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Hand Gesture Recognition</a>
+                            <a href="https://github.com/apalapramanik/Classifying-CIFAR100" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Classifying CIFAR-100</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-icon-header">
+                        <i class="fas fa-robot"></i>
+                        <div class="proj-year-tag">2022–23</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Robotics &amp; Safety Verification Projects</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">ROS</span>
+                            <span class="stat-badge">YOLOv5</span>
+                            <span class="stat-badge">STL / LTL</span>
+                            <span class="stat-badge">Gazebo</span>
+                        </div>
+                        <p class="proj-card-desc">TurtleBot3 safety system with YOLOv5 human detection, Kalman-filter trajectory prediction, and reachability-based collision verification in Gazebo. Husky UGV setup (ROS Melodic, Jetson, RealSense, Kinova arm). STL/LTL runtime monitoring framework with ROS integration.</p>
+                        <div class="proj-card-links">
+                            <a href="https://github.com/apalapramanik/TurtleBot3-Safety-Verification" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> TurtleBot3 Safety Verification</a>
+                            <a href="https://github.com/apalapramanik/Husky" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Clearpath Husky UGV</a>
+                            <a href="https://github.com/apalapramanik/Monitoring" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> STL/LTL Runtime Monitoring</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<div id="skills" class="section">
+        <div class="skills-container">
+            <h1 class="skills-heading">Skills.</h1>
+            <p class="skills-subtitle">Core skills are what I use daily in research. Familiar tools are ones I've shipped with but use less often.</p>
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <div class="skill-category-icon"><i class="fas fa-broadcast-tower"></i></div>
+                    <h3 class="skill-category-title">Wireless &amp; RF <span class="skill-level core">Core</span></h3>
+                    <ul class="skill-list">
+                        <li>GNU Radio</li>
+                        <li>USRP / Software Defined Radio</li>
+                        <li>Wireless InSite (Ray Tracing)</li>
+                        <li>Sionna RT</li>
+                        <li>mmWave Propagation Modeling</li>
+                        <li>Bistatic Radar Measurement</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-icon"><i class="fas fa-brain"></i></div>
+                    <h3 class="skill-category-title">Machine Learning <span class="skill-level core">Core</span></h3>
+                    <ul class="skill-list">
+                        <li>PyTorch / TensorFlow</li>
+                        <li>CNN, RNN, GRU, LSTM</li>
+                        <li>Transformers / Vision Transformers</li>
+                        <li>Complex-Valued Neural Networks</li>
+                        <li>Reinforcement Learning (hardware-in-the-loop)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-icon"><i class="fas fa-code"></i></div>
+                    <h3 class="skill-category-title">Programming <span class="skill-level core">Core</span></h3>
+                    <ul class="skill-list">
+                        <li>Python (PyTorch, TensorFlow, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn)</li>
+                        <li>MATLAB</li>
+                        <li>C / C++</li>
+                        <li>Shell (Bash / Zsh)</li>
+                        <li>ROS (rospy, roscpp)</li>
+                        <li>Azure</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="skill-category-title">Tools &amp; OS <span class="skill-level core">Core</span></h3>
+                    <ul class="skill-list">
+                        <li>Ubuntu / Linux</li>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>LaTeX (Overleaf)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-icon"><i class="fas fa-robot"></i></div>
+                    <h3 class="skill-category-title">Robotics &amp; Verification <span class="skill-level core">Core</span></h3>
+                    <ul class="skill-list">
+                        <li>Gazebo / RViz</li>
+                        <li>Point Cloud Library (PCL)</li>
+                        <li>Neural Network Verification (NNV)</li>
+                        <li>Signal Temporal Logic (STL)</li>
+                        <li>Depth Cameras / Point Cloud Sensors</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-icon"><i class="fas fa-microchip"></i></div>
+                    <h3 class="skill-category-title">RF &amp; Embedded Design <span class="skill-level familiar">Familiar</span></h3>
+                    <ul class="skill-list">
+                        <li>VHDL / Verilog</li>
+                        <li>Arduino</li>
+                        <li>AVR Studio</li>
+                        <li>KEIL</li>
+                        <li>Proteus Professional</li>
+                        <li>ADS (Keysight)</li>
+                        <li>HFSS (Ansys)</li>
+                        <li>LTSpice</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<div id="Research" class="section">
+
+        <section id="publications" class="timeline">
+            
+            <div class="container">
+                <h1 id="publications-heading">Publications.</h1>
+                <div class="timeline-item" >
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">Waves on the Walls: Empirical Characterization of mmWave Lateral Waves for Enhanced Indoor Coverage</h3>
+                        <i class="timeline-details">2026 IEEE International Conference on Mobile Ad&#8209;Hoc and Smart Systems (MASS) <span style="color:var(--text-muted);">(under review)</span></i>
+                        <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik</strong>, Avhishek Biswas, Sasitharan Balasubramaniam, Christos Argyropoulos, Mehmet C. Vuran</p>
+                    </div>
+                </div>
+                <div class="timeline-item" >
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">Look Once, Beam Twice: Camera&#8209;Primed Real&#8209;Time Double&#8209;Directional mmWave Beam Management for Vehicular Connectivity</h3>
+                        <i class="timeline-details">2026 IEEE International Conference on Sensing, Communication, and Networking (SECON) <span style="color:var(--accent);">(to appear)</span></i>
+                        <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik*</strong>, <strong style="color:var(--accent);">Avhishek Biswas*</strong> (equal contribution), Eylem Ekici, Mehmet Can Vuran</p>
+                        <a target="_blank" rel="noopener" class="pub-link" aria-label="View on Google Scholar" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:zYLM7Y9cAGgC"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+                <div class="timeline-item" >
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">Perception-based Runtime Monitoring and Verification for Human-Robot Construction Systems <span class="award-badge"><i class="fas fa-award"></i> Best Paper Candidate</span></h3>
+                        <i class="timeline-details">ACM/IEEE MEMOCODE 2024 </i>
+                        <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik</strong>, Sung Woo Choi, Yuntao Li, Luan Viet Nguyen, Kyungki Kim, Hoang-Dung Tran</p>
+                        <a target="_blank" rel="noopener" class="pub-link" aria-label="View on Google Scholar" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:IjCSPb-OGe4C"><i class="fas fa-graduation-cap"></i></a>
+
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class="timeline-item" >
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">ASTITVA: assistive special tools and technologies for inclusion of visually challenged</h3>             
+                        <i class="timeline-details">2021 international conference on computing, communication, and intelligent systems (ICCCIS)</i>
+                        <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik</strong>, Rahul Johari, Nitesh Kumar Gaurav, Sapna Chaudhary, Rohan Tripathi</p>
+                        <a target="_blank" rel="noopener" class="pub-link" aria-label="View on Google Scholar" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:d1gkVwhDpl0C"><i class="fas fa-graduation-cap"></i></a>
+                      
+                    </div>
+                </div>
+                <div class="timeline-item" >        
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">START: smart stick based on TLC algorithm in IoT network for visually challenged persons</h3>            
+                        <i class="timeline-details">2020 Fourth International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud)(I-SMAC)</i>
+                        <p class="timeline-details">Authors: Rahul Johari, Nitesh Kumar Gaurav, Sapna Chaudhary, <strong style="color:var(--accent);">Apala Pramanik</strong></p>
+                        <a target="_blank" rel="noopener" class="pub-link" aria-label="View on Google Scholar" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:u5HHmVD_uO8C"><i class="fas fa-graduation-cap"></i></a>
+                        
+                    </div>
+                </div>
+                <div class="timeline-item" >        
+                    <div class="timeline-right">
+                        <h3 class="timeline-title">SERI: SEcure Routing in IoT</h3>              
+                        <i class="timeline-details">International Conference on Internet of Things and Connected Technologies</i>
+                        <p class="timeline-details">Authors: Varnika Gaur, Rahul Johari, Parth Khandelwal, <strong style="color:var(--accent);">Apala Pramanik</strong></p>
+                        <a target="_blank" rel="noopener" class="pub-link" aria-label="View on Google Scholar" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:2osOgNQ5qMEC"><i class="fas fa-graduation-cap"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+          </section>
+
+
+    </div>
+
+<div id="research-statement" class="section">
         <div class="research-statement-container">
             <h1 class="research-statement-heading">Research Statement.</h1>
             <div class="research-statement-card">
@@ -228,73 +603,7 @@
         </div>
     </div>
 
-    <div id="Research" class="section">
-
-        <section id="publications" class="timeline">
-            
-            <div class="container">
-                <h1 id="publications-heading">Publications.</h1>
-                <div class="timeline-item" >
-                    <div class="timeline-right">
-                        <h3 class="timeline-title">Waves on the Walls: Empirical Characterization of mmWave Lateral Waves for Enhanced Indoor Coverage</h3>
-                        <i class="timeline-details">2026 IEEE International Conference on Mobile Ad&#8209;Hoc and Smart Systems (MASS) <span style="color:var(--text-muted);">(under review)</span></i>
-                        <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik</strong>, Avhishek Biswas, Sasitharan Balasubramaniam, Christos Argyropoulos, Mehmet C. Vuran</p>
-                    </div>
-                </div>
-                <div class="timeline-item" >
-                    <div class="timeline-right">
-                        <h3 class="timeline-title">Look Once, Beam Twice: Camera&#8209;Primed Real&#8209;Time Double&#8209;Directional mmWave Beam Management for Vehicular Connectivity</h3>
-                        <i class="timeline-details">2026 IEEE International Conference on Sensing, Communication, and Networking (SECON) <span style="color:var(--accent);">(to appear)</span></i>
-                        <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik*</strong>, <strong style="color:var(--accent);">Avhishek Biswas*</strong> (equal contribution), Eylem Ekici, Mehmet Can Vuran</p>
-                        <a target="_blank" style="color: #4E5B6C;" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:zYLM7Y9cAGgC"><i class="fas fa-graduation-cap"></i></a>
-                    </div>
-                </div>
-                <div class="timeline-item" >
-                    <div class="timeline-right">
-                        <h3 class="timeline-title">Perception-based Runtime Monitoring and Verification for Human-Robot Construction Systems <span class="award-badge"><i class="fas fa-award"></i> Best Paper Candidate</span></h3>
-                        <i class="timeline-details">ACM/IEEE MEMOCODE 2024 </i>
-                        <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik</strong>, Sung Woo Choi, Yuntao Li, Luan Viet Nguyen, Kyungki Kim, Hoang-Dung Tran</p>
-                        <a target="_blank" style="color: #4E5B6C;"href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:IjCSPb-OGe4C"><i class="fas fa-graduation-cap"></i></a>
-
-                        
-                        
-                    </div>
-                </div>
-                
-                <div class="timeline-item" >
-                    <div class="timeline-right">
-                        <h3 class="timeline-title">ASTITVA: assistive special tools and technologies for inclusion of visually challenged</h3>             
-                        <i class="timeline-details">2021 international conference on computing, communication, and intelligent systems (ICCCIS)</i>
-                        <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik</strong>, Rahul Johari, Nitesh Kumar Gaurav, Sapna Chaudhary, Rohan Tripathi</p>
-                        <a target="_blank" style="color: #4E5B6C;"href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:d1gkVwhDpl0C"><i class="fas fa-graduation-cap"></i></a>
-                      
-                    </div>
-                </div>
-                <div class="timeline-item" >        
-                    <div class="timeline-right">
-                        <h3 class="timeline-title">START: smart stick based on TLC algorithm in IoT network for visually challenged persons</h3>            
-                        <i class="timeline-details">2020 Fourth International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud)(I-SMAC)</i>
-                        <p class="timeline-details">Authors: Rahul Johari, Nitesh Kumar Gaurav, Sapna Chaudhary, <strong style="color:var(--accent);">Apala Pramanik</strong></p>
-                        <a target="_blank" style="color: #4E5B6C;"href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:u5HHmVD_uO8C"><i class="fas fa-graduation-cap"></i></a>
-                        
-                    </div>
-                </div>
-                <div class="timeline-item" >        
-                    <div class="timeline-right">
-                        <h3 class="timeline-title">SERI: SEcure Routing in IoT</h3>              
-                        <i class="timeline-details">International Conference on Internet of Things and Connected Technologies</i>
-                        <p class="timeline-details">Authors: Varnika Gaur, Rahul Johari, Parth Khandelwal, <strong style="color:var(--accent);">Apala Pramanik</strong></p>
-                        <a target="_blank" style="color: #4E5B6C;"href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:2osOgNQ5qMEC"><i class="fas fa-graduation-cap"></i></a>
-                        
-                    </div>
-                </div>
-            </div>
-          </section>
-
-
-    </div>
-
-    <div id="blogs" class="section">
+<div id="blogs" class="section">
         <div class="blogs-container">
             <h1 class="blogs-heading">Blogs.</h1>
             <div class="blogs-grid">
@@ -367,295 +676,13 @@
         </div>
     </div>
 
-    <div id="skills" class="section">
-        <div class="skills-container">
-            <h1 class="skills-heading">Skills.</h1>
-            <p class="skills-subtitle">Core skills are what I use daily in research. Familiar tools are ones I've shipped with but use less often.</p>
-            <div class="skills-grid">
-
-                <div class="skill-category">
-                    <div class="skill-category-icon"><i class="fas fa-broadcast-tower"></i></div>
-                    <h3 class="skill-category-title">Wireless &amp; RF <span class="skill-level core">Core</span></h3>
-                    <ul class="skill-list">
-                        <li>GNU Radio</li>
-                        <li>USRP / Software Defined Radio</li>
-                        <li>Wireless InSite (Ray Tracing)</li>
-                        <li>Sionna RT</li>
-                        <li>mmWave Propagation Modeling</li>
-                        <li>Bistatic Radar Measurement</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-icon"><i class="fas fa-brain"></i></div>
-                    <h3 class="skill-category-title">Machine Learning <span class="skill-level core">Core</span></h3>
-                    <ul class="skill-list">
-                        <li>PyTorch / TensorFlow</li>
-                        <li>CNN, RNN, GRU, LSTM</li>
-                        <li>Transformers / Vision Transformers</li>
-                        <li>Complex-Valued Neural Networks</li>
-                        <li>Reinforcement Learning (hardware-in-the-loop)</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-icon"><i class="fas fa-code"></i></div>
-                    <h3 class="skill-category-title">Programming <span class="skill-level core">Core</span></h3>
-                    <ul class="skill-list">
-                        <li>Python (PyTorch, TensorFlow, NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn)</li>
-                        <li>MATLAB</li>
-                        <li>C / C++</li>
-                        <li>Shell (Bash / Zsh)</li>
-                        <li>ROS (rospy, roscpp)</li>
-                        <li>Azure</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-icon"><i class="fas fa-tools"></i></div>
-                    <h3 class="skill-category-title">Tools &amp; OS <span class="skill-level core">Core</span></h3>
-                    <ul class="skill-list">
-                        <li>Ubuntu / Linux</li>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>LaTeX (Overleaf)</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-icon"><i class="fas fa-robot"></i></div>
-                    <h3 class="skill-category-title">Robotics &amp; Verification <span class="skill-level core">Core</span></h3>
-                    <ul class="skill-list">
-                        <li>Gazebo / RViz</li>
-                        <li>Point Cloud Library (PCL)</li>
-                        <li>Neural Network Verification (NNV)</li>
-                        <li>Signal Temporal Logic (STL)</li>
-                        <li>Depth Cameras / Point Cloud Sensors</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-icon"><i class="fas fa-microchip"></i></div>
-                    <h3 class="skill-category-title">Embedded &amp; Undergrad Toolchain <span class="skill-level familiar">Familiar</span></h3>
-                    <ul class="skill-list">
-                        <li>VHDL / Verilog</li>
-                        <li>Arduino</li>
-                        <li>AVR Studio</li>
-                        <li>KEIL</li>
-                        <li>Proteus Professional</li>
-                        <li>ADS (Keysight)</li>
-                        <li>HFSS (Ansys)</li>
-                        <li>LTSpice</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="projects" class="section">
-        <div class="container_proj">
-            <h1 class="projects-heading">Projects.</h1>
-            <div class="projects-grid">
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img src="figures/raytrace_tool.png" alt="Ray Tracing Micro Tool for mmWave Beam-Sweep Analysis">
-                        <div class="proj-year-tag">2026</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Ray Tracing Micro Tool</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">Python CLI</span>
-                            <span class="stat-badge">Interactive HTML</span>
-                            <span class="stat-badge">mmWave</span>
-                        </div>
-                        <p class="proj-card-desc">Python toolkit that turns raw 63×63 mmWave beam-sweep CSV data into an interactive floor-plan report and publication-quality heatmaps in a single command. Includes a browser-based floor plan editor and real-time specular ray-tracing overlay.</p>
-                        <a href="https://github.com/UNL-CPN-Lab/Ray-Tracing-Micro-Tool" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img src="figures/rnn.png" alt="Sequence Modeling">
-                        <div class="proj-year-tag">2026</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Sequence Modeling: GRU, LSTM &amp; Transformer</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">GRU / LSTM</span>
-                            <span class="stat-badge">Transformer</span>
-                            <span class="stat-badge">TensorFlow</span>
-                        </div>
-                        <p class="proj-card-desc">Comparative study of recurrent and attention-based architectures. Implemented and evaluated GRU, LSTM, and Transformer models on time-series and NLP tasks, analyzing compute efficiency and long-range dependency handling.</p>
-                        <div class="proj-card-links">
-                            <a href="https://github.com/apalapramanik/GRU" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> GRU</a>
-                            <a href="https://github.com/apalapramanik/RNN" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> RNN</a>
-                            <a href="https://github.com/apalapramanik/LSTM" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> LSTM</a>
-                            <a href="https://github.com/apalapramanik/Transformers" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Transformers</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img src="figures/raytracing.png" alt="3D Ray Tracing for mmWave Propagation">
-                        <div class="proj-year-tag">2024</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">3D Ray Tracing for mmWave Propagation</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">24 GHz</span>
-                            <span class="stat-badge">3-bounce reflections</span>
-                            <span class="stat-badge">MATLAB</span>
-                        </div>
-                        <p class="proj-card-desc">MATLAB-based ray tracing simulator for indoor mmWave propagation. Traces rays through a configurable 3D layout, computing received power with free-space path loss, multiple reflections, and log-normal shadowing.</p>
-                        <a href="https://github.com/apalapramanik/mmWave-Ray-Tracing" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img src="figures/wirelessnet.png" alt="Multi-Modal Traffic Pattern Detection">
-                        <div class="proj-year-tag">2024</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Multi-Modal Traffic Pattern Detection</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">&gt;80% accuracy</span>
-                            <span class="stat-badge">&lt;100 ms latency</span>
-                            <span class="stat-badge">USRP + CVNN</span>
-                        </div>
-                        <p class="proj-card-desc">Real-time traffic classification fusing synchronized USRP RF signals and camera images (±10 ms). A Complex-Valued Neural Network classifies traffic states with a watchdog for continuous operation.</p>
-                        <a href="https://github.com/apalapramanik/WirelessNet" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img src="figures/slam.webp" alt="Edge-Assisted SLAM">
-                        <div class="proj-year-tag">2023</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Edge-Assisted SLAM for Human-Robot Construction</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">1.25 m safety radius</span>
-                            <span class="stat-badge">YOLOv3 + Kalman</span>
-                            <span class="stat-badge">ROS</span>
-                        </div>
-                        <p class="proj-card-desc">EdgeSLAM deployment at a construction site; robot navigates to goals while maintaining a 1.25 m safe distance from workers using YOLOv3 detection and Kalman filtering on depth-camera point clouds.</p>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img src="figures/vit.png" alt="Vision Transformer Re-implementation">
-                        <div class="proj-year-tag">2023</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Vision Transformer Re-implementation</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">Self-Attention</span>
-                            <span class="stat-badge">PyTorch</span>
-                        </div>
-                        <p class="proj-card-desc">Re-implemented the ViT architecture from scratch, exploring self-attention for image recognition. Analyzed scaling challenges, pretraining strategies in data-limited regimes, and fine-tuning vs. CNNs.</p>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-icon-header">
-                        <i class="fas fa-brain"></i>
-                        <div class="proj-year-tag">2023–24</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">AI &amp; Machine Learning Projects</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">BERT</span>
-                            <span class="stat-badge">CNN</span>
-                            <span class="stat-badge">TensorFlow</span>
-                            <span class="stat-badge">HuggingFace</span>
-                        </div>
-                        <p class="proj-card-desc">A collection of ML projects: Spanish news classification with fine-tuned BERT (BETO, 7-class NLP), sign-language gesture recognition (CNN, 98% test acc), and CIFAR-100 image classification (custom CNN, 63.75% test acc).</p>
-                        <div class="proj-card-links">
-                            <a href="https://github.com/apalapramanik/Spanish-News-Classification" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Spanish News Classification</a>
-                            <a href="https://github.com/apalapramanik/Hand-Gesture-Recognition" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Hand Gesture Recognition</a>
-                            <a href="https://github.com/apalapramanik/Classifying-CIFAR100" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Classifying CIFAR-100</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-icon-header">
-                        <i class="fas fa-robot"></i>
-                        <div class="proj-year-tag">2022–23</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Robotics &amp; Safety Verification Projects</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">ROS</span>
-                            <span class="stat-badge">YOLOv5</span>
-                            <span class="stat-badge">STL / LTL</span>
-                            <span class="stat-badge">Gazebo</span>
-                        </div>
-                        <p class="proj-card-desc">TurtleBot3 safety system with YOLOv5 human detection, Kalman-filter trajectory prediction, and reachability-based collision verification in Gazebo. Husky UGV setup (ROS Melodic, Jetson, RealSense, Kinova arm). STL/LTL runtime monitoring framework with ROS integration.</p>
-                        <div class="proj-card-links">
-                            <a href="https://github.com/apalapramanik/TurtleBot3-Safety-Verification" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> TurtleBot3 Safety Verification</a>
-                            <a href="https://github.com/apalapramanik/Husky" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Clearpath Husky UGV</a>
-                            <a href="https://github.com/apalapramanik/Monitoring" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> STL/LTL Runtime Monitoring</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="hobbies" class="section">
-        <div class="hobbies-container">
-            <h1 class="hobbies-heading">Hobbies.</h1>
-            <p class="hobbies-subtitle">Beyond research, these are the things that keep me balanced and curious.</p>
-            <div class="hobbies-grid">
-                <a href="hobbies/bharatnatyam.html" class="hobby-card">
-                    <div class="hobby-image" style="background-image: url('figures/dance.JPG');"></div>
-                    <div class="hobby-body">
-                        <div class="hobby-icon"><i class="fas fa-theater-masks"></i></div>
-                        <h3 class="hobby-title">Bharatnatyam</h3>
-                        <p class="hobby-desc">Senior diploma in Indian classical dance with 10+ years of training.</p>
-                        <span class="hobby-link">Read more <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-                <a href="hobbies/gym.html" class="hobby-card">
-                    <div class="hobby-image" style="background-image: url('figures/gym.jpeg');"></div>
-                    <div class="hobby-body">
-                        <div class="hobby-icon"><i class="fas fa-dumbbell"></i></div>
-                        <h3 class="hobby-title">Gym &amp; Fitness</h3>
-                        <p class="hobby-desc">Passionate about weight training and maintaining a healthy, active lifestyle.</p>
-                        <span class="hobby-link">Read more <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-                <a href="hobbies/travelling.html" class="hobby-card">
-                    <div class="hobby-image" style="background-image: url('figures/utah.jpg');"></div>
-                    <div class="hobby-body">
-                        <div class="hobby-icon"><i class="fas fa-plane-departure"></i></div>
-                        <h3 class="hobby-title">Travelling</h3>
-                        <p class="hobby-desc">Exploring new places, cultures, and cuisines whenever the chance comes up.</p>
-                        <span class="hobby-link">Read more <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    
-
-    <div id="news" class="section">
+<div id="news" class="section">
         <div class="content">
           <h1 class="news-heading">News.</h1>
           <ul class="news-list" style="font-size: 1.2em; color: var(--text-body); line-height: 1.8;">
           <li class="news-highlight"><span class="news-date">2026</span> Awarded the <strong>Outstanding Graduate Research Student Award</strong> at University of Nebraska-Lincoln</li>
           <li class="news-highlight"><span class="news-date">Mar 2026</span> First author paper accepted at <strong>IEEE SECON 2026</strong> &#8220;Look Once, Beam Twice: Camera&#8209;Primed Real&#8209;Time Double&#8209;Directional mmWave Beam Management for Vehicular Connectivity&#8221;</li>
-          <li><span class="news-date">2026</span> Reviewer for <strong>IEEE Transactions on Wireless Communications</strong></li>
-          <li><span class="news-date">2025</span> Reviewer for <strong>IEEE Transactions on Wireless Communications</strong></li>
+          <li><span class="news-date">2025 &ndash; 2026</span> Reviewer for <strong>IEEE Transactions on Wireless Communications</strong></li>
           <li><span class="news-date">May 2025</span> Graduated with MS in Computer Science from University of Nebraska-Lincoln</li>
           <li><span class="news-date">Oct 2024</span> Presented &#8220;Perception-based Runtime Monitoring and Verification for Human-Robot Construction Systems&#8221; at <strong>ACM/IEEE MEMOCODE 2024</strong>, Best Paper Candidate (Raleigh, NC)</li>
           <li><span class="news-date">Aug 2024</span> Started PhD in Wireless Communications with focus on millimeter wave for V2I at UNL</li>
@@ -666,7 +693,7 @@
         </div>
       </div>
 
-    <div id="outreach" class="section">
+<div id="outreach" class="section">
         <div class="outreach-container">
           <h1 class="outreach-heading">Outreach.</h1>
           <p class="outreach-subtitle">Sharing wireless research with students across every level, from curious kids to future PhDs.</p>
@@ -709,7 +736,43 @@
         </div>
     </div>
 
-    <div id="contact" class="section">
+<div id="hobbies" class="section">
+        <div class="hobbies-container">
+            <h1 class="hobbies-heading">Hobbies.</h1>
+            <p class="hobbies-subtitle">Beyond research, these are the things that keep me balanced and curious.</p>
+            <div class="hobbies-grid">
+                <a href="hobbies/bharatnatyam.html" class="hobby-card">
+                    <div class="hobby-image" style="background-image: url('figures/opt/dance.webp');"></div>
+                    <div class="hobby-body">
+                        <div class="hobby-icon"><i class="fas fa-theater-masks"></i></div>
+                        <h3 class="hobby-title">Bharatnatyam</h3>
+                        <p class="hobby-desc">Senior diploma in Indian classical dance with 10+ years of training.</p>
+                        <span class="hobby-link">Read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="hobbies/gym.html" class="hobby-card">
+                    <div class="hobby-image" style="background-image: url('figures/opt/gym.webp');"></div>
+                    <div class="hobby-body">
+                        <div class="hobby-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h3 class="hobby-title">Gym &amp; Fitness</h3>
+                        <p class="hobby-desc">Passionate about weight training and maintaining a healthy, active lifestyle.</p>
+                        <span class="hobby-link">Read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="hobbies/travelling.html" class="hobby-card">
+                    <div class="hobby-image" style="background-image: url('figures/opt/utah.webp');"></div>
+                    <div class="hobby-body">
+                        <div class="hobby-icon"><i class="fas fa-plane-departure"></i></div>
+                        <h3 class="hobby-title">Travelling</h3>
+                        <p class="hobby-desc">Exploring new places, cultures, and cuisines whenever the chance comes up.</p>
+                        <span class="hobby-link">Read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<div id="contact" class="section">
         <div class="content contact-content">
           <h1 class="contact-heading">Let's Connect.</h1>
           <p class="contact-tagline">I'm always open to conversations about wireless communication, ML research, internships, and collaborations.</p>
@@ -721,8 +784,6 @@
               <a target="_blank" href="https://www.linkedin.com/in/apala-pramanik" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
               <a target="_blank" href="https://github.com/apalapramanik" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
               <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=iUuz41kAAAAJ" aria-label="Google Scholar Profile"><i class="fas fa-graduation-cap"></i></a>
-              <a target="_blank" href="https://www.facebook.com/apala.pramanik" aria-label="Facebook Profile"><i class="fab fa-facebook"></i></a>
-              <a target="_blank" href="https://www.instagram.com/apala__pramanik" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
           </div>
       </div>
     </div>
@@ -745,7 +806,7 @@
                 <a href="mailto:apramanik2@huskers.unl.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
             <div class="footer-updated">
-                Last updated: April 2026
+                Last updated: July 2026
             </div>
         </div>
     </footer>

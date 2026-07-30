@@ -1,6 +1,12 @@
 /* General styles */
 
-
+/* Border-box everywhere: several containers combine width:100% with padding,
+   which overflows the viewport on narrow screens under the default box model. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
@@ -60,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 .content {
     text-align: left;
     padding: 20px;
-    color: black;
+    color: var(--text-primary);
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -71,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--text-primary);
     gap: 50px;
 }
 
@@ -90,8 +96,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 340px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid rgba(119, 141, 169, 0.4);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--accent-soft-border);
+    box-shadow: var(--shadow-card-hover);
     transition: transform 0.4s ease;
 }
 
@@ -148,6 +154,22 @@ h1 {
     font-weight: 600;
     margin-bottom: 10px;
     box-shadow: 0 0 12px var(--accent-soft-border);
+}
+
+/* Work authorization / availability — the first thing a recruiter screens for */
+.hero-auth {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0 0 12px 0;
+}
+
+.hero-auth i {
+    color: var(--accent);
+    flex-shrink: 0;
 }
 
 .hero-paper-banner {
@@ -331,6 +353,61 @@ h1 {
         flex-direction: column;
         text-align: center;
     }
+
+    .section {
+        padding: 30px 16px;
+        min-height: auto;
+    }
+
+    #content_home {
+        padding-top: 80px;
+    }
+
+    /* The hero column is content-sized, so a bare max-width:100% on the child
+       resolves against the child's own 520px and still overflows. Pin the
+       wrapper to the section width first. */
+    .content_home {
+        gap: 24px;
+        width: 100%;
+    }
+
+    .content_home > div {
+        max-width: 100%;
+        width: 100%;
+        min-width: 0;
+    }
+
+    #initials {
+        font-size: 26px;
+        top: 12px;
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .content_home h1 {
+        font-size: 2em;
+    }
+
+    /* Justified text creates rivers of whitespace in narrow columns */
+    .content_home p {
+        text-align: left !important;
+    }
+
+    .hero-actions {
+        gap: 10px;
+    }
+
+    .hero-cta {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    .hero-badge {
+        font-size: 0.8em;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -340,21 +417,13 @@ h1 {
         margin-top: 60px;
     }
 
-    img {
+    .content_home .hero-image {
         margin-right: 0;
         margin-bottom: 5px;
-        width: 80%;
-        height: auto;
     }
 
-    h1 {
+    .content_home h1 {
         font-size: 2.4em;
-
-    }
-
-    p {
-        font-size: 1.4em;
-        line-height: 1.5;
     }
 
 

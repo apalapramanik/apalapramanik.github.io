@@ -1,10 +1,10 @@
 /* Theme variables — light is default, dark is toggled via [data-theme="dark"] */
 
 :root {
-    /* Palette: Vibrant Coral #e26d5c | Wine Plum #723d46 | Deep Mocha #472d30 | Soft Peach #ffe1a8 */
-    --bg-base: #ffffff;
-    --bg-gradient-top: #ffffff;
-    --bg-gradient-bottom: #ffffff;
+    /* Palette: Warm Sand #f2e9dc | Vibrant Coral #e26d5c | Wine Plum #723d46 | Deep Mocha #472d30 | Soft Peach #ffe1a8 */
+    --bg-base: #f2e9dc;
+    --bg-gradient-top: #fbf5ec;
+    --bg-gradient-bottom: #f2e9dc;
     --text-primary: #472d30;
     --text-heading: #472d30;
     --text-body: #5a3a3e;
@@ -15,7 +15,9 @@
     --card-border: rgba(114, 61, 70, 0.20);
     --card-border-hover: rgba(226, 109, 92, 0.55);
     --hr-color: rgba(114, 61, 70, 0.25);
-    --navbar-bg: #ffffff;
+    --navbar-bg: rgba(242, 233, 220, 0.88);
+    --navbar-panel-bg: #f2e9dc;
+    --navbar-border: rgba(114, 61, 70, 0.14);
     --navbar-text: #472d30;
     --footer-bg: rgba(255, 248, 235, 0.92);
     --shadow-card: 0 4px 14px rgba(71, 45, 48, 0.12);
@@ -44,7 +46,9 @@
     --card-border: rgba(119, 141, 169, 0.2);
     --card-border-hover: rgba(246, 170, 28, 0.5);
     --hr-color: rgba(255, 255, 255, 0.08);
-    --navbar-bg: transparent;
+    --navbar-bg: rgba(10, 10, 21, 0.82);
+    --navbar-panel-bg: #131a2b;
+    --navbar-border: rgba(255, 255, 255, 0.08);
     --navbar-text: #ffffff;
     --footer-bg: rgba(10, 10, 21, 0.85);
     --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.25);
