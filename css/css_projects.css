@@ -153,17 +153,19 @@
     transform: scale(1.08);
 }
 
+/* Links sit side by side and wrap, rather than each spanning the full width.
+   margin-top:auto pins them to the card bottom so equal-height cards line up. */
 .proj-card-links {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 6px;
-    margin-top: 4px;
+    margin-top: auto;
+    padding-top: 8px;
 }
 
-.proj-card-links .card-link {
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: flex-start;
+/* A card with a single link uses .card-link directly in the body */
+.proj-card-body > .card-link {
+    margin-top: auto;
 }
 
 @media (max-width: 1300px) {

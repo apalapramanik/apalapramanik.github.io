@@ -134,17 +134,16 @@
 
  
     <script type="text/javascript" src="js/interactions.js"></script>
-    <a id="initials" href="#content_home" aria-label="Back to top">ap.</a>
     <a id="back-to-top" href="#content_home" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
     <nav class="navbar">
         <div class="nav-links" id="nav-links">
             <a href="#content_home">Home</a>
+            <a href="#research-statement">Research</a>
             <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#publications">Publications</a>
-            <a href="#research-statement">Research</a>
+            <a href="#projects">Projects</a>
             <a href="#blogs">Blogs</a>
             <a href="#news">News</a>
             <a href="#outreach">Outreach</a>
@@ -181,9 +180,9 @@
                     <i class="fas fa-briefcase"></i> Open to Spring / Summer 2027 Internships: ML for Wireless / V2I / V2X
                 </div>
                 <p class="hero-auth">
-                    <i class="fas fa-id-badge"></i> F-1 student visa &mdash; eligible for CPT/OPT internship employment; no sponsorship required for internships.
+                    <i class="fas fa-id-badge"></i> F-1 student visa &middot; Eligible for CPT/OPT internship employment
                 </p>
-                <p style="font-size: 0.95em; line-height: 1.6; color: var(--text-body); text-align: justify;">I am a PhD student at the <a href="https://cpn.unl.edu/" target="_blank" style="color:var(--accent);">CPN Lab</a>, University of Nebraska-Lincoln, advised by <a href="https://cse.unl.edu/~mcvuran/" target="_blank" style="color:var(--accent);">Dr. Mehmet Can Vuran</a>. My research focuses on enhancing <strong>mmWave</strong> communication through advanced beamforming, beam tracking, and prediction techniques, integrating <strong>machine learning</strong> and sensory data for improved wireless connectivity. I am also beginning to explore <strong>O-RAN</strong> (the open, disaggregated RAN architecture) as a platform for bringing intelligent, standards-compliant control closer to the radio.</p>
+                <p class="hero-bio">I am a PhD student at the <a href="https://cpn.unl.edu/" target="_blank" style="color:var(--accent);">CPN Lab</a>, University of Nebraska-Lincoln, advised by <a href="https://cse.unl.edu/~mcvuran/" target="_blank" style="color:var(--accent);">Dr. Mehmet Can Vuran</a>. My research focuses on enhancing <strong>mmWave</strong> communication through advanced beamforming, beam tracking, and prediction techniques, integrating <strong>machine learning</strong> and sensory data for improved wireless connectivity. I am also beginning to explore <strong>O-RAN</strong> (the open, disaggregated RAN architecture) as a platform for bringing intelligent, standards-compliant control closer to the radio.</p>
                 <hr style="width: 100%; margin-top: 0; margin-bottom: 10px; border: none; border-top: 1px solid var(--hr-color);">
                 <div class="hero-actions">
                     <a href="APALA_RESUME.pdf" target="_blank" rel="noopener" type="application/pdf" class="hero-cta"><i class="fas fa-file-alt"></i> View CV</a>
@@ -194,10 +193,32 @@
                     <a target="_blank" href="https://github.com/apalapramanik" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
                     <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=iUuz41kAAAAJ&view_op=list_works&gmla=AILGF5UVY-chuAA12NOOq-Xp53s9t3TaLDb_ecIacMH8Xa4YxBRekQMrauP1WAHtYXLdxI3pihijLGmDcgpP9uNI" aria-label="Google Scholar Profile"><i class="fas fa-graduation-cap"></i></a>
                     <a target="_blank" href="https://www.linkedin.com/in/apala-pramanik" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:apramanik2@huskers.unl.edu?subject=Internship%20Opportunity%20%2F%20Collaboration" aria-label="Email Apala Pramanik"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
       
+    </div>
+
+<div id="research-statement" class="section">
+        <div class="research-statement-container">
+            <h1 class="research-statement-heading">Research Statement.</h1>
+            <div class="research-statement-card">
+                <div class="research-quote-mark"><i class="fas fa-quote-left"></i></div>
+                <p class="research-statement-body">My research focuses on making <strong>mmWave wireless links survive the real world</strong>, where vehicles move, blockages happen, and hardware imposes hard constraints. I combine <strong>machine learning</strong>, <strong>camera and sensor cues</strong>, and <strong>ray-traced propagation models</strong> to enable fast, reliable double-directional beam management for V2I and V2X connectivity.</p>
+                <p class="research-statement-body">I'm especially interested in closing the loop between <strong>perception and the physical layer</strong>: using what a camera sees to prime where a beam points, and using reinforcement learning to adapt transmit power and gain in real time under SNR constraints. The goal is practical: algorithms that run on SDR testbeds today and scale to vehicular networks tomorrow.</p>
+                <p class="research-statement-body">I am also starting to explore <strong>O-RAN</strong> as a research direction. I'm new to the space, but the idea of using open, standardized interfaces (xApps, the Near-RT RIC, and the E2 control loop) to bring data-driven decision making closer to the radio feels like a natural extension of the work I already care about.</p>
+                <div class="research-keywords">
+                    <span class="research-keyword">mmWave Beam Management</span>
+                    <span class="research-keyword">Vision-Aided Wireless</span>
+                    <span class="research-keyword">Reinforcement Learning</span>
+                    <span class="research-keyword">Ray Tracing</span>
+                    <span class="research-keyword">V2I / V2X</span>
+                    <span class="research-keyword">Software-Defined Radio</span>
+                    <span class="research-keyword">O-RAN</span>
+                </div>
+            </div>
+        </div>
     </div>
 
 <div id="experience" class="section">
@@ -271,165 +292,6 @@
         </div>
     </div>
 
-<div id="projects" class="section">
-        <div class="container_proj">
-            <h1 class="projects-heading">Projects.</h1>
-            <div class="projects-grid">
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/raytrace_tool.webp" alt="Ray Tracing Micro Tool for mmWave Beam-Sweep Analysis">
-                        <div class="proj-year-tag">2026</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Ray Tracing Micro Tool</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">Python CLI</span>
-                            <span class="stat-badge">Interactive HTML</span>
-                            <span class="stat-badge">mmWave</span>
-                        </div>
-                        <p class="proj-card-desc">Python toolkit that turns raw 63×63 mmWave beam-sweep CSV data into an interactive floor-plan report and publication-quality heatmaps in a single command. Includes a browser-based floor plan editor and real-time specular ray-tracing overlay.</p>
-                        <a href="https://github.com/UNL-CPN-Lab/Ray-Tracing-Micro-Tool" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/rnn.webp" alt="Sequence Modeling">
-                        <div class="proj-year-tag">2026</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Sequence Modeling: GRU, LSTM &amp; Transformer</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">GRU / LSTM</span>
-                            <span class="stat-badge">Transformer</span>
-                            <span class="stat-badge">TensorFlow</span>
-                        </div>
-                        <p class="proj-card-desc">Comparative study of recurrent and attention-based architectures. Implemented and evaluated GRU, LSTM, and Transformer models on time-series and NLP tasks, analyzing compute efficiency and long-range dependency handling.</p>
-                        <div class="proj-card-links">
-                            <a href="https://github.com/apalapramanik/GRU" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> GRU</a>
-                            <a href="https://github.com/apalapramanik/RNN" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> RNN</a>
-                            <a href="https://github.com/apalapramanik/LSTM" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> LSTM</a>
-                            <a href="https://github.com/apalapramanik/Transformers" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Transformers</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/raytracing.webp" alt="3D Ray Tracing for mmWave Propagation">
-                        <div class="proj-year-tag">2024</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">3D Ray Tracing for mmWave Propagation</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">24 GHz</span>
-                            <span class="stat-badge">3-bounce reflections</span>
-                            <span class="stat-badge">MATLAB</span>
-                        </div>
-                        <p class="proj-card-desc">MATLAB-based ray tracing simulator for indoor mmWave propagation. Traces rays through a configurable 3D layout, computing received power with free-space path loss, multiple reflections, and log-normal shadowing.</p>
-                        <a href="https://github.com/apalapramanik/mmWave-Ray-Tracing" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/wirelessnet.webp" alt="Multi-Modal Traffic Pattern Detection">
-                        <div class="proj-year-tag">2024</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Multi-Modal Traffic Pattern Detection</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">&gt;80% accuracy</span>
-                            <span class="stat-badge">&lt;100 ms latency</span>
-                            <span class="stat-badge">USRP + CVNN</span>
-                        </div>
-                        <p class="proj-card-desc">Real-time traffic classification fusing synchronized USRP RF signals and camera images (±10 ms). A Complex-Valued Neural Network classifies traffic states with a watchdog for continuous operation.</p>
-                        <a href="https://github.com/apalapramanik/WirelessNet" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/slam.webp" alt="Edge-Assisted SLAM">
-                        <div class="proj-year-tag">2023</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Edge-Assisted SLAM for Human-Robot Construction</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">1.25 m safety radius</span>
-                            <span class="stat-badge">YOLOv3 + Kalman</span>
-                            <span class="stat-badge">ROS</span>
-                        </div>
-                        <p class="proj-card-desc">EdgeSLAM deployment at a construction site; robot navigates to goals while maintaining a 1.25 m safe distance from workers using YOLOv3 detection and Kalman filtering on depth-camera point clouds.</p>
-                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:IjCSPb-OGe4C" target="_blank" rel="noopener" class="card-link"><i class="fas fa-file-alt"></i> MEMOCODE 2024 paper</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-image">
-                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/vit.webp" alt="Vision Transformer Re-implementation">
-                        <div class="proj-year-tag">2023</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Vision Transformer Re-implementation</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">Self-Attention</span>
-                            <span class="stat-badge">PyTorch</span>
-                        </div>
-                        <p class="proj-card-desc">Re-implemented the ViT architecture from scratch, exploring self-attention for image recognition. Analyzed scaling challenges, pretraining strategies in data-limited regimes, and fine-tuning vs. CNNs.</p>
-                        <a href="https://github.com/apalapramanik/Vision-Transformer" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-icon-header">
-                        <i class="fas fa-brain"></i>
-                        <div class="proj-year-tag">2023–24</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">AI &amp; Machine Learning Projects</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">BERT</span>
-                            <span class="stat-badge">CNN</span>
-                            <span class="stat-badge">TensorFlow</span>
-                            <span class="stat-badge">HuggingFace</span>
-                        </div>
-                        <p class="proj-card-desc">A collection of ML projects: Spanish news classification with fine-tuned BERT (BETO, 7-class NLP), sign-language gesture recognition (CNN, 98% test acc), and CIFAR-100 image classification (custom CNN, 63.75% test acc).</p>
-                        <div class="proj-card-links">
-                            <a href="https://github.com/apalapramanik/Spanish-News-Classification" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Spanish News Classification</a>
-                            <a href="https://github.com/apalapramanik/Hand-Gesture-Recognition" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Hand Gesture Recognition</a>
-                            <a href="https://github.com/apalapramanik/Classifying-CIFAR100" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Classifying CIFAR-100</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="proj-card">
-                    <div class="proj-card-icon-header">
-                        <i class="fas fa-robot"></i>
-                        <div class="proj-year-tag">2022–23</div>
-                    </div>
-                    <div class="proj-card-body">
-                        <h3 class="proj-card-title">Robotics &amp; Safety Verification Projects</h3>
-                        <div class="proj-card-stats">
-                            <span class="stat-badge">ROS</span>
-                            <span class="stat-badge">YOLOv5</span>
-                            <span class="stat-badge">STL / LTL</span>
-                            <span class="stat-badge">Gazebo</span>
-                        </div>
-                        <p class="proj-card-desc">TurtleBot3 safety system with YOLOv5 human detection, Kalman-filter trajectory prediction, and reachability-based collision verification in Gazebo. Husky UGV setup (ROS Melodic, Jetson, RealSense, Kinova arm). STL/LTL runtime monitoring framework with ROS integration.</p>
-                        <div class="proj-card-links">
-                            <a href="https://github.com/apalapramanik/TurtleBot3-Safety-Verification" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> TurtleBot3 Safety Verification</a>
-                            <a href="https://github.com/apalapramanik/Husky" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Clearpath Husky UGV</a>
-                            <a href="https://github.com/apalapramanik/Monitoring" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> STL/LTL Runtime Monitoring</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
 <div id="skills" class="section">
         <div class="skills-container">
             <h1 class="skills-heading">Skills.</h1>
@@ -446,6 +308,8 @@
                         <li>Sionna RT</li>
                         <li>mmWave Propagation Modeling</li>
                         <li>Bistatic Radar Measurement</li>
+                        <li>O-RAN Testbed Setup</li>
+                        <li>RFsim Setup</li>
                     </ul>
                 </div>
 
@@ -532,7 +396,7 @@
                 <div class="timeline-item" >
                     <div class="timeline-right">
                         <h3 class="timeline-title">Look Once, Beam Twice: Camera&#8209;Primed Real&#8209;Time Double&#8209;Directional mmWave Beam Management for Vehicular Connectivity</h3>
-                        <i class="timeline-details">2026 IEEE International Conference on Sensing, Communication, and Networking (SECON) <span style="color:var(--accent);">(to appear)</span></i>
+                        <i class="timeline-details">2026 IEEE International Conference on Sensing, Communication, and Networking (SECON)</i>
                         <p class="timeline-details">Authors: <strong style="color:var(--accent);">Apala Pramanik*</strong>, <strong style="color:var(--accent);">Avhishek Biswas*</strong> (equal contribution), Eylem Ekici, Mehmet Can Vuran</p>
                         <a target="_blank" rel="noopener" class="pub-link" aria-label="View on Google Scholar" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:zYLM7Y9cAGgC"><i class="fas fa-graduation-cap"></i></a>
                     </div>
@@ -582,23 +446,153 @@
 
     </div>
 
-<div id="research-statement" class="section">
-        <div class="research-statement-container">
-            <h1 class="research-statement-heading">Research Statement.</h1>
-            <div class="research-statement-card">
-                <div class="research-quote-mark"><i class="fas fa-quote-left"></i></div>
-                <p class="research-statement-body">My research focuses on making <strong>mmWave wireless links survive the real world</strong>, where vehicles move, blockages happen, and hardware imposes hard constraints. I combine <strong>machine learning</strong>, <strong>camera and sensor cues</strong>, and <strong>ray-traced propagation models</strong> to enable fast, reliable double-directional beam management for V2I and V2X connectivity.</p>
-                <p class="research-statement-body">I'm especially interested in closing the loop between <strong>perception and the physical layer</strong>: using what a camera sees to prime where a beam points, and using reinforcement learning to adapt transmit power and gain in real time under SNR constraints. The goal is practical: algorithms that run on SDR testbeds today and scale to vehicular networks tomorrow.</p>
-                <p class="research-statement-body">I am also starting to explore <strong>O-RAN</strong> as a research direction. I'm new to the space, but the idea of using open, standardized interfaces (xApps, the Near-RT RIC, and the E2 control loop) to bring data-driven decision making closer to the radio feels like a natural extension of the work I already care about.</p>
-                <div class="research-keywords">
-                    <span class="research-keyword">mmWave Beam Management</span>
-                    <span class="research-keyword">Vision-Aided Wireless</span>
-                    <span class="research-keyword">Reinforcement Learning</span>
-                    <span class="research-keyword">Ray Tracing</span>
-                    <span class="research-keyword">V2I / V2X</span>
-                    <span class="research-keyword">Software-Defined Radio</span>
-                    <span class="research-keyword">O-RAN</span>
+<div id="projects" class="section">
+        <div class="container_proj">
+            <h1 class="projects-heading">Projects.</h1>
+            <div class="projects-grid">
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/raytrace_tool.webp" alt="Ray Tracing Micro Tool for mmWave Beam-Sweep Analysis">
+                        <div class="proj-year-tag">2026</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Ray Tracing Micro Tool</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">Python CLI</span>
+                            <span class="stat-badge">Interactive HTML</span>
+                            <span class="stat-badge">mmWave</span>
+                        </div>
+                        <a href="https://github.com/UNL-CPN-Lab/Ray-Tracing-Micro-Tool" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
                 </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/rnn.webp" alt="Sequence Modeling">
+                        <div class="proj-year-tag">2026</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Sequence Modeling: GRU, LSTM &amp; Transformer</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">GRU / LSTM</span>
+                            <span class="stat-badge">Transformer</span>
+                            <span class="stat-badge">TensorFlow</span>
+                        </div>
+                        <div class="proj-card-links">
+                            <a href="https://github.com/apalapramanik/GRU" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> GRU</a>
+                            <a href="https://github.com/apalapramanik/RNN" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> RNN</a>
+                            <a href="https://github.com/apalapramanik/LSTM" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> LSTM</a>
+                            <a href="https://github.com/apalapramanik/Transformers" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Transformers</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/raytracing.webp" alt="3D Ray Tracing for mmWave Propagation">
+                        <div class="proj-year-tag">2024</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">3D Ray Tracing for mmWave Propagation</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">24 GHz</span>
+                            <span class="stat-badge">3-bounce reflections</span>
+                            <span class="stat-badge">MATLAB</span>
+                        </div>
+                        <a href="https://github.com/apalapramanik/mmWave-Ray-Tracing" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/wirelessnet.webp" alt="Multi-Modal Traffic Pattern Detection">
+                        <div class="proj-year-tag">2024</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Multi-Modal Traffic Pattern Detection</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">&gt;80% accuracy</span>
+                            <span class="stat-badge">&lt;100 ms latency</span>
+                            <span class="stat-badge">USRP + CVNN</span>
+                        </div>
+                        <a href="https://github.com/apalapramanik/WirelessNet" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/slam.webp" alt="Edge-Assisted SLAM">
+                        <div class="proj-year-tag">2023</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Edge-Assisted SLAM for Human-Robot Construction</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">1.25 m safety radius</span>
+                            <span class="stat-badge">YOLOv3 + Kalman</span>
+                            <span class="stat-badge">ROS</span>
+                        </div>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iUuz41kAAAAJ&citation_for_view=iUuz41kAAAAJ:IjCSPb-OGe4C" target="_blank" rel="noopener" class="card-link"><i class="fas fa-file-alt"></i> MEMOCODE 2024 paper</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-image">
+                        <img loading="lazy" decoding="async" width="800" height="380" src="figures/opt/vit.webp" alt="Vision Transformer Re-implementation">
+                        <div class="proj-year-tag">2023</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Vision Transformer Re-implementation</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">Self-Attention</span>
+                            <span class="stat-badge">PyTorch</span>
+                        </div>
+                        <a href="https://github.com/apalapramanik/Vision-Transformer" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-icon-header">
+                        <i class="fas fa-brain"></i>
+                        <div class="proj-year-tag">2023–24</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">AI &amp; Machine Learning Projects</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">BERT</span>
+                            <span class="stat-badge">CNN</span>
+                            <span class="stat-badge">TensorFlow</span>
+                            <span class="stat-badge">HuggingFace</span>
+                        </div>
+                        <div class="proj-card-links">
+                            <a href="https://github.com/apalapramanik/Spanish-News-Classification" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Spanish News Classification</a>
+                            <a href="https://github.com/apalapramanik/Hand-Gesture-Recognition" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Hand Gesture Recognition</a>
+                            <a href="https://github.com/apalapramanik/Classifying-CIFAR100" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Classifying CIFAR-100</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-card-icon-header">
+                        <i class="fas fa-robot"></i>
+                        <div class="proj-year-tag">2022–23</div>
+                    </div>
+                    <div class="proj-card-body">
+                        <h3 class="proj-card-title">Robotics &amp; Safety Verification Projects</h3>
+                        <div class="proj-card-stats">
+                            <span class="stat-badge">ROS</span>
+                            <span class="stat-badge">YOLOv5</span>
+                            <span class="stat-badge">STL / LTL</span>
+                            <span class="stat-badge">Gazebo</span>
+                        </div>
+                        <div class="proj-card-links">
+                            <a href="https://github.com/apalapramanik/TurtleBot3-Safety-Verification" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> TurtleBot3 Safety Verification</a>
+                            <a href="https://github.com/apalapramanik/Husky" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> Clearpath Husky UGV</a>
+                            <a href="https://github.com/apalapramanik/Monitoring" target="_blank" rel="noopener" class="card-link"><i class="fab fa-github"></i> STL/LTL Runtime Monitoring</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -680,8 +674,9 @@
         <div class="content">
           <h1 class="news-heading">News.</h1>
           <ul class="news-list" style="font-size: 1.2em; color: var(--text-body); line-height: 1.8;">
-          <li class="news-highlight"><span class="news-date">2026</span> Awarded the <strong>Outstanding Graduate Research Student Award</strong> at University of Nebraska-Lincoln</li>
-          <li class="news-highlight"><span class="news-date">Mar 2026</span> First author paper accepted at <strong>IEEE SECON 2026</strong> &#8220;Look Once, Beam Twice: Camera&#8209;Primed Real&#8209;Time Double&#8209;Directional mmWave Beam Management for Vehicular Connectivity&#8221;</li>
+          <li class="news-highlight"><span class="news-date">Fall 2026</span> Lecturer for <strong>CSCE 438/838: Internet of Things</strong> at University of Nebraska-Lincoln</li>
+          <li><span class="news-date">May 2026</span> Awarded the <strong>Outstanding Graduate Research Student Award</strong> at University of Nebraska-Lincoln</li>
+          <li><span class="news-date">Mar 2026</span> First author paper accepted at <strong>IEEE SECON 2026</strong> &#8220;Look Once, Beam Twice: Camera&#8209;Primed Real&#8209;Time Double&#8209;Directional mmWave Beam Management for Vehicular Connectivity&#8221;</li>
           <li><span class="news-date">2025 &ndash; 2026</span> Reviewer for <strong>IEEE Transactions on Wireless Communications</strong></li>
           <li><span class="news-date">May 2025</span> Graduated with MS in Computer Science from University of Nebraska-Lincoln</li>
           <li><span class="news-date">Oct 2024</span> Presented &#8220;Perception-based Runtime Monitoring and Verification for Human-Robot Construction Systems&#8221; at <strong>ACM/IEEE MEMOCODE 2024</strong>, Best Paper Candidate (Raleigh, NC)</li>
@@ -784,6 +779,7 @@
               <a target="_blank" href="https://www.linkedin.com/in/apala-pramanik" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
               <a target="_blank" href="https://github.com/apalapramanik" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
               <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=iUuz41kAAAAJ" aria-label="Google Scholar Profile"><i class="fas fa-graduation-cap"></i></a>
+              <a href="mailto:apramanik2@huskers.unl.edu?subject=Internship%20Opportunity%20%2F%20Collaboration" aria-label="Email Apala Pramanik"><i class="fas fa-envelope"></i></a>
           </div>
       </div>
     </div>

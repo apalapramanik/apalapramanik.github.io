@@ -72,6 +72,10 @@
     color: var(--text-body);
     line-height: 1.6;
     margin: 0;
+    text-align: justify;
+    /* hyphenation keeps justified narrow columns from opening up word-gaps */
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 @media (max-width: 1300px) {

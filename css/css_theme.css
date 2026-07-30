@@ -71,7 +71,7 @@ body, .section, .blog-card, .hobby-card, .skill-category,
 .hero-badge, .hero-paper-banner, .hero-cta, .hero-cta-outline,
 .research-keyword, .exp-tag, .outreach-tag, .stat-badge,
 .news-date, .award-badge, .blog-tag, .skill-level,
-.hero-stat-num, .hero-stat-label, .contact-response-time,
+.contact-response-time,
 h1, h2, h3, h4, p, li, span, a {
     transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
